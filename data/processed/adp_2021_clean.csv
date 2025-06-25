@@ -1,0 +1,490 @@
+name,team,bye_week,position,adp,name_normalized,match_key,year
+Christian McCaffrey,SF,6.0,RB,1.0,christian mccaffrey,christianmccaffrey,2021
+Dalvin Cook,FA,0.0,RB,2.0,dalvin cook,dalvincook,2021
+Alvin Kamara,NO,6.0,RB,3.0,alvin kamara,alvinkamara,2021
+Derrick Henry,BAL,8.0,RB,4.0,derrick henry,derrickhenry,2021
+Ezekiel Elliott,FA,0.0,RB,5.8,ezekiel elliott,ezekielelliott,2021
+Davante Adams,LAR,11.0,WR,6.6,davante adams,davanteadams,2021
+Travis Kelce,KC,12.0,TE,8.4,travis kelce,traviskelce,2021
+Aaron Jones Sr.,MIN,7.0,RB,9.4,aaron jones,aaronjones,2021
+Saquon Barkley,PHI,14.0,RB,9.6,saquon barkley,saquonbarkley,2021
+Nick Chubb,HOU,10.0,RB,10.4,nick chubb,nickchubb,2021
+Jonathan Taylor,IND,14.0,RB,10.4,jonathan taylor,jonathantaylor,2021
+Austin Ekeler,WAS,9.0,RB,10.4,austin ekeler,austinekeler,2021
+Tyreek Hill,MIA,14.0,WR,10.6,tyreek hill,tyreekhill,2021
+Stefon Diggs,NE,14.0,WR,14.0,stefon diggs,stefondiggs,2021
+Najee Harris,LAC,7.0,RB,15.6,najee harris,najeeharris,2021
+DeAndre Hopkins,BAL,8.0,WR,17.2,deandre hopkins,deandrehopkins,2021
+Antonio Gibson,NE,14.0,RB,17.6,antonio gibson,antoniogibson,2021
+Patrick Mahomes II,KC,12.0,QB,18.2,patrick mahomes,patrickmahomes,2021
+Calvin Ridley,TEN,13.0,WR,18.4,calvin ridley,calvinridley,2021
+DK Metcalf,PIT,7.0,WR,18.8,dk metcalf,dkmetcalf,2021
+Joe Mixon,HOU,10.0,RB,20.8,joe mixon,joemixon,2021
+Darren Waller,FA,0.0,TE,22.4,darren waller,darrenwaller,2021
+Justin Jefferson,MIN,7.0,WR,23.4,justin jefferson,justinjefferson,2021
+A.J. Brown,PHI,14.0,WR,23.8,aj brown,ajbrown,2021
+Clyde Edwards-Helaire,NO,6.0,RB,24.2,clyde edwards helaire,clydeedwardshelaire,2021
+George Kittle,SF,6.0,TE,26.8,george kittle,georgekittle,2021
+Keenan Allen,FA,0.0,WR,27.4,keenan allen,keenanallen,2021
+Terry McLaurin,WAS,9.0,WR,29.6,terry mclaurin,terrymclaurin,2021
+Josh Allen,BUF,7.0,QB,30.0,josh allen,joshallen,2021
+David Montgomery,DET,9.0,RB,30.2,david montgomery,davidmontgomery,2021
+Allen Robinson,II,0.0,WR,32.0,allen robinson,allenrobinson,2021
+Chris Carson ,FA,0.0,RB,32.4,chris carson,chriscarson,2021
+CeeDee Lamb,DAL,7.0,WR,32.8,ceedee lamb,ceedeelamb,2021
+James Robinson ,FA,0.0,RB,33.4,james robinson,jamesrobinson,2021
+Mike Evans,TB,9.0,WR,35.4,mike evans,mikeevans,2021
+Josh Jacobs,GB,13.0,RB,36.4,josh jacobs,joshjacobs,2021
+D'Andre Swift,CHI,10.0,RB,36.8,dandre swift,dandreswift,2021
+Miles Sanders,DAL,7.0,RB,38.2,miles sanders,milessanders,2021
+Robert Woods,PIT,7.0,WR,38.4,robert woods,robertwoods,2021
+Kyler Murray,ARI,12.0,QB,40.2,kyler murray,kylermurray,2021
+Amari Cooper,FA,0.0,WR,41.2,amari cooper,amaricooper,2021
+Chris Godwin,TB,9.0,WR,42.4,chris godwin,chrisgodwin,2021
+Lamar Jackson,BAL,8.0,QB,44.8,lamar jackson,lamarjackson,2021
+Cooper Kupp,SEA,9.0,WR,46.0,cooper kupp,cooperkupp,2021
+Julio Jones,FA,0.0,WR,46.2,julio jones,juliojones,2021
+Kyle Pitts,ATL,6.0,TE,47.0,kyle pitts,kylepitts,2021
+Tyler Lockett,TEN,13.0,WR,49.2,tyler lockett,tylerlockett,2021
+Myles Gaskin,FA,0.0,RB,49.8,myles gaskin,mylesgaskin,2021
+Mark Andrews,BAL,8.0,TE,50.6,mark andrews,markandrews,2021
+Adam Thielen,CAR,13.0,WR,50.6,adam thielen,adamthielen,2021
+Diontae Johnson,CLE,13.0,WR,51.8,diontae johnson,diontaejohnson,2021
+DJ Moore,CHI,10.0,WR,53.4,dj moore,djmoore,2021
+Aaron Rodgers,PIT,7.0,QB,54.4,aaron rodgers,aaronrodgers,2021
+Russell Wilson,NYG,10.0,QB,55.6,russell wilson,russellwilson,2021
+Dak Prescott,DAL,7.0,QB,56.0,dak prescott,dakprescott,2021
+Mike Davis,FA,0.0,RB,56.8,mike davis,mikedavis,2021
+Kareem Hunt,KC,12.0,RB,57.2,kareem hunt,kareemhunt,2021
+T.J. Hockenson,MIN,7.0,TE,58.2,tj hockenson,tjhockenson,2021
+Darrell Henderson Jr.,FA,0.0,RB,60.0,darrell henderson,darrellhenderson,2021
+Javonte Williams,DAL,7.0,RB,60.6,javonte williams,javontewilliams,2021
+Brandon Aiyuk,SF,6.0,WR,60.8,brandon aiyuk,brandonaiyuk,2021
+Chase Edmonds,FA,0.0,RB,62.0,chase edmonds,chaseedmonds,2021
+Justin Herbert,LAC,7.0,QB,62.2,justin herbert,justinherbert,2021
+Tee Higgins,CIN,10.0,WR,64.8,tee higgins,teehiggins,2021
+Gus Edwards ,FA,0.0,RB,65.2,gus edwards,gusedwards,2021
+Odell Beckham Jr.,FA,0.0,WR,67.8,odell beckham,odellbeckham,2021
+Raheem Mostert,LV,8.0,RB,68.8,raheem mostert,raheemmostert,2021
+Chase Claypool,FA,0.0,WR,69.2,chase claypool,chaseclaypool,2021
+JuJu Smith-Schuster,KC,12.0,WR,70.8,juju smith schuster,jujusmithschuster,2021
+Tom Brady,FA,0.0,QB,71.8,tom brady,tombrady,2021
+Damien Harris,FA,0.0,RB,72.0,damien harris,damienharris,2021
+Jerry Jeudy,CLE,13.0,WR,72.4,jerry jeudy,jerryjeudy,2021
+Ja'Marr Chase,CIN,10.0,WR,74.4,jamarr chase,jamarrchase,2021
+Kenny Golladay,FA,0.0,WR,74.8,kenny golladay,kennygolladay,2021
+DeVonta Smith,PHI,14.0,WR,77.0,devonta smith,devontasmith,2021
+Robbie Chosen,FA,0.0,WR,77.4,robbie chosen,robbiechosen,2021
+Michael Thomas ,FA,0.0,WR,79.2,michael thomas,michaelthomas,2021
+Courtland Sutton,DEN,11.0,WR,79.6,courtland sutton,courtlandsutton,2021
+Melvin Gordon,III,0.0,RB,79.6,melvin gordon,melvingordon,2021
+Logan Thomas ,FA,0.0,TE,81.2,logan thomas,loganthomas,2021
+Noah Fant,SEA,9.0,TE,84.2,noah fant,noahfant,2021
+Leonard Fournette,FA,0.0,RB,86.4,leonard fournette,leonardfournette,2021
+Trey Sermon,PIT,7.0,RB,87.2,trey sermon,treysermon,2021
+Deebo Samuel Sr.,WAS,9.0,WR,88.0,deebo samuel,deebosamuel,2021
+Matthew Stafford,LAR,11.0,QB,88.2,matthew stafford,matthewstafford,2021
+Robert Tonyan,KC,12.0,TE,88.4,robert tonyan,roberttonyan,2021
+Tyler Boyd,FA,0.0,WR,91.2,tyler boyd,tylerboyd,2021
+Ronald Jones,II,0.0,RB,91.8,ronald jones,ronaldjones,2021
+Laviska Shenault Jr.,BUF,7.0,WR,91.8,laviska shenault,laviskashenault,2021
+Brandin Cooks,NO,6.0,WR,92.8,brandin cooks,brandincooks,2021
+Michael Carter,ARI,12.0,RB,93.4,michael carter,michaelcarter,2021
+Ryan Tannehill,FA,0.0,QB,93.4,ryan tannehill,ryantannehill,2021
+Antonio Brown ,FA,0.0,WR,94.6,antonio brown,antoniobrown,2021
+Corey Davis ,FA,0.0,WR,95.6,corey davis,coreydavis,2021
+Jalen Hurts,PHI,14.0,QB,97.0,jalen hurts,jalenhurts,2021
+Dallas Goedert,PHI,14.0,TE,99.2,dallas goedert,dallasgoedert,2021
+James Conner,ARI,12.0,RB,100.8,james conner,jamesconner,2021
+DJ Chark Jr. ,FA,0.0,WR,102.0,dj chark jr,djcharkjr,2021
+Jarvis Landry,FA,0.0,WR,103.4,jarvis landry,jarvislandry,2021
+Tampa Bay Buccaneers,DST,9.0,DST,105.4,tampa bay buccaneers,tampabaybuccaneers,2021
+A.J. Dillon,PHI,14.0,RB,105.8,aj dillon,ajdillon,2021
+Michael Pittman Jr.,IND,14.0,WR,106.4,michael pittman,michaelpittman,2021
+Kenyan Drake ,FA,0.0,RB,106.4,kenyan drake,kenyandrake,2021
+Zack Moss,CIN,10.0,RB,106.6,zack moss,zackmoss,2021
+Jaylen Waddle,MIA,14.0,WR,107.4,jaylen waddle,jaylenwaddle,2021
+Los Angeles Rams,DST,11.0,DST,107.8,los angeles rams,losangelesrams,2021
+William Fuller,V,0.0,WR,109.8,william fuller,williamfuller,2021
+Mike Gesicki,CIN,10.0,TE,109.8,mike gesicki,mikegesicki,2021
+Pittsburgh Steelers,DST,7.0,DST,111.2,pittsburgh steelers,pittsburghsteelers,2021
+Joe Burrow,CIN,10.0,QB,111.2,joe burrow,joeburrow,2021
+Tyler Higbee,LAR,11.0,TE,112.0,tyler higbee,tylerhigbee,2021
+Devin Singletary,NYG,10.0,RB,112.4,devin singletary,devinsingletary,2021
+Jamaal Williams,FA,0.0,RB,116.4,jamaal williams,jamaalwilliams,2021
+Sony Michel,FA,0.0,RB,117.8,sony michel,sonymichel,2021
+Michael Gallup,WAS,9.0,WR,118.0,michael gallup,michaelgallup,2021
+Curtis Samuel,BUF,7.0,WR,118.2,curtis samuel,curtissamuel,2021
+Washington Commanders,DST,9.0,DST,120.0,washington commanders,washingtoncommanders,2021
+Marvin Jones Jr.,FA,0.0,WR,122.4,marvin jones,marvinjones,2021
+Jonnu Smith,MIA,14.0,TE,123.0,jonnu smith,jonnusmith,2021
+Mike Williams,LAC,7.0,WR,123.0,mike williams,mikewilliams,2021
+Marquez Callaway,FA,0.0,WR,123.0,marquez callaway,marquezcallaway,2021
+Marquise Brown,KC,12.0,WR,123.2,marquise brown,marquisebrown,2021
+Baltimore Ravens,DST,8.0,DST,123.8,baltimore ravens,baltimoreravens,2021
+Nyheim Hines,FA,0.0,RB,124.0,nyheim hines,nyheimhines,2021
+Rob Gronkowski,FA,0.0,TE,125.6,rob gronkowski,robgronkowski,2021
+Harrison Butker,KC,12.0,K,127.8,harrison butker,harrisonbutker,2021
+Justin Tucker,FA,0.0,K,127.8,justin tucker,justintucker,2021
+Trevor Lawrence,JAC,7.0,QB,128.0,trevor lawrence,trevorlawrence,2021
+Darnell Mooney,ATL,6.0,WR,128.6,darnell mooney,darnellmooney,2021
+Henry Ruggs III ,FA,0.0,WR,129.0,henry ruggs iii,henryruggsiii,2021
+David Johnson,FA,0.0,RB,129.8,david johnson,davidjohnson,2021
+Tony Pollard,TEN,13.0,RB,132.6,tony pollard,tonypollard,2021
+Mecole Hardman Jr.,GB,13.0,WR,132.8,mecole hardman,mecolehardman,2021
+DeVante Parker,FA,0.0,WR,134.2,devante parker,devanteparker,2021
+San Francisco 49ers,DST,6.0,DST,136.8,san francisco 49ers,sanfrancisco49ers,2021
+Baker Mayfield,TB,9.0,QB,138.6,baker mayfield,bakermayfield,2021
+Buffalo Bills,DST,7.0,DST,139.0,buffalo bills,buffalobills,2021
+J.D. McKissic,FA,0.0,RB,139.8,jd mckissic,jdmckissic,2021
+Justin Fields,NYJ,6.0,QB,140.8,justin fields,justinfields,2021
+Matt Ryan,FA,0.0,QB,141.8,matt ryan,mattryan,2021
+Younghoe Koo,ATL,6.0,K,143.2,younghoe koo,younghoekoo,2021
+Cole Beasley,FA,0.0,WR,143.8,cole beasley,colebeasley,2021
+Jakobi Meyers,LV,8.0,WR,145.0,jakobi meyers,jakobimeyers,2021
+Elijah Moore,BUF,7.0,WR,145.6,elijah moore,elijahmoore,2021
+Phillip Lindsay,FA,0.0,RB,146.2,phillip lindsay,philliplindsay,2021
+Russell Gage Jr.,SF,6.0,WR,148.8,russell gage,russellgage,2021
+Trey Lance,LAC,7.0,QB,149.0,trey lance,treylance,2021
+James White ,FA,0.0,RB,151.8,james white,jameswhite,2021
+Indianapolis Colts,DST,14.0,DST,151.8,indianapolis colts,indianapoliscolts,2021
+Hunter Henry,NE,14.0,TE,153.2,hunter henry,hunterhenry,2021
+Alexander Mattison,MIA,14.0,RB,154.2,alexander mattison,alexandermattison,2021
+Tyler Bass,BUF,7.0,K,155.0,tyler bass,tylerbass,2021
+Kirk Cousins,ATL,6.0,QB,157.8,kirk cousins,kirkcousins,2021
+Tua Tagovailoa,MIA,14.0,QB,158.6,tua tagovailoa,tuatagovailoa,2021
+New England Patriots,DST,14.0,DST,158.8,new england patriots,newenglandpatriots,2021
+Evan Engram,DEN,11.0,TE,159.8,evan engram,evanengram,2021
+Denver Broncos,DST,11.0,DST,163.2,denver broncos,denverbroncos,2021
+Jason Sanders,MIA,14.0,K,163.4,jason sanders,jasonsanders,2021
+Ben Roethlisberger,FA,0.0,QB,165.0,ben roethlisberger,benroethlisberger,2021
+Zach Ertz,WAS,9.0,TE,165.2,zach ertz,zachertz,2021
+Jared Cook,FA,0.0,TE,165.4,jared cook,jaredcook,2021
+Ryan Succop,FA,0.0,K,165.8,ryan succop,ryansuccop,2021
+Tevin Coleman,FA,0.0,RB,167.8,tevin coleman,tevincoleman,2021
+Jameis Winston,NYG,10.0,QB,168.2,jameis winston,jameiswinston,2021
+Rhamondre Stevenson,NE,14.0,RB,169.0,rhamondre stevenson,rhamondrestevenson,2021
+Sterling Shepard,TB,9.0,WR,172.4,sterling shepard,sterlingshepard,2021
+Austin Hooper,NE,14.0,TE,174.2,austin hooper,austinhooper,2021
+Cleveland Browns,DST,13.0,DST,174.4,cleveland browns,clevelandbrowns,2021
+Giovani Bernard,FA,0.0,RB,174.4,giovani bernard,giovanibernard,2021
+Nelson Agholor,FA,0.0,WR,176.2,nelson agholor,nelsonagholor,2021
+Chuba Hubbard,CAR,13.0,RB,176.6,chuba hubbard,chubahubbard,2021
+Rondale Moore,MIN,7.0,WR,177.0,rondale moore,rondalemoore,2021
+Mac Jones,SF,6.0,QB,177.0,mac jones,macjones,2021
+Greg Zuerlein,FA,0.0,K,177.6,greg zuerlein,gregzuerlein,2021
+Rodrigo Blankenship,FA,0.0,K,177.6,rodrigo blankenship,rodrigoblankenship,2021
+Kenneth Gainwell,PIT,7.0,RB,177.8,kenneth gainwell,kennethgainwell,2021
+Gerald Everett,FA,0.0,TE,179.6,gerald everett,geraldeverett,2021
+Ryan Fitzpatrick ,FA,0.0,QB,182.8,ryan fitzpatrick,ryanfitzpatrick,2021
+Daniel Carlson,LV,8.0,K,183.6,daniel carlson,danielcarlson,2021
+Jordan Akins,FA,0.0,TE,186.0,jordan akins,jordanakins,2021
+Kansas City Chiefs,DST,12.0,DST,186.4,kansas city chiefs,kansascitychiefs,2021
+Derek Carr,FA,0.0,QB,186.4,derek carr,derekcarr,2021
+Jalen Reagor,LAC,7.0,WR,187.4,jalen reagor,jalenreagor,2021
+Cole Kmet,CHI,10.0,TE,187.4,cole kmet,colekmet,2021
+Tyrell Williams,FA,0.0,WR,188.4,tyrell williams,tyrellwilliams,2021
+New Orleans Saints,DST,6.0,DST,189.2,new orleans saints,neworleanssaints,2021
+Rashaad Penny,FA,0.0,RB,190.6,rashaad penny,rashaadpenny,2021
+Terrace Marshall Jr.,PHI,14.0,WR,191.0,terrace marshall,terracemarshall,2021
+Miami Dolphins,DST,14.0,DST,191.6,miami dolphins,miamidolphins,2021
+Zach Wilson,MIA,14.0,QB,192.4,zach wilson,zachwilson,2021
+Jason Myers,SEA,9.0,K,193.4,jason myers,jasonmyers,2021
+Latavius Murray,FA,0.0,RB,194.2,latavius murray,lataviusmurray,2021
+Mason Crosby,FA,0.0,K,195.0,mason crosby,masoncrosby,2021
+Emmanuel Sanders,FA,0.0,WR,195.4,emmanuel sanders,emmanuelsanders,2021
+Brandon McManus,GB,13.0,K,195.5,brandon mcmanus,brandonmcmanus,2021
+A.J. Green,FA,0.0,WR,197.0,aj green,ajgreen,2021
+Amon-Ra St. Brown,DET,9.0,WR,198.5,amon ra st brown,amonrastbrown,2021
+Ty'Son Williams,FA,0.0,RB,198.6,tyson williams,tysonwilliams,2021
+Randall Cobb,FA,0.0,WR,199.6,randall cobb,randallcobb,2021
+Devontae Booker,FA,0.0,RB,200.0,devontae booker,devontaebooker,2021
+Giovanni Ricci,MIN,7.0,TE,200.0,giovanni ricci,giovanniricci,2021
+Wil Lutz,DEN,11.0,K,204.3,wil lutz,willutz,2021
+Gabe Davis,FA,0.0,WR,204.6,gabe davis,gabedavis,2021
+Tarik Cohen,FA,0.0,RB,206.5,tarik cohen,tarikcohen,2021
+Tony Jones Jr.,FA,0.0,RB,207.0,tony jones,tonyjones,2021
+Matt Prater,FA,0.0,K,207.2,matt prater,mattprater,2021
+Daniel Jones,IND,14.0,QB,207.2,daniel jones,danieljones,2021
+Green Bay Packers,DST,13.0,DST,207.4,green bay packers,greenbaypackers,2021
+Bryan Edwards,FA,0.0,WR,207.4,bryan edwards,bryanedwards,2021
+Adam Trautman,DEN,11.0,TE,207.5,adam trautman,adamtrautman,2021
+Matt Gay,WAS,9.0,K,209.0,matt gay,mattgay,2021
+Deshaun Watson,CLE,13.0,QB,209.2,deshaun watson,deshaunwatson,2021
+Christian Kirk,HOU,10.0,WR,209.3,christian kirk,christiankirk,2021
+Pat Freiermuth,PIT,7.0,TE,210.4,pat freiermuth,patfreiermuth,2021
+Ty Johnson,BUF,7.0,RB,210.5,ty johnson,tyjohnson,2021
+T.Y. Hilton,FA,0.0,WR,210.5,ty hilton,tyhilton,2021
+Austin Seibert ,FA,0.0,K,211.0,austin seibert,austinseibert,2021
+Damien Williams,FA,0.0,RB,211.5,damien williams,damienwilliams,2021
+Sam Darnold,SEA,9.0,QB,212.0,sam darnold,samdarnold,2021
+Darrel Williams,FA,0.0,RB,213.2,darrel williams,darrelwilliams,2021
+Rashod Bateman,BAL,8.0,WR,214.3,rashod bateman,rashodbateman,2021
+Anthony Firkser,FA,0.0,TE,215.4,anthony firkser,anthonyfirkser,2021
+Tre'Quan Smith,FA,0.0,WR,215.8,trequan smith,trequansmith,2021
+Eric Ebron,FA,0.0,TE,217.2,eric ebron,ericebron,2021
+Malcolm Brown,FA,0.0,RB,218.3,malcolm brown,malcolmbrown,2021
+Elijah Mitchell,KC,12.0,RB,219.0,elijah mitchell,elijahmitchell,2021
+Blake Jarwin,FA,0.0,TE,219.0,blake jarwin,blakejarwin,2021
+Mark Ingram,II,0.0,RB,221.6,mark ingram,markingram,2021
+Seattle Seahawks,DST,9.0,DST,222.6,seattle seahawks,seattleseahawks,2021
+Marlon Mack,FA,0.0,RB,223.5,marlon mack,marlonmack,2021
+Parris Campbell,DAL,7.0,WR,223.6,parris campbell,parriscampbell,2021
+Todd Gurley,II,0.0,RB,225.3,todd gurley,toddgurley,2021
+Chicago Bears,DST,10.0,DST,226.4,chicago bears,chicagobears,2021
+Arizona Cardinals,DST,12.0,DST,227.0,arizona cardinals,arizonacardinals,2021
+Robbie Gould,FA,0.0,K,227.8,robbie gould,robbiegould,2021
+Allen Lazard,NYJ,6.0,WR,227.8,allen lazard,allenlazard,2021
+Jamison Crowder,FA,0.0,WR,228.2,jamison crowder,jamisoncrowder,2021
+Sam Ficken,FA,0.0,K,229.0,sam ficken,samficken,2021
+Graham Gano,NYG,10.0,K,229.5,graham gano,grahamgano,2021
+Marquez Valdes-Scantling,SEA,9.0,WR,230.0,marquez valdes scantling,marquezvaldesscantling,2021
+Tennessee Titans,DST,13.0,DST,230.4,tennessee titans,tennesseetitans,2021
+Carson Wentz,FA,0.0,QB,231.8,carson wentz,carsonwentz,2021
+Le'Veon Bell,FA,0.0,RB,232.3,leveon bell,leveonbell,2021
+Minnesota Vikings,DST,7.0,DST,232.4,minnesota vikings,minnesotavikings,2021
+Cam Newton,FA,0.0,QB,234.8,cam newton,camnewton,2021
+Justin Jackson,FA,0.0,RB,235.0,justin jackson,justinjackson,2021
+Jerick McKinnon,FA,0.0,RB,235.5,jerick mckinnon,jerickmckinnon,2021
+Sammy Watkins,FA,0.0,WR,236.0,sammy watkins,sammywatkins,2021
+Anthony McFarland Jr.,FA,0.0,RB,236.0,anthony mcfarland,anthonymcfarland,2021
+Darrynton Evans,BUF,7.0,RB,238.0,darrynton evans,darryntonevans,2021
+Andy Dalton,CAR,13.0,QB,238.0,andy dalton,andydalton,2021
+Jared Goff,DET,9.0,QB,238.0,jared goff,jaredgoff,2021
+Boston Scott,FA,0.0,RB,238.8,boston scott,bostonscott,2021
+Chris Boswell,PIT,7.0,K,239.5,chris boswell,chrisboswell,2021
+Jake Funk,FA,0.0,RB,240.0,jake funk,jakefunk,2021
+Nico Collins,HOU,10.0,WR,241.0,nico collins,nicocollins,2021
+Las Vegas Raiders,DST,8.0,DST,243.0,las vegas raiders,lasvegasraiders,2021
+Kadarius Toney,FA,0.0,WR,243.8,kadarius toney,kadariustoney,2021
+Royce Freeman,FA,0.0,RB,244.0,royce freeman,roycefreeman,2021
+Tim Tebow,FA,0.0,TE,244.3,tim tebow,timtebow,2021
+Benny Snell Jr.,FA,0.0,RB,244.7,benny snell,bennysnell,2021
+Los Angeles Chargers,DST,7.0,DST,245.6,los angeles chargers,losangeleschargers,2021
+Dallas Cowboys,DST,7.0,DST,245.7,dallas cowboys,dallascowboys,2021
+Carolina Panthers,DST,13.0,DST,245.8,carolina panthers,carolinapanthers,2021
+Joshua Palmer,BUF,7.0,WR,246.0,joshua palmer,joshuapalmer,2021
+Hayden Hurst,FA,0.0,TE,246.7,hayden hurst,haydenhurst,2021
+Taysom Hill,NO,6.0,TE,247.0,taysom hill,taysomhill,2021
+Detrez Newsome,FA,0.0,RB,248.0,detrez newsome,detreznewsome,2021
+Cordarrelle Patterson,PIT,7.0,RB,248.3,cordarrelle patterson,cordarrellepatterson,2021
+Teddy Bridgewater,FA,0.0,QB,248.8,teddy bridgewater,teddybridgewater,2021
+Evan McPherson,CIN,10.0,K,248.8,evan mcpherson,evanmcpherson,2021
+Stephen Gostkowski,FA,0.0,K,249.0,stephen gostkowski,stephengostkowski,2021
+Carlos Hyde ,FA,0.0,RB,249.5,carlos hyde,carloshyde,2021
+Cairo Santos,CHI,10.0,K,249.5,cairo santos,cairosantos,2021
+Paul McRoberts,FA,0.0,WR,250.0,paul mcroberts,paulmcroberts,2021
+Salvon Ahmed,IND,14.0,RB,250.3,salvon ahmed,salvonahmed,2021
+Jonathan Brown,FA,0.0,K,251.0,jonathan brown,jonathanbrown,2021
+J.J. Taylor,HOU,10.0,RB,251.3,jj taylor,jjtaylor,2021
+Jeff Wilson Jr.,FA,0.0,RB,252.5,jeff wilson,jeffwilson,2021
+Wayne Gallman Jr.,FA,0.0,RB,252.5,wayne gallman,waynegallman,2021
+Nick Tiano,FA,0.0,QB,253.0,nick tiano,nicktiano,2021
+Javian Hawkins,TEN,13.0,RB,253.5,javian hawkins,javianhawkins,2021
+O.J. Howard,FA,0.0,TE,254.8,oj howard,ojhoward,2021
+La'Mical Perine,FA,0.0,RB,255.0,lamical perine,lamicalperine,2021
+Kent Taylor,FA,0.0,TE,256.0,kent taylor,kenttaylor,2021
+Breshad Perriman,FA,0.0,WR,257.0,breshad perriman,breshadperriman,2021
+Stevan Ridley,FA,0.0,RB,257.0,stevan ridley,stevanridley,2021
+Juwan Johnson,NO,6.0,TE,259.0,juwan johnson,juwanjohnson,2021
+Austin MacGinnis,FA,0.0,K,259.0,austin macginnis,austinmacginnis,2021
+Juwan Green,FA,0.0,WR,259.0,juwan green,juwangreen,2021
+Amari Rodgers,FA,0.0,WR,259.5,amari rodgers,amarirodgers,2021
+Justice Hill,BAL,8.0,RB,260.0,justice hill,justicehill,2021
+Jimmy Graham,FA,0.0,TE,260.3,jimmy graham,jimmygraham,2021
+Hunter Renfrow,CAR,13.0,WR,260.8,hunter renfrow,hunterrenfrow,2021
+Denzel Mims,FA,0.0,WR,261.5,denzel mims,denzelmims,2021
+Taywan Taylor,FA,0.0,WR,262.0,taywan taylor,taywantaylor,2021
+Jimmy Garoppolo,LAR,11.0,QB,262.3,jimmy garoppolo,jimmygaroppolo,2021
+Tyler Davis,FA,0.0,WR,263.0,tyler davis,tylerdavis,2021
+Tyler Kroft,FA,0.0,TE,265.0,tyler kroft,tylerkroft,2021
+Josh Hammond,FA,0.0,WR,266.0,josh hammond,joshhammond,2021
+Byron Pringle,FA,0.0,WR,267.0,byron pringle,byronpringle,2021
+Brian Hill,FA,0.0,RB,267.0,brian hill,brianhill,2021
+Austin Traylor,FA,0.0,TE,267.0,austin traylor,austintraylor,2021
+Jarvion Franklin,FA,0.0,RB,268.0,jarvion franklin,jarvionfranklin,2021
+Larry Fitzgerald,FA,0.0,WR,268.0,larry fitzgerald,larryfitzgerald,2021
+Dalton Schultz,HOU,10.0,TE,269.0,dalton schultz,daltonschultz,2021
+Manasseh Bailey,FA,0.0,WR,269.0,manasseh bailey,manassehbailey,2021
+Alex Collins,FA,0.0,RB,270.0,alex collins,alexcollins,2021
+Quinton Flowers,FA,0.0,QB,270.0,quinton flowers,quintonflowers,2021
+Joshua Kelley,FA,0.0,RB,270.5,joshua kelley,joshuakelley,2021
+Dan Arnold,FA,0.0,TE,270.5,dan arnold,danarnold,2021
+Larry Rountree,III,0.0,RB,271.0,larry rountree,larryrountree,2021
+Darrin Hall,FA,0.0,RB,271.0,darrin hall,darrinhall,2021
+Mekhi Sargent,FA,0.0,RB,271.0,mekhi sargent,mekhisargent,2021
+Donovan Peoples-Jones,NO,6.0,WR,271.3,donovan peoples jones,donovanpeoplesjones,2021
+Cam Akers,NO,6.0,RB,271.7,cam akers,camakers,2021
+Pooka Williams Jr.,FA,0.0,RB,272.0,pooka williams,pookawilliams,2021
+Josh Adams,FA,0.0,RB,272.0,josh adams,joshadams,2021
+New York Giants,DST,10.0,DST,272.3,new york giants,newyorkgiants,2021
+Qadree Ollison,FA,0.0,RB,273.0,qadree ollison,qadreeollison,2021
+Phillip Andersen,FA,0.0,K,273.0,phillip andersen,phillipandersen,2021
+Josh Lambo,FA,0.0,K,273.5,josh lambo,joshlambo,2021
+John Brown,FA,0.0,WR,273.7,john brown,johnbrown,2021
+Jamal Robinson,FA,0.0,WR,274.0,jamal robinson,jamalrobinson,2021
+Dawson Knox,BUF,7.0,TE,274.0,dawson knox,dawsonknox,2021
+Mike White,BUF,7.0,QB,275.0,mike white,mikewhite,2021
+Jeremy Kerley,FA,0.0,WR,276.0,jeremy kerley,jeremykerley,2021
+Dalton Crossan,FA,0.0,RB,277.0,dalton crossan,daltoncrossan,2021
+Jaret Patterson,LAC,7.0,RB,277.0,jaret patterson,jaretpatterson,2021
+Keke Coutee,FA,0.0,WR,277.0,keke coutee,kekecoutee,2021
+JaMycal Hasty,FA,0.0,RB,277.0,jamycal hasty,jamycalhasty,2021
+Ralph Webb,FA,0.0,RB,278.0,ralph webb,ralphwebb,2021
+Mike Boone,FA,0.0,RB,278.0,mike boone,mikeboone,2021
+Demarcus Robinson,SF,6.0,WR,278.5,demarcus robinson,demarcusrobinson,2021
+Taylor Russolino,FA,0.0,K,279.0,taylor russolino,taylorrussolino,2021
+Anthony Miller,BAL,8.0,WR,279.5,anthony miller,anthonymiller,2021
+Brandon Wilds,FA,0.0,RB,280.0,brandon wilds,brandonwilds,2021
+DeSean Jackson,FA,0.0,WR,280.3,desean jackson,deseanjackson,2021
+Michael Badgley,FA,0.0,K,280.5,michael badgley,michaelbadgley,2021
+Daniel Crawford,FA,0.0,TE,281.0,daniel crawford,danielcrawford,2021
+Ka'imi Fairbairn,HOU,10.0,K,281.5,kaimi fairbairn,kaimifairbairn,2021
+Samaje Perine,CIN,10.0,RB,282.5,samaje perine,samajeperine,2021
+Chase McLaughlin,TB,9.0,K,284.0,chase mclaughlin,chasemclaughlin,2021
+Jake Elliott,PHI,14.0,K,286.0,jake elliott,jakeelliott,2021
+Dustin Hopkins,CLE,13.0,K,286.3,dustin hopkins,dustinhopkins,2021
+Darius Slayton,NYG,10.0,WR,286.5,darius slayton,dariusslayton,2021
+KJ Hamler,BUF,7.0,WR,288.7,kj hamler,kjhamler,2021
+Philadelphia Eagles,DST,14.0,DST,289.0,philadelphia eagles,philadelphiaeagles,2021
+Tyrod Taylor,NYJ,6.0,QB,289.5,tyrod taylor,tyrodtaylor,2021
+Cincinnati Bengals,DST,10.0,DST,290.0,cincinnati bengals,cincinnatibengals,2021
+Quez Watkins,ARI,12.0,WR,291.0,quez watkins,quezwatkins,2021
+Jacksonville Jaguars,DST,7.0,DST,291.0,jacksonville jaguars,jacksonvillejaguars,2021
+Mo Alie-Cox,IND,14.0,TE,291.0,mo alie cox,moaliecox,2021
+Trace McSorley,FA,0.0,QB,292.0,trace mcsorley,tracemcsorley,2021
+Chris Herndon,IV,0.0,TE,292.0,chris herndon,chrisherndon,2021
+Van Jefferson,TEN,13.0,WR,294.0,van jefferson,vanjefferson,2021
+Nick Folk,FA,0.0,K,295.0,nick folk,nickfolk,2021
+Drew Lock,SEA,9.0,QB,296.0,drew lock,drewlock,2021
+Scotty Miller,PIT,7.0,WR,296.0,scotty miller,scottymiller,2021
+Jalen Richard,FA,0.0,RB,297.0,jalen richard,jalenrichard,2021
+Chris Evans,FA,0.0,RB,297.0,chris evans,chrisevans,2021
+Eno Benjamin,FA,0.0,RB,299.0,eno benjamin,enobenjamin,2021
+Joey Slye,TEN,13.0,K,300.0,joey slye,joeyslye,2021
+Travis Fulgham,FA,0.0,WR,302.0,travis fulgham,travisfulgham,2021
+Josh Reynolds,NYJ,6.0,WR,302.5,josh reynolds,joshreynolds,2021
+Dyami Brown,JAC,7.0,WR,304.0,dyami brown,dyamibrown,2021
+Olamide Zaccheaus,CHI,10.0,WR,307.0,olamide zaccheaus,olamidezaccheaus,2021
+Quintez Cephus,LAR,11.0,WR,308.0,quintez cephus,quintezcephus,2021
+C.J. Uzomah,FA,0.0,TE,308.0,cj uzomah,cjuzomah,2021
+Adam Humphries,FA,0.0,WR,309.0,adam humphries,adamhumphries,2021
+Dee Eskridge,MIA,14.0,WR,311.0,dee eskridge,deeeskridge,2021
+Donald Parham Jr.,PIT,7.0,TE,312.5,donald parham,donaldparham,2021
+Ke'Shawn Vaughn,FA,0.0,RB,313.0,keshawn vaughn,keshawnvaughn,2021
+Rashard Higgins,FA,0.0,WR,313.5,rashard higgins,rashardhiggins,2021
+Atlanta Falcons,DST,6.0,DST,314.0,atlanta falcons,atlantafalcons,2021
+Cody Parkey,FA,0.0,K,316.0,cody parkey,codyparkey,2021
+New York Jets,DST,6.0,DST,316.5,new york jets,newyorkjets,2021
+Tim Patrick,DET,9.0,WR,317.0,tim patrick,timpatrick,2021
+Kalen Ballage,FA,0.0,RB,318.0,kalen ballage,kalenballage,2021
+Chris Conley,FA,0.0,WR,319.0,chris conley,chrisconley,2021
+Kendrick Bourne,NE,14.0,WR,320.5,kendrick bourne,kendrickbourne,2021
+Detroit Lions,DST,9.0,DST,321.0,detroit lions,detroitlions,2021
+De'Angelo Henderson Sr.,FA,0.0,RB,322.0,deangelo henderson,deangelohenderson,2021
+David Njoku,CLE,13.0,TE,324.0,david njoku,davidnjoku,2021
+Deonte Harty,FA,0.0,WR,325.0,deonte harty,deonteharty,2021
+Houston Texans,DST,10.0,DST,326.0,houston texans,houstontexans,2021
+Randy Bullock,FA,0.0,K,326.5,randy bullock,randybullock,2021
+David Moore,CAR,13.0,WR,329.0,david moore,davidmoore,2021
+Kerryon Johnson,FA,0.0,RB,334.0,kerryon johnson,kerryonjohnson,2021
+D'Onta Foreman,FA,0.0,RB,335.0,donta foreman,dontaforeman,2021
+Ito Smith,FA,0.0,RB,337.0,ito smith,itosmith,2021
+Tyler Conklin,LAC,7.0,TE,339.5,tyler conklin,tylerconklin,2021
+Zach Pascal,NYG,10.0,WR,341.0,zach pascal,zachpascal,2021
+Ameer Abdullah,FA,0.0,RB,343.0,ameer abdullah,ameerabdullah,2021
+Jack Doyle,FA,0.0,TE,344.5,jack doyle,jackdoyle,2021
+Xavier Jones,FA,0.0,RB,347.0,xavier jones,xavierjones,2021
+Devin Funchess,FA,0.0,WR,349.0,devin funchess,devinfunchess,2021
+Adrian Peterson ,FA,0.0,RB,349.5,adrian peterson,adrianpeterson,2021
+Keelan Cole Sr.,FA,0.0,WR,351.0,keelan cole,keelancole,2021
+Marquise Goodwin,FA,0.0,WR,352.0,marquise goodwin,marquisegoodwin,2021
+Jonathan Williams,FA,0.0,RB,353.0,jonathan williams,jonathanwilliams,2021
+Kyle Juszczyk,SF,6.0,RB,353.5,kyle juszczyk,kylejuszczyk,2021
+Terry Godwin,FA,0.0,WR,354.0,terry godwin,terrygodwin,2021
+Stephen Anderson,FA,0.0,TE,355.0,stephen anderson,stephenanderson,2021
+Case Cookus,FA,0.0,QB,358.0,case cookus,casecookus,2021
+Marcus Mariota,WAS,9.0,QB,359.0,marcus mariota,marcusmariota,2021
+Matt Breida,FA,0.0,RB,360.0,matt breida,mattbreida,2021
+Tylan Wallace,BAL,8.0,WR,362.0,tylan wallace,tylanwallace,2021
+Antonio Gandy-Golden,FA,0.0,WR,365.0,antonio gandy golden,antoniogandygolden,2021
+James Washington,FA,0.0,WR,366.0,james washington,jameswashington,2021
+N'Keal Harry,FA,0.0,WR,368.0,nkeal harry,nkealharry,2021
+Tucker McCann,FA,0.0,K,369.0,tucker mccann,tuckermccann,2021
+Tutu Atwell,LAR,11.0,WR,371.0,tutu atwell,tutuatwell,2021
+Preston Williams,FA,0.0,WR,372.0,preston williams,prestonwilliams,2021
+Jalen Guyton,FA,0.0,WR,373.0,jalen guyton,jalenguyton,2021
+Mohamed Sanu Sr.,FA,0.0,WR,374.0,mohamed sanu,mohamedsanu,2021
+Cam Sims,FA,0.0,WR,375.0,cam sims,camsims,2021
+Shi Smith,FA,0.0,WR,376.0,shi smith,shismith,2021
+Damiere Byrd,FA,0.0,WR,377.0,damiere byrd,damierebyrd,2021
+Mitchell Trubisky,BUF,7.0,QB,378.0,mitchell trubisky,mitchelltrubisky,2021
+Albert Wilson,FA,0.0,WR,379.0,albert wilson,albertwilson,2021
+Sam Ehlinger,DEN,11.0,QB,380.0,sam ehlinger,samehlinger,2021
+Anthony Schwartz,FA,0.0,WR,381.0,anthony schwartz,anthonyschwartz,2021
+Antonio Williams,FA,0.0,RB,384.0,antonio williams,antoniowilliams,2021
+Tyler Johnson,NYJ,6.0,WR,385.0,tyler johnson,tylerjohnson,2021
+Antonio Callaway,FA,0.0,WR,386.0,antonio callaway,antoniocallaway,2021
+Dez Fitzpatrick,LAC,7.0,WR,387.0,dez fitzpatrick,dezfitzpatrick,2021
+Jordan Love,GB,13.0,QB,388.0,jordan love,jordanlove,2021
+Foster Moreau,NO,6.0,TE,389.0,foster moreau,fostermoreau,2021
+Ty Montgomery,II,0.0,RB,391.0,ty montgomery,tymontgomery,2021
+James O'Shaughnessy,FA,0.0,TE,392.0,james oshaughnessy,jamesoshaughnessy,2021
+Tyron Billy-Johnson,FA,0.0,WR,393.0,tyron billy johnson,tyronbillyjohnson,2021
+Matt Ammendola,FA,0.0,K,394.0,matt ammendola,mattammendola,2021
+Jacob Eason,FA,0.0,QB,395.0,jacob eason,jacobeason,2021
+Jermar Jefferson,FA,0.0,RB,396.0,jermar jefferson,jermarjefferson,2021
+Jaylen Samuels,FA,0.0,RB,397.0,jaylen samuels,jaylensamuels,2021
+Colin Kaepernick,FA,0.0,QB,399.0,colin kaepernick,colinkaepernick,2021
+Ryan Santoso,FA,0.0,K,400.0,ryan santoso,ryansantoso,2021
+Johnny Manziel,FA,0.0,QB,401.0,johnny manziel,johnnymanziel,2021
+Albert Okwuegbunam Jr.,IND,14.0,TE,402.0,albert okwuegbunam,albertokwuegbunam,2021
+Ray Rice,FA,0.0,RB,403.0,ray rice,rayrice,2021
+Kylin Hill ,FA,0.0,RB,404.0,kylin hill,kylinhill,2021
+Greg Ward,FA,0.0,WR,405.0,greg ward,gregward,2021
+Easop Winston Jr.,FA,0.0,WR,406.0,easop winston,easopwinston,2021
+Michael Strachan,WAS,9.0,WR,407.0,michael strachan,michaelstrachan,2021
+Devin Smith,FA,0.0,WR,408.0,devin smith,devinsmith,2021
+Riley Ridley,FA,0.0,WR,409.0,riley ridley,rileyridley,2021
+Aldrick Rosas,FA,0.0,K,411.0,aldrick rosas,aldrickrosas,2021
+Dazz Newsome,FA,0.0,WR,412.0,dazz newsome,dazznewsome,2021
+Jody Fortson Jr. ,FA,0.0,TE,413.0,jody fortson jr,jodyfortsonjr,2021
+Dede Westbrook,FA,0.0,WR,414.0,dede westbrook,dedewestbrook,2021
+Tony Romo,FA,0.0,QB,415.0,tony romo,tonyromo,2021
+Andy Isabella,FA,0.0,WR,416.0,andy isabella,andyisabella,2021
+Zay Jones,ARI,12.0,WR,417.0,zay jones,zayjones,2021
+DeeJay Dallas,ARI,12.0,RB,418.0,deejay dallas,deejaydallas,2021
+Corey Clement,FA,0.0,RB,419.0,corey clement,coreyclement,2021
+Demetric Felton Jr.,WAS,9.0,RB,420.0,demetric felton,demetricfelton,2021
+Will Dissly,LAC,7.0,TE,421.0,will dissly,willdissly,2021
+Tom Kennedy,DET,9.0,WR,422.0,tom kennedy,tomkennedy,2021
+Kylen Granson,PHI,14.0,TE,423.0,kylen granson,kylengranson,2021
+Devin Duvernay,CHI,10.0,WR,424.0,devin duvernay,devinduvernay,2021
+Noah Gray,KC,12.0,TE,425.0,noah gray,noahgray,2021
+Gerrid Doaks,FA,0.0,RB,426.0,gerrid doaks,gerriddoaks,2021
+Simi Fehoko,ARI,12.0,WR,427.0,simi fehoko,simifehoko,2021
+Damoun Patterson,FA,0.0,WR,428.0,damoun patterson,damounpatterson,2021
+Charlie Woerner,ATL,6.0,TE,429.0,charlie woerner,charliewoerner,2021
+Greg Joseph,SF,6.0,K,430.0,greg joseph,gregjoseph,2021
+Pharoh Cooper,FA,0.0,WR,431.0,pharoh cooper,pharohcooper,2021
+Kyle Rudolph,FA,0.0,TE,432.0,kyle rudolph,kylerudolph,2021
+Jeremy McNichols,WAS,9.0,RB,433.0,jeremy mcnichols,jeremymcnichols,2021
+Brandon Dillon,FA,0.0,TE,434.0,brandon dillon,brandondillon,2021
+Chad Beebe,FA,0.0,WR,436.0,chad beebe,chadbeebe,2021
+Taylor Heinicke,LAC,7.0,QB,437.0,taylor heinicke,taylorheinicke,2021
+Trent Sherfield Sr.,DEN,11.0,WR,438.0,trent sherfield,trentsherfield,2021
+Davis Mills,HOU,10.0,QB,439.0,davis mills,davismills,2021
+Durham Smythe,CHI,10.0,TE,440.0,durham smythe,durhamsmythe,2021
+Chad Henne,FA,0.0,QB,441.0,chad henne,chadhenne,2021
+Eddy Pineiro,FA,0.0,K,442.0,eddy pineiro,eddypineiro,2021
+John Wolford,JAC,7.0,QB,443.0,john wolford,johnwolford,2021
+Mike Glennon,FA,0.0,QB,444.0,mike glennon,mikeglennon,2021
+Rex Burkhead,FA,0.0,RB,445.0,rex burkhead,rexburkhead,2021
+Willie Snead,IV,0.0,WR,446.0,willie snead,williesnead,2021
+Drew Sample,CIN,10.0,TE,447.0,drew sample,drewsample,2021
+Joe Flacco,CLE,13.0,QB,448.0,joe flacco,joeflacco,2021
+Jacoby Brissett,ARI,12.0,QB,449.0,jacoby brissett,jacobybrissett,2021
+Cornell Powell,FA,0.0,WR,450.0,cornell powell,cornellpowell,2021
+Harrison Bryant,PHI,14.0,TE,451.0,harrison bryant,harrisonbryant,2021
+Gardner Minshew II,KC,12.0,QB,452.0,gardner minshew,gardnerminshew,2021
+Jacob Hollister,FA,0.0,TE,453.0,jacob hollister,jacobhollister,2021

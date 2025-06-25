@@ -1,0 +1,354 @@
+name,team,bye_week,position,adp,name_normalized,match_key,year,fantasy_points,games_played
+Jonathan Taylor,IND,14.0,RB,1.0,jonathan taylor,jonathantaylor,2022,146.4,11.0
+Christian McCaffrey,SF,9.0,RB,2.0,christian mccaffrey,christianmccaffrey,2022,334.1,16.0
+Austin Ekeler,WAS,14.0,RB,3.8,austin ekeler,austinekeler,2022,363.7,16.0
+Cooper Kupp,SEA,11.0,WR,4.0,cooper kupp,cooperkupp,2022,201.4,9.0
+Derrick Henry,BAL,10.0,RB,5.3,derrick henry,derrickhenry,2022,284.8,15.0
+Justin Jefferson,MIN,7.0,WR,5.5,justin jefferson,justinjefferson,2022,359.5,16.0
+Dalvin Cook,FA,0.0,RB,7.5,dalvin cook,dalvincook,2022,235.1,16.0
+Najee Harris,LAC,8.0,RB,8.0,najee harris,najeeharris,2022,209.3,16.0
+Ja'Marr Chase,CIN,10.0,WR,8.3,jamarr chase,jamarrchase,2022,219.8,11.0
+Joe Mixon,HOU,6.0,RB,10.3,joe mixon,joemixon,2022,221.7,13.0
+Davante Adams,LAR,7.0,WR,12.3,davante adams,davanteadams,2022,323.2,16.0
+Stefon Diggs,NE,10.0,WR,12.5,stefon diggs,stefondiggs,2022,293.2,15.0
+Alvin Kamara,NO,14.0,RB,13.3,alvin kamara,alvinkamara,2022,199.8,14.0
+Travis Kelce,KC,8.0,TE,15.0,travis kelce,traviskelce,2022,306.5,16.0
+D'Andre Swift,CHI,14.0,RB,15.5,dandre swift,dandreswift,2022,175.5,13.0
+Deebo Samuel Sr.,WAS,14.0,WR,17.0,deebo samuel,deebosamuel,2022,164.0,12.0
+CeeDee Lamb,DAL,9.0,WR,19.5,ceedee lamb,ceedeelamb,2022,285.4,16.0
+Aaron Jones Sr.,MIN,7.0,RB,19.5,aaron jones,aaronjones,2022,240.8,16.0
+Tyreek Hill,MIA,11.0,WR,19.8,tyreek hill,tyreekhill,2022,342.9,16.0
+Nick Chubb,HOU,6.0,RB,20.0,nick chubb,nickchubb,2022,258.2,16.0
+Saquon Barkley,PHI,7.0,RB,20.3,saquon barkley,saquonbarkley,2022,284.0,16.0
+Josh Allen,BUF,7.0,QB,20.8,josh allen,joshallen,2022,373.8,15.0
+Mark Andrews,BAL,10.0,TE,21.8,mark andrews,markandrews,2022,190.5,15.0
+Leonard Fournette,FA,0.0,RB,22.0,leonard fournette,leonardfournette,2022,226.7,15.0
+Javonte Williams,DAL,9.0,RB,22.8,javonte williams,javontewilliams,2022,42.0,4.0
+Mike Evans,TB,11.0,WR,26.8,mike evans,mikeevans,2022,225.4,15.0
+Keenan Allen,FA,0.0,WR,28.3,keenan allen,keenanallen,2022,133.8,9.0
+James Conner,ARI,13.0,RB,29.3,james conner,jamesconner,2022,200.2,13.0
+Patrick Mahomes II,KC,8.0,QB,29.8,patrick mahomes,patrickmahomes,2022,400.8,16.0
+Ezekiel Elliott,FA,0.0,RB,30.3,ezekiel elliott,ezekielelliott,2022,184.8,14.0
+A.J. Brown,PHI,7.0,WR,30.8,aj brown,ajbrown,2022,286.1,16.0
+Kyle Pitts,ATL,14.0,TE,32.8,kyle pitts,kylepitts,2022,75.6,10.0
+Michael Pittman Jr.,IND,14.0,WR,33.5,michael pittman,michaelpittman,2022,204.5,15.0
+Tee Higgins,CIN,10.0,WR,33.8,tee higgins,teehiggins,2022,219.2,15.0
+Justin Herbert,LAC,8.0,QB,34.5,justin herbert,justinherbert,2022,261.4,16.0
+David Montgomery,DET,6.0,RB,36.5,david montgomery,davidmontgomery,2022,175.6,15.0
+Cam Akers,NO,14.0,RB,39.8,cam akers,camakers,2022,125.5,14.0
+George Kittle,SF,9.0,TE,39.8,george kittle,georgekittle,2022,181.6,14.0
+Travis Etienne Jr.,JAC,11.0,RB,40.5,travis etienne,travisetienne,2022,199.7,16.0
+Terry McLaurin,WAS,14.0,WR,41.0,terry mclaurin,terrymclaurin,2022,212.6,16.0
+Lamar Jackson,BAL,10.0,QB,43.5,lamar jackson,lamarjackson,2022,236.1,12.0
+DJ Moore,CHI,14.0,WR,43.8,dj moore,djmoore,2022,197.1,16.0
+Diontae Johnson,CLE,9.0,WR,43.8,diontae johnson,diontaejohnson,2022,172.9,16.0
+Darren Waller,FA,0.0,TE,44.8,darren waller,darrenwaller,2022,79.3,8.0
+Mike Williams,LAC,8.0,WR,46.0,mike williams,mikewilliams,2022,169.3,12.0
+Jaylen Waddle,MIA,11.0,WR,47.3,jaylen waddle,jaylenwaddle,2022,248.9,16.0
+DK Metcalf,PIT,9.0,WR,48.3,dk metcalf,dkmetcalf,2022,219.8,16.0
+Josh Jacobs,GB,14.0,RB,49.5,josh jacobs,joshjacobs,2022,321.3,16.0
+J.K. Dobbins,DEN,9.0,RB,52.0,jk dobbins,jkdobbins,2022,81.2,8.0
+Elijah Mitchell,KC,8.0,RB,52.0,elijah mitchell,elijahmitchell,2022,26.1,4.0
+Breece Hall,NYJ,10.0,RB,52.3,breece hall,breecehall,2022,115.1,7.0
+Kyler Murray,ARI,13.0,QB,53.8,kyler murray,kylermurray,2022,200.5,11.0
+Jalen Hurts,PHI,7.0,QB,55.3,jalen hurts,jalenhurts,2022,369.6,14.0
+Brandin Cooks,NO,14.0,WR,56.0,brandin cooks,brandincooks,2022,124.0,12.0
+Dalton Schultz,HOU,6.0,TE,57.3,dalton schultz,daltonschultz,2022,135.4,14.0
+Courtland Sutton,DEN,9.0,WR,58.0,courtland sutton,courtlandsutton,2022,147.1,14.0
+Joe Burrow,CIN,10.0,QB,60.3,joe burrow,joeburrow,2022,339.1,15.0
+Marquise Brown,KC,8.0,WR,61.5,marquise brown,marquisebrown,2022,154.3,11.0
+Chris Godwin,TB,11.0,WR,61.8,chris godwin,chrisgodwin,2022,213.3,14.0
+Allen Robinson II ,FA,0.0,WR,62.8,allen robinson ii,allenrobinsonii,2022,84.9,10.0
+Amon-Ra St. Brown,DET,6.0,WR,63.5,amon ra st brown,amonrastbrown,2022,256.7,15.0
+Clyde Edwards-Helaire,NO,14.0,RB,64.0,clyde edwards helaire,clydeedwardshelaire,2022,98.3,10.0
+Antonio Gibson,NE,10.0,RB,64.8,antonio gibson,antoniogibson,2022,165.9,15.0
+Jerry Jeudy,CLE,9.0,WR,65.8,jerry jeudy,jerryjeudy,2022,179.9,14.0
+T.J. Hockenson,MIN,7.0,TE,65.8,tj hockenson,tjhockenson,2022,212.8,16.0
+Gabe Davis,FA,0.0,WR,67.3,gabe davis,gabedavis,2022,164.7,14.0
+A.J. Dillon,PHI,7.0,RB,67.8,aj dillon,ajdillon,2022,164.3,16.0
+Amari Cooper,FA,0.0,WR,67.8,amari cooper,amaricooper,2022,240.9,16.0
+Dallas Goedert,PHI,7.0,TE,70.5,dallas goedert,dallasgoedert,2022,130.6,11.0
+Tom Brady,FA,0.0,QB,72.0,tom brady,tombrady,2022,264.3,16.0
+Adam Thielen,CAR,13.0,WR,73.3,adam thielen,adamthielen,2022,170.8,16.0
+Darnell Mooney,ATL,14.0,WR,73.5,darnell mooney,darnellmooney,2022,101.5,12.0
+JuJu Smith-Schuster,KC,8.0,WR,74.3,juju smith schuster,jujusmithschuster,2022,179.8,15.0
+Russell Wilson,NYG,9.0,QB,77.5,russell wilson,russellwilson,2022,201.5,14.0
+Michael Thomas ,FA,0.0,WR,80.0,michael thomas,michaelthomas,2022,51.1,3.0
+Aaron Rodgers,PIT,9.0,QB,80.3,aaron rodgers,aaronrodgers,2022,228.0,16.0
+Dak Prescott,DAL,9.0,QB,82.0,dak prescott,dakprescott,2022,189.9,11.0
+Devin Singletary,NYG,9.0,RB,82.5,devin singletary,devinsingletary,2022,175.7,15.0
+Hunter Renfrow,CAR,13.0,WR,83.3,hunter renfrow,hunterrenfrow,2022,59.7,9.0
+DeAndre Hopkins,BAL,10.0,WR,83.3,deandre hopkins,deandrehopkins,2022,151.7,9.0
+Dameon Pierce,HU,6.0,RB,83.5,dameon pierce,dameonpierce,2022,166.4,13.0
+Damien Harris,FA,0.0,RB,83.8,damien harris,damienharris,2022,84.8,10.0
+Miles Sanders,DAL,9.0,RB,84.5,miles sanders,milessanders,2022,213.4,16.0
+Kareem Hunt,KC,8.0,RB,85.3,kareem hunt,kareemhunt,2022,121.0,16.0
+Cordarrelle Patterson,PIT,9.0,RB,85.8,cordarrelle patterson,cordarrellepatterson,2022,138.8,12.0
+Tony Pollard,TEN,6.0,RB,86.0,tony pollard,tonypollard,2022,246.9,15.0
+Chase Edmonds,FA,0.0,RB,86.8,chase edmonds,chaseedmonds,2022,69.7,12.0
+Rashaad Penny ,FA,0.0,RB,87.0,rashaad penny,rashaadpenny,2022,52.2,5.0
+Rashod Bateman,BAL,10.0,WR,88.5,rashod bateman,rashodbateman,2022,53.5,6.0
+Zach Ertz,WAS,14.0,TE,88.8,zach ertz,zachertz,2022,115.6,10.0
+Dawson Knox,BUF,7.0,TE,90.0,dawson knox,dawsonknox,2022,126.4,14.0
+Elijah Moore,BUF,7.0,WR,90.0,elijah moore,elijahmoore,2022,86.0,15.0
+DeVonta Smith,PHI,7.0,WR,90.3,devonta smith,devontasmith,2022,240.9,16.0
+Matthew Stafford,LAR,7.0,QB,92.0,matthew stafford,matthewstafford,2022,108.4,9.0
+Buffalo Bills,DST,7.0,DST,92.0,buffalo bills,buffalobills,2022,-1.0,-1.0
+Tyler Lockett,TEN,6.0,WR,96.5,tyler lockett,tylerlockett,2022,221.9,15.0
+Brandon Aiyuk,SF,9.0,WR,98.0,brandon aiyuk,brandonaiyuk,2022,217.9,16.0
+Drake London,ATL,14.0,WR,98.5,drake london,drakelondon,2022,160.6,16.0
+Rhamondre Stevenson,NE,10.0,RB,100.0,rhamondre stevenson,rhamondrestevenson,2022,235.9,16.0
+Christian Kirk,HOU,6.0,WR,100.3,christian kirk,christiankirk,2022,220.0,16.0
+Trey Lance,LAC,8.0,QB,101.5,trey lance,treylance,2022,12.5,2.0
+Robert Woods,PIT,9.0,WR,103.0,robert woods,robertwoods,2022,107.7,16.0
+Allen Lazard,NYJ,10.0,WR,104.5,allen lazard,allenlazard,2022,160.7,14.0
+Justin Tucker,FA,0.0,K,105.5,justin tucker,justintucker,2022,-1.0,-1.0
+Melvin Gordon,III,0.0,RB,107.5,melvin gordon,melvingordon,2022,87.1,10.0
+Pat Freiermuth,PIT,9.0,TE,108.5,pat freiermuth,patfreiermuth,2022,148.2,15.0
+Chris Olave,NO,14.0,WR,110.8,chris olave,chrisolave,2022,183.2,14.0
+Tampa Bay Buccaneers,DST,11.0,DST,112.3,tampa bay buccaneers,tampabaybuccaneers,2022,-1.0,-1.0
+Derek Carr,FA,0.0,QB,113.3,derek carr,derekcarr,2022,219.1,15.0
+Kenneth Walker III,SEA,11.0,RB,116.0,kenneth walker,kennethwalker,2022,189.2,14.0
+Chase Claypool,FA,0.0,WR,116.3,chase claypool,chaseclaypool,2022,96.1,14.0
+James Robinson,FA,0.0,RB,117.0,james robinson,jamesrobinson,2022,88.6,11.0
+Michael Carter,ARI,13.0,RB,117.0,michael carter,michaelcarter,2022,123.5,15.0
+San Francisco 49ers,DST,9.0,DST,118.8,san francisco 49ers,sanfrancisco49ers,2022,-1.0,-1.0
+Kadarius Toney,FA,0.0,WR,119.0,kadarius toney,kadariustoney,2022,44.9,8.0
+James Cook,BUF,7.0,RB,120.0,james cook,jamescook,2022,98.6,15.0
+Cole Kmet,CHI,14.0,TE,121.8,cole kmet,colekmet,2022,131.6,16.0
+Indianapolis Colts,DST,14.0,DST,123.5,indianapolis colts,indianapoliscolts,2022,-1.0,-1.0
+Kirk Cousins,ATL,14.0,QB,125.3,kirk cousins,kirkcousins,2022,278.6,16.0
+George Pickens,DAL,9.0,WR,127.8,george pickens,georgepickens,2022,150.3,16.0
+Harrison Butker,KC,8.0,K,129.0,harrison butker,harrisonbutker,2022,-1.0,-1.0
+Los Angeles Rams,DST,7.0,DST,129.0,los angeles rams,losangelesrams,2022,-1.0,-1.0
+Mike Gesicki,CIN,10.0,TE,129.0,mike gesicki,mikegesicki,2022,89.6,16.0
+Evan McPherson,CIN,10.0,K,129.0,evan mcpherson,evanmcpherson,2022,-1.0,-1.0
+Hunter Henry,NE,10.0,TE,130.3,hunter henry,hunterhenry,2022,93.7,16.0
+Treylon Burks,TEN,6.0,WR,131.8,treylon burks,treylonburks,2022,88.2,10.0
+Daniel Carlson,LV,6.0,K,132.3,daniel carlson,danielcarlson,2022,-1.0,-1.0
+Darrell Henderson Jr.,FA,0.0,RB,132.5,darrell henderson,darrellhenderson,2022,73.5,10.0
+Tyler Bass,BUF,7.0,K,132.8,tyler bass,tylerbass,2022,-1.0,-1.0
+Alexander Mattison,MIA,11.0,RB,135.0,alexander mattison,alexandermattison,2022,69.4,16.0
+New Orleans Saints,DST,14.0,DST,135.3,new orleans saints,neworleanssaints,2022,-1.0,-1.0
+Matt Gay,WAS,14.0,K,135.8,matt gay,mattgay,2022,-1.0,-1.0
+Tyler Boyd,FA,0.0,WR,137.8,tyler boyd,tylerboyd,2022,156.1,15.0
+Garrett Wilson,NYJ,10.0,WR,138.0,garrett wilson,garrettwilson,2022,197.8,16.0
+Dallas Cowboys,DST,9.0,DST,138.8,dallas cowboys,dallascowboys,2022,-1.0,-1.0
+Michael Gallup,WAS,14.0,WR,139.3,michael gallup,michaelgallup,2022,103.4,13.0
+Tua Tagovailoa,MIA,11.0,QB,140.5,tua tagovailoa,tuatagovailoa,2022,230.9,13.0
+Nyheim Hines,FA,0.0,RB,140.5,nyheim hines,nyheimhines,2022,69.4,15.0
+Green Bay Packers,DST,14.0,DST,142.5,green bay packers,greenbaypackers,2022,-1.0,-1.0
+Skyy Moore,KC,8.0,WR,142.8,skyy moore,skyymoore,2022,43.4,16.0
+Julio Jones,FA,0.0,WR,143.8,julio jones,juliojones,2022,70.4,10.0
+Raheem Mostert,LV,6.0,RB,144.8,raheem mostert,raheemmostert,2022,160.2,15.0
+Russell Gage Jr.,SF,9.0,WR,145.5,russell gage,russellgage,2022,113.1,12.0
+Kenneth Gainwell,PIT,9.0,RB,146.8,kenneth gainwell,kennethgainwell,2022,82.7,16.0
+DJ Chark Jr.,FA,0.0,WR,147.5,dj chark,djchark,2022,93.8,10.0
+Justin Fields,NYJ,10.0,QB,148.0,justin fields,justinfields,2022,296.0,15.0
+Los Angeles Chargers,DST,8.0,DST,148.8,los angeles chargers,losangeleschargers,2022,-1.0,-1.0
+Marquez Valdes-Scantling,SEA,11.0,WR,148.8,marquez valdes scantling,marquezvaldesscantling,2022,116.7,16.0
+Matt Prater,FA,0.0,K,151.0,matt prater,mattprater,2022,-1.0,-1.0
+Brian Robinson Jr.,WAS,14.0,RB,153.8,brian robinson,brianrobinson,2022,112.7,12.0
+Trevor Lawrence,JAC,11.0,QB,155.0,trevor lawrence,trevorlawrence,2022,285.4,16.0
+Tyler Higbee,LAR,7.0,TE,155.3,tyler higbee,tylerhigbee,2022,144.7,16.0
+Jarvis Landry ,FA,0.0,WR,157.3,jarvis landry,jarvislandry,2022,60.2,9.0
+Baltimore Ravens,DST,10.0,DST,159.8,baltimore ravens,baltimoreravens,2022,-1.0,-1.0
+DeVante Parker,FA,0.0,WR,161.5,devante parker,devanteparker,2022,77.0,12.0
+David Njoku,CLE,9.0,TE,161.8,david njoku,davidnjoku,2022,127.8,13.0
+Jakobi Meyers,LV,6.0,WR,162.3,jakobi meyers,jakobimeyers,2022,168.0,13.0
+Noah Fant,SEA,11.0,TE,164.3,noah fant,noahfant,2022,116.6,16.0
+J.D. McKissic ,FA,0.0,RB,165.3,jd mckissic,jdmckissic,2022,55.8,8.0
+New England Patriots,DST,10.0,DST,166.0,new england patriots,newenglandpatriots,2022,-1.0,-1.0
+Jameis Winston,NYG,9.0,QB,166.3,jameis winston,jameiswinston,2022,43.9,3.0
+Younghoe Koo,ATL,14.0,K,166.5,younghoe koo,younghoekoo,2022,-1.0,-1.0
+Jeff Wilson Jr.,FA,0.0,RB,167.0,jeff wilson,jeffwilson,2022,149.1,15.0
+Mecole Hardman Jr.,GB,14.0,WR,168.8,mecole hardman,mecolehardman,2022,93.8,8.0
+Denver Broncos,DST,9.0,DST,169.0,denver broncos,denverbroncos,2022,-1.0,-1.0
+Albert Okwuegbunam Jr.,IND,14.0,TE,169.3,albert okwuegbunam,albertokwuegbunam,2022,25.5,7.0
+Miami Dolphins,DST,11.0,DST,169.3,miami dolphins,miamidolphins,2022,-1.0,-1.0
+Jamaal Williams,FA,0.0,RB,170.0,jamaal williams,jamaalwilliams,2022,206.7,16.0
+Mason Crosby,FA,0.0,K,170.5,mason crosby,masoncrosby,2022,-1.0,-1.0
+Nick Folk,FA,0.0,K,172.0,nick folk,nickfolk,2022,-1.0,-1.0
+Matt Ryan,FA,0.0,QB,172.3,matt ryan,mattryan,2022,155.3,12.0
+Brandon McManus,GB,14.0,K,173.8,brandon mcmanus,brandonmcmanus,2022,-1.0,-1.0
+Jahan Dotson,PHI,7.0,WR,174.8,jahan dotson,jahandotson,2022,120.4,11.0
+Pittsburgh Steelers,DST,9.0,DST,174.8,pittsburgh steelers,pittsburghsteelers,2022,-1.0,-1.0
+Irv Smith Jr.,HOU,6.0,TE,175.8,irv smith,irvsmith,2022,50.8,7.0
+Romeo Doubs,GB,14.0,WR,176.3,romeo doubs,romeodoubs,2022,101.6,12.0
+Isaiah McKenzie,FA,0.0,WR,176.3,isaiah mckenzie,isaiahmckenzie,2022,115.9,14.0
+Mike Davis,FA,0.0,RB,177.0,mike davis,mikedavis,2022,4.2,8.0
+Robert Tonyan,KC,8.0,TE,177.8,robert tonyan,roberttonyan,2022,106.1,16.0
+Isiah Pacheco,KC,8.0,RB,178.0,isiah pacheco,isiahpacheco,2022,122.6,16.0
+Mark Ingram II ,FA,0.0,RB,179.0,mark ingram ii,markingramii,2022,50.3,10.0
+Ryan Succop,FA,0.0,K,179.0,ryan succop,ryansuccop,2022,-1.0,-1.0
+Khalil Herbert,IND,14.0,RB,181.3,khalil herbert,khalilherbert,2022,112.0,12.0
+Kansas City Chiefs,DST,8.0,DST,183.3,kansas city chiefs,kansascitychiefs,2022,-1.0,-1.0
+Ryan Tannehill ,FA,0.0,QB,185.3,ryan tannehill,ryantannehill,2022,161.2,12.0
+Tyler Allgeier,ATL,14.0,RB,186.3,tyler allgeier,tylerallgeier,2022,145.9,15.0
+Rondale Moore,MIN,7.0,WR,186.3,rondale moore,rondalemoore,2022,87.9,8.0
+Marlon Mack,FA,0.0,RB,187.5,marlon mack,marlonmack,2022,38.3,8.0
+Mac Jones,SF,9.0,QB,188.0,mac jones,macjones,2022,153.8,13.0
+Christian Watson,GB,14.0,WR,188.3,christian watson,christianwatson,2022,147.5,13.0
+Gerald Everett,FA,0.0,TE,189.3,gerald everett,geraldeverett,2022,129.7,15.0
+Ronald Jones,II,0.0,RB,191.0,ronald jones,ronaldjones,2022,5.7,5.0
+Darrel Williams,FA,0.0,RB,191.5,darrel williams,darrelwilliams,2022,21.1,6.0
+Chuba Hubbard,CAR,13.0,RB,193.0,chuba hubbard,chubahubbard,2022,80.8,14.0
+Rachaad White,TB,11.0,RB,193.0,rachaad white,rachaadwhite,2022,137.6,16.0
+Evan Engram,DEN,9.0,TE,193.8,evan engram,evanengram,2022,170.2,16.0
+Deshaun Watson,CLE,9.0,QB,194.5,deshaun watson,deshaunwatson,2022,68.0,5.0
+Baker Mayfield,TB,11.0,QB,195.3,baker mayfield,bakermayfield,2022,115.9,11.0
+Greg Joseph,SF,9.0,K,195.3,greg joseph,gregjoseph,2022,-1.0,-1.0
+Randy Bullock,FA,0.0,K,197.0,randy bullock,randybullock,2022,-1.0,-1.0
+Philadelphia Eagles,DST,7.0,DST,197.3,philadelphia eagles,philadelphiaeagles,2022,-1.0,-1.0
+Cleveland Browns,DST,9.0,DST,198.0,cleveland browns,clevelandbrowns,2022,-1.0,-1.0
+Isaiah Spiller,FA,0.0,RB,199.7,isaiah spiller,isaiahspiller,2022,8.4,6.0
+Myles Gaskin ,FA,0.0,RB,200.0,myles gaskin,mylesgaskin,2022,9.4,4.0
+Robbie Gould,FA,0.0,K,201.3,robbie gould,robbiegould,2022,-1.0,-1.0
+Zamir White,LV,6.0,RB,201.3,zamir white,zamirwhite,2022,6.6,13.0
+Odell Beckham Jr.,FA,0.0,WR,202.0,odell beckham,odellbeckham,2022,-1.0,-1.0
+Joshua Palmer,BUF,7.0,WR,202.3,joshua palmer,joshuapalmer,2022,159.4,15.0
+Jameson Williams,DET,6.0,WR,202.7,jameson williams,jamesonwilliams,2022,15.1,5.0
+Chris Boswell,PIT,9.0,K,202.7,chris boswell,chrisboswell,2022,-1.0,-1.0
+Matt Breida,FA,0.0,RB,205.0,matt breida,mattbreida,2022,48.8,16.0
+Hayden Hurst,FA,0.0,TE,206.0,hayden hurst,haydenhurst,2022,100.0,12.0
+Las Vegas Raiders,DST,6.0,DST,207.0,las vegas raiders,lasvegasraiders,2022,-1.0,-1.0
+Austin Seibert,FA,0.0,K,208.0,austin seibert,austinseibert,2022,-1.0,-1.0
+Logan Thomas,FA,0.0,TE,208.3,logan thomas,loganthomas,2022,73.7,13.0
+Carson Wentz,FA,0.0,QB,208.3,carson wentz,carsonwentz,2022,112.8,8.0
+Robbie Chosen,FA,0.0,WR,208.5,robbie chosen,robbiechosen,2022,-1.0,-1.0
+Austin Hooper,NE,10.0,TE,209.0,austin hooper,austinhooper,2022,89.6,16.0
+Jalen Tolbert,DAL,9.0,WR,210.3,jalen tolbert,jalentolbert,2022,3.2,8.0
+Kenny Golladay,FA,0.0,WR,210.5,kenny golladay,kennygolladay,2022,9.1,11.0
+Alec Pierce,IND,14.0,WR,211.3,alec pierce,alecpierce,2022,105.1,15.0
+Tyrion Davis-Price,TEN,6.0,RB,211.5,tyrion davis price,tyriondavisprice,2022,7.2,5.0
+Corey Davis,FA,0.0,WR,211.5,corey davis,coreydavis,2022,94.9,12.0
+Parris Campbell,DAL,9.0,WR,212.0,parris campbell,parriscampbell,2022,136.3,16.0
+A.J. Green,FA,0.0,WR,212.0,aj green,ajgreen,2022,43.5,14.0
+Wil Lutz,DEN,9.0,K,212.3,wil lutz,willutz,2022,-1.0,-1.0
+Marvin Jones Jr.,FA,0.0,WR,212.3,marvin jones,marvinjones,2022,112.0,15.0
+Nico Collins,HU,6.0,WR,213.8,nico collins,nicocollins,2022,97.1,10.0
+Daniel Jones,IND,14.0,QB,213.8,daniel jones,danieljones,2022,289.0,16.0
+Rodrigo Blankenship,FA,0.0,K,214.5,rodrigo blankenship,rodrigoblankenship,2022,-1.0,-1.0
+Graham Gano,NYG,9.0,K,214.5,graham gano,grahamgano,2022,-1.0,-1.0
+Jared Goff,DET,6.0,QB,214.8,jared goff,jaredgoff,2022,273.4,16.0
+C.J. Uzomah,FA,0.0,TE,215.0,cj uzomah,cjuzomah,2022,56.2,15.0
+Jerick McKinnon,FA,0.0,RB,216.3,jerick mckinnon,jerickmckinnon,2022,187.7,16.0
+Taysom Hill,NO,14.0,TE,216.5,taysom hill,taysomhill,2022,124.6,15.0
+Sammy Watkins,FA,0.0,WR,217.0,sammy watkins,sammywatkins,2022,38.6,11.0
+Dustin Hopkins,CLE,9.0,K,217.0,dustin hopkins,dustinhopkins,2022,-1.0,-1.0
+Van Jefferson,TEN,6.0,WR,217.3,van jefferson,vanjefferson,2022,69.8,10.0
+Jake Elliott,PHI,7.0,K,218.0,jake elliott,jakeelliott,2022,-1.0,-1.0
+D'Onta Foreman,FA,0.0,RB,219.0,donta foreman,dontaforeman,2022,124.2,16.0
+Jordan Mason,MIN,7.0,RB,220.0,jordan mason,jordanmason,2022,29.0,15.0
+Cincinnati Bengals,DST,10.0,DST,220.5,cincinnati bengals,cincinnatibengals,2022,-1.0,-1.0
+Isaiah Likely,BAL,10.0,TE,221.0,isaiah likely,isaiahlikely,2022,73.0,15.0
+Kenyan Drake,FA,0.0,RB,221.3,kenyan drake,kenyandrake,2022,88.2,11.0
+Tennessee Titans,DST,6.0,DST,222.0,tennessee titans,tennesseetitans,2022,-1.0,-1.0
+Brevin Jordan,HOU,6.0,TE,223.0,brevin jordan,brevinjordan,2022,26.8,10.0
+Minnesota Vikings,DST,7.0,DST,224.0,minnesota vikings,minnesotavikings,2022,-1.0,-1.0
+Randall Cobb,FA,0.0,WR,224.5,randall cobb,randallcobb,2022,78.6,12.0
+Wan'Dale Robinson,NYG,9.0,WR,224.7,wandale robinson,wandalerobinson,2022,51.6,6.0
+Eno Benjamin,FA,0.0,RB,225.0,eno benjamin,enobenjamin,2022,89.3,14.0
+Kenny Pickett,CLE,9.0,QB,225.3,kenny pickett,kennypickett,2022,136.0,12.0
+Dontrell Hilliard ,FA,0.0,RB,226.0,dontrell hilliard,dontrellhilliard,2022,77.2,12.0
+K.J. Osborn,WAS,14.0,WR,226.7,kj osborn,kjosborn,2022,138.9,16.0
+KJ Hamler,BUF,7.0,WR,229.0,kj hamler,kjhamler,2022,25.8,7.0
+Cairo Santos,CHI,14.0,K,230.0,cairo santos,cairosantos,2022,-1.0,-1.0
+Ke'Shawn Vaughn,FA,0.0,RB,230.0,keshawn vaughn,keshawnvaughn,2022,4.8,14.0
+Damien Williams,FA,0.0,RB,231.0,damien williams,damienwilliams,2022,0.2,1.0
+Washington Commanders,DST,14.0,DST,231.7,washington commanders,washingtoncommanders,2022,-1.0,-1.0
+Jimmy Garoppolo,LAR,7.0,QB,233.0,jimmy garoppolo,jimmygaroppolo,2022,164.8,11.0
+Arizona Cardinals,DST,13.0,DST,233.5,arizona cardinals,arizonacardinals,2022,-1.0,-1.0
+Cade York,FA,0.0,K,234.0,cade york,cadeyork,2022,-1.0,-1.0
+Rex Burkhead,FA,0.0,RB,234.3,rex burkhead,rexburkhead,2022,76.3,15.0
+Kendrick Bourne,NE,10.0,WR,235.0,kendrick bourne,kendrickbourne,2022,79.8,15.0
+Marcus Mariota,WAS,14.0,QB,235.5,marcus mariota,marcusmariota,2022,196.6,13.0
+Kyle Rudolph,FA,0.0,TE,237.7,kyle rudolph,kylerudolph,2022,4.0,8.0
+Brett Maher,FA,0.0,K,238.0,brett maher,brettmaher,2022,-1.0,-1.0
+Zach Wilson,MIA,11.0,QB,239.0,zach wilson,zachwilson,2022,91.7,9.0
+Sony Michel,FA,0.0,RB,240.0,sony michel,sonymichel,2022,24.9,10.0
+Cameron Brate,FA,0.0,TE,240.0,cameron brate,cameronbrate,2022,37.4,10.0
+Ameer Abdullah,FA,0.0,RB,242.5,ameer abdullah,ameerabdullah,2022,52.1,16.0
+David Bell,CLE,9.0,WR,243.0,david bell,davidbell,2022,45.4,15.0
+Jason Myers,SEA,11.0,K,244.0,jason myers,jasonmyers,2022,-1.0,-1.0
+Joshua Kelley,FA,0.0,RB,244.0,joshua kelley,joshuakelley,2022,61.4,12.0
+Jason Sanders,MIA,11.0,K,244.0,jason sanders,jasonsanders,2022,-1.0,-1.0
+Mitchell Trubisky,BUF,7.0,QB,244.3,mitchell trubisky,mitchelltrubisky,2022,-1.0,-1.0
+DeAndre Torrey,FA,0.0,RB,247.0,deandre torrey,deandretorrey,2022,-1.0,-1.0
+Gus Edwards,FA,0.0,RB,247.0,gus edwards,gusedwards,2022,57.7,8.0
+Chicago Bears,DST,14.0,DST,247.5,chicago bears,chicagobears,2022,-1.0,-1.0
+Jake Powell,FA,0.0,TE,248.0,jake powell,jakepowell,2022,-1.0,-1.0
+Mo Alie-Cox,IND,14.0,TE,248.0,mo alie cox,moaliecox,2022,46.5,16.0
+Anthony Johnson,FA,0.0,DT,249.0,anthony johnson,anthonyjohnson,2022,-1.0,-1.0
+Samaje Perine,CIN,10.0,RB,249.5,samaje perine,samajeperine,2022,138.9,15.0
+Davis Mills,HOU,6.0,QB,250.0,davis mills,davismills,2022,159.0,14.0
+Tyler Conklin,LAC,8.0,TE,250.0,tyler conklin,tylerconklin,2022,128.2,16.0
+Collin Hill,FA,0.0,QB,250.0,collin hill,collinhill,2022,-1.0,-1.0
+Hassan Haskins,LAC,8.0,RB,250.5,hassan haskins,hassanhaskins,2022,22.4,14.0
+Chad Muma,JAC,11.0,LB,251.0,chad muma,chadmuma,2022,-1.0,-1.0
+Carolina Panthers,DST,13.0,DST,251.0,carolina panthers,carolinapanthers,2022,-1.0,-1.0
+Braxton Berrios,HOU,6.0,WR,252.0,braxton berrios,braxtonberrios,2022,53.6,16.0
+Ben Johnson,FA,0.0,OT,252.0,ben johnson,benjohnson,2022,-1.0,-1.0
+Kyle Juszczyk,SF,9.0,RB,253.0,kyle juszczyk,kylejuszczyk,2022,49.7,15.0
+Austin Walter,FA,0.0,RB,253.0,austin walter,austinwalter,2022,-1.0,-1.0
+Jamison Crowder,FA,0.0,WR,253.5,jamison crowder,jamisoncrowder,2022,12.0,4.0
+Donovan Peoples-Jones,NO,14.0,WR,253.7,donovan peoples jones,donovanpeoplesjones,2022,154.9,16.0
+Kayvon Thibodeaux,NYG,9.0,DE,254.0,kayvon thibodeaux,kayvonthibodeaux,2022,-1.0,-1.0
+Zay Jones,ARI,13.0,WR,254.0,zay jones,zayjones,2022,192.0,15.0
+Karan Higdon,FA,0.0,RB,255.0,karan higdon,karanhigdon,2022,-1.0,-1.0
+Jordan Johnson,FA,0.0,RB,256.0,jordan johnson,jordanjohnson,2022,-1.0,-1.0
+Seattle Seahawks,DST,11.0,DST,256.0,seattle seahawks,seattleseahawks,2022,-1.0,-1.0
+Zack Moss,CIN,10.0,RB,256.5,zack moss,zackmoss,2022,43.4,12.0
+Stephen Baggett,FA,0.0,TE,257.0,stephen baggett,stephenbaggett,2022,-1.0,-1.0
+Jaylen Warren,PIT,9.0,RB,258.0,jaylen warren,jaylenwarren,2022,86.0,15.0
+Alex Barnes,FA,0.0,RB,258.0,alex barnes,alexbarnes,2022,-1.0,-1.0
+Zach Olstad,FA,0.0,RB,259.0,zach olstad,zacholstad,2022,-1.0,-1.0
+Detroit Lions,DST,6.0,DST,259.0,detroit lions,detroitlions,2022,-1.0,-1.0
+Temarrick Hemingway,FA,0.0,TE,260.0,temarrick hemingway,temarrickhemingway,2022,-1.0,-1.0
+Jerome Washington,FA,0.0,TE,261.0,jerome washington,jeromewashington,2022,-1.0,-1.0
+Stephon Robinson Jr.,FA,0.0,WR,262.0,stephon robinson,stephonrobinson,2022,-1.0,-1.0
+Boston Scott,FA,0.0,RB,262.0,boston scott,bostonscott,2022,34.8,14.0
+New York Giants,DST,9.0,DST,262.0,new york giants,newyorkgiants,2022,-1.0,-1.0
+Nick Bawden,FA,0.0,RB,263.0,nick bawden,nickbawden,2022,-1.0,-1.0
+Curtis Samuel,BUF,7.0,WR,263.3,curtis samuel,curtissamuel,2022,175.9,16.0
+Michael Jacobson,NO,14.0,TE,264.0,michael jacobson,michaeljacobson,2022,-1.0,-1.0
+Jamel Johnson,FA,0.0,WR,265.0,jamel johnson,jameljohnson,2022,-1.0,-1.0
+Brandon Barnes,FA,0.0,TE,266.0,brandon barnes,brandonbarnes,2022,-1.0,-1.0
+D'Ernest Johnson,FA,0.0,RB,266.5,dernest johnson,dernestjohnson,2022,5.4,14.0
+Drew Anderson,FA,0.0,QB,267.0,drew anderson,drewanderson,2022,-1.0,-1.0
+Zach Conque,FA,0.0,QB,268.0,zach conque,zachconque,2022,-1.0,-1.0
+Marquez Callaway,FA,0.0,WR,268.0,marquez callaway,marquezcallaway,2022,37.8,13.0
+Bobby Wagner,WAS,14.0,LB,269.0,bobby wagner,bobbywagner,2022,-1.0,-1.0
+Kendrick Rogers,FA,0.0,WR,270.0,kendrick rogers,kendrickrogers,2022,-1.0,-1.0
+Taywan Taylor,FA,0.0,WR,271.0,taywan taylor,taywantaylor,2022,-1.0,-1.0
+New York Jets,DST,10.0,DST,272.0,new york jets,newyorkjets,2022,-1.0,-1.0
+Kyle Lewis,FA,0.0,WR,272.0,kyle lewis,kylelewis,2022,-1.0,-1.0
+Ryan Davis,FA,0.0,DE,273.0,ryan davis,ryandavis,2022,-1.0,-1.0
+Jonnu Smith,MIA,11.0,TE,273.0,jonnu smith,jonnusmith,2022,52.0,14.0
+Papi White,FA,0.0,WR,274.0,papi white,papiwhite,2022,-1.0,-1.0
+Laviska Shenault Jr.,BUF,7.0,WR,275.0,laviska shenault,laviskashenault,2022,70.8,12.0
+Krishawn Hogan,FA,0.0,WR,276.0,krishawn hogan,krishawnhogan,2022,-1.0,-1.0
+Houston Texans,DST,6.0,DST,276.0,houston texans,houstontexans,2022,-1.0,-1.0
+Brogan Roback,FA,0.0,QB,277.0,brogan roback,broganroback,2022,-1.0,-1.0
+Cedrick Wilson Jr.,NO,14.0,WR,278.0,cedrick wilson,cedrickwilson,2022,26.4,15.0
+Cole Hunt,FA,0.0,TE,278.0,cole hunt,colehunt,2022,-1.0,-1.0
+David Watford,FA,0.0,WR,279.0,david watford,davidwatford,2022,-1.0,-1.0
+Chris Evans,FA,0.0,RB,280.0,chris evans,chrisevans,2022,12.8,12.0
+Zaire Mitchell-Paden,BAL,10.0,TE,280.0,zaire mitchell paden,zairemitchellpaden,2022,-1.0,-1.0
+Josh Smith,FA,0.0,WR,281.0,josh smith,joshsmith,2022,-1.0,-1.0
+Brandon Bolden,FA,0.0,RB,281.0,brandon bolden,brandonbolden,2022,27.3,15.0
+Sterling Shepard,TB,11.0,WR,281.5,sterling shepard,sterlingshepard,2022,34.4,3.0
+Nelson Agholor,FA,0.0,WR,283.0,nelson agholor,nelsonagholor,2022,75.2,15.0
+Foster Moreau,NO,14.0,TE,284.0,foster moreau,fostermoreau,2022,83.2,14.0
+Quez Watkins,ARI,13.0,WR,287.0,quez watkins,quezwatkins,2022,81.1,16.0
+J.J. Taylor,HOU,6.0,RB,288.0,jj taylor,jjtaylor,2022,2.7,1.0
+Byron Pringle,FA,0.0,WR,289.0,byron pringle,byronpringle,2022,34.0,10.0
+Jacksonville Jaguars,DST,11.0,DST,290.0,jacksonville jaguars,jacksonvillejaguars,2022,-1.0,-1.0
+Drew Lock,SEA,11.0,QB,291.0,drew lock,drewlock,2022,-1.0,-1.0
+Jauan Jennings,SF,9.0,WR,293.0,jauan jennings,jauanjennings,2022,80.6,15.0
+DeeJay Dallas,ARI,13.0,RB,294.0,deejay dallas,deejaydallas,2022,44.6,14.0
+Ka'imi Fairbairn,HOU,6.0,K,295.0,kaimi fairbairn,kaimifairbairn,2022,-1.0,-1.0
+Trey Sermon,PIT,9.0,RB,296.0,trey sermon,treysermon,2022,1.9,2.0
+Malik Willis,GB,14.0,QB,297.0,malik willis,malikwillis,2022,19.3,8.0
+Joey Slye,TEN,6.0,K,299.0,joey slye,joeyslye,2022,-1.0,-1.0
+O.J. Howard,FA,0.0,TE,300.0,oj howard,ojhoward,2022,36.5,13.0

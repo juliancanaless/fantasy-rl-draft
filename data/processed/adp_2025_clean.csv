@@ -1,0 +1,394 @@
+name,team,bye_week,position,adp,name_normalized,match_key,year
+Ja'Marr Chase,CIN,10.0,WR,1.0,jamarr chase,jamarrchase,2025
+Justin Jefferson,MIN,6.0,WR,2.5,justin jefferson,justinjefferson,2025
+Saquon Barkley,PHI,9.0,RB,3.0,saquon barkley,saquonbarkley,2025
+Bijan Robinson,ATL,5.0,RB,3.5,bijan robinson,bijanrobinson,2025
+CeeDee Lamb,DAL,10.0,WR,5.0,ceedee lamb,ceedeelamb,2025
+Jahmyr Gibbs,DET,8.0,RB,6.0,jahmyr gibbs,jahmyrgibbs,2025
+Puka Nacua,LAR,8.0,WR,7.5,puka nacua,pukanacua,2025
+Malik Nabers,NYG,14.0,WR,8.0,malik nabers,maliknabers,2025
+Christian McCaffrey,SF,14.0,RB,8.5,christian mccaffrey,christianmccaffrey,2025
+Nico Collins,HOU,6.0,WR,11.0,nico collins,nicocollins,2025
+Amon-Ra St. Brown,DET,8.0,WR,11.0,amon ra st brown,amonrastbrown,2025
+Ashton Jeanty,LV,8.0,RB,11.0,ashton jeanty,ashtonjeanty,2025
+Brian Thomas Jr.,JAC,8.0,WR,13.0,brian thomas,brianthomas,2025
+Derrick Henry,BAL,7.0,RB,14.5,derrick henry,derrickhenry,2025
+Drake London,ATL,5.0,WR,14.5,drake london,drakelondon,2025
+De'Von Achane,MIA,12.0,RB,16.5,devon achane,devonachane,2025
+A.J. Brown,PHI,9.0,WR,16.5,aj brown,ajbrown,2025
+Ladd McConkey,LAC,12.0,WR,18.5,ladd mcconkey,laddmcconkey,2025
+Brock Bowers,LV,8.0,TE,18.5,brock bowers,brockbowers,2025
+Jonathan Taylor,IND,11.0,RB,20.5,jonathan taylor,jonathantaylor,2025
+Rashee Rice,KC,10.0,WR,21.0,rashee rice,rasheerice,2025
+Bucky Irving,TB,9.0,RB,22.5,bucky irving,buckyirving,2025
+Tee Higgins,CIN,10.0,WR,23.0,tee higgins,teehiggins,2025
+Garrett Wilson,NYJ,9.0,WR,24.0,garrett wilson,garrettwilson,2025
+Trey McBride,ARI,8.0,TE,25.5,trey mcbride,treymcbride,2025
+Josh Jacobs,GB,5.0,RB,26.5,josh jacobs,joshjacobs,2025
+Marvin Harrison Jr.,ARI,8.0,WR,27.0,marvin harrison,marvinharrison,2025
+Davante Adams,LAR,8.0,WR,28.0,davante adams,davanteadams,2025
+Chase Brown,CIN,10.0,RB,28.0,chase brown,chasebrown,2025
+Tyreek Hill,MIA,12.0,WR,30.0,tyreek hill,tyreekhill,2025
+Jaxon Smith-Njigba,SEA,8.0,WR,31.0,jaxon smith njigba,jaxonsmithnjigba,2025
+Terry McLaurin,WAS,12.0,WR,32.0,terry mclaurin,terrymclaurin,2025
+Kyren Williams,LAR,8.0,RB,34.0,kyren williams,kyrenwilliams,2025
+Breece Hall,NYJ,9.0,RB,34.0,breece hall,breecehall,2025
+Josh Allen,BUF,7.0,QB,35.0,josh allen,joshallen,2025
+Lamar Jackson,BAL,7.0,QB,35.0,lamar jackson,lamarjackson,2025
+Mike Evans,TB,9.0,WR,36.0,mike evans,mikeevans,2025
+Tetairoa McMillan,CAR,14.0,WR,38.0,tetairoa mcmillan,tetairoamcmillan,2025
+Jayden Daniels,WAS,12.0,QB,40.0,jayden daniels,jaydendaniels,2025
+DJ Moore,CHI,5.0,WR,40.5,dj moore,djmoore,2025
+Xavier Worthy,KC,10.0,WR,40.5,xavier worthy,xavierworthy,2025
+Jameson Williams,DET,8.0,WR,43.0,jameson williams,jamesonwilliams,2025
+James Cook,BUF,7.0,RB,43.0,james cook,jamescook,2025
+DK Metcalf,PIT,5.0,WR,44.0,dk metcalf,dkmetcalf,2025
+George Kittle,SF,14.0,TE,44.0,george kittle,georgekittle,2025
+DeVonta Smith,PHI,9.0,WR,46.0,devonta smith,devontasmith,2025
+Omarion Hampton,LAC,12.0,RB,47.5,omarion hampton,omarionhampton,2025
+Jalen Hurts,PHI,9.0,QB,48.0,jalen hurts,jalenhurts,2025
+Courtland Sutton,DEN,12.0,WR,48.5,courtland sutton,courtlandsutton,2025
+Travis Hunter,JAC,8.0,WR,50.5,travis hunter,travishunter,2025
+George Pickens,DAL,10.0,WR,50.5,george pickens,georgepickens,2025
+Zay Flowers,BAL,7.0,WR,52.0,zay flowers,zayflowers,2025
+Chuba Hubbard,CAR,14.0,RB,53.5,chuba hubbard,chubahubbard,2025
+Kenneth Walker III,SEA,8.0,RB,54.0,kenneth walker,kennethwalker,2025
+Calvin Ridley,TEN,10.0,WR,55.0,calvin ridley,calvinridley,2025
+Jaylen Waddle,MIA,12.0,WR,55.5,jaylen waddle,jaylenwaddle,2025
+Alvin Kamara,NO,11.0,RB,57.0,alvin kamara,alvinkamara,2025
+Joe Mixon,HOU,6.0,RB,58.0,joe mixon,joemixon,2025
+Joe Burrow,CIN,10.0,QB,58.5,joe burrow,joeburrow,2025
+Jauan Jennings,SF,14.0,WR,61.0,jauan jennings,jauanjennings,2025
+RJ Harvey,DEN,12.0,RB,62.0,rj harvey,rjharvey,2025
+Chris Godwin,TB,9.0,WR,62.5,chris godwin,chrisgodwin,2025
+Rome Odunze,CHI,5.0,WR,64.0,rome odunze,romeodunze,2025
+James Conner,ARI,8.0,RB,64.5,james conner,jamesconner,2025
+Chris Olave,NO,11.0,WR,64.5,chris olave,chrisolave,2025
+TreVeyon Henderson,NE,14.0,RB,65.5,treveyon henderson,treveyonhenderson,2025
+Jordan Addison,MIN,6.0,WR,66.0,jordan addison,jordanaddison,2025
+Jerry Jeudy,CLE,9.0,WR,66.5,jerry jeudy,jerryjeudy,2025
+Deebo Samuel Sr.,WAS,12.0,WR,68.5,deebo samuel,deebosamuel,2025
+Jakobi Meyers,LV,8.0,WR,70.0,jakobi meyers,jakobimeyers,2025
+David Montgomery,DET,8.0,RB,71.5,david montgomery,davidmontgomery,2025
+Ricky Pearsall,SF,14.0,WR,73.0,ricky pearsall,rickypearsall,2025
+Sam LaPorta,DET,8.0,TE,73.0,sam laporta,samlaporta,2025
+D'Andre Swift,CHI,5.0,RB,73.5,dandre swift,dandreswift,2025
+Quinshon Judkins,CLE,9.0,RB,76.0,quinshon judkins,quinshonjudkins,2025
+Kaleb Johnson,PIT,5.0,RB,76.0,kaleb johnson,kalebjohnson,2025
+Khalil Shakir,BUF,7.0,WR,77.0,khalil shakir,khalilshakir,2025
+Stefon Diggs,NE,14.0,WR,78.0,stefon diggs,stefondiggs,2025
+Matthew Golden,GB,5.0,WR,78.5,matthew golden,matthewgolden,2025
+Jayden Reed,GB,5.0,WR,80.0,jayden reed,jaydenreed,2025
+Tony Pollard,TEN,10.0,RB,81.5,tony pollard,tonypollard,2025
+Josh Downs,IND,11.0,WR,82.0,josh downs,joshdowns,2025
+Isiah Pacheco,KC,10.0,RB,82.5,isiah pacheco,isiahpacheco,2025
+Aaron Jones Sr.,MIN,6.0,RB,83.0,aaron jones,aaronjones,2025
+Patrick Mahomes II,KC,10.0,QB,84.5,patrick mahomes,patrickmahomes,2025
+Darnell Mooney,ATL,5.0,WR,86.5,darnell mooney,darnellmooney,2025
+Brian Robinson Jr.,WAS,12.0,RB,88.0,brian robinson,brianrobinson,2025
+T.J. Hockenson,MIN,6.0,TE,88.0,tj hockenson,tjhockenson,2025
+Cooper Kupp,SEA,8.0,WR,89.5,cooper kupp,cooperkupp,2025
+Baker Mayfield,TB,9.0,QB,90.5,baker mayfield,bakermayfield,2025
+Brandon Aiyuk,SF,14.0,WR,91.0,brandon aiyuk,brandonaiyuk,2025
+Michael Pittman Jr.,IND,11.0,WR,92.0,michael pittman,michaelpittman,2025
+Jordan Mason,MIN,6.0,RB,94.5,jordan mason,jordanmason,2025
+Kyler Murray,ARI,8.0,QB,95.0,kyler murray,kylermurray,2025
+Emeka Egbuka,TB,9.0,WR,95.0,emeka egbuka,emekaegbuka,2025
+Travis Kelce,KC,10.0,TE,95.5,travis kelce,traviskelce,2025
+Justin Fields,NYJ,9.0,QB,96.0,justin fields,justinfields,2025
+Jaylen Warren,PIT,5.0,RB,96.0,jaylen warren,jaylenwarren,2025
+Jayden Higgins,HOU,6.0,WR,98.5,jayden higgins,jaydenhiggins,2025
+Bo Nix,DEN,12.0,QB,98.5,bo nix,bonix,2025
+Keon Coleman,BUF,7.0,WR,101.5,keon coleman,keoncoleman,2025
+Brock Purdy,SF,14.0,QB,102.5,brock purdy,brockpurdy,2025
+Evan Engram,DEN,12.0,TE,104.5,evan engram,evanengram,2025
+Tre Harris,LAC,12.0,WR,105.0,tre harris,treharris,2025
+Travis Etienne Jr.,JAC,8.0,RB,105.5,travis etienne,travisetienne,2025
+Mark Andrews,BAL,7.0,TE,107.0,mark andrews,markandrews,2025
+Rashid Shaheed,NO,11.0,WR,107.5,rashid shaheed,rashidshaheed,2025
+Najee Harris,LAC,12.0,RB,107.5,najee harris,najeeharris,2025
+Tyrone Tracy Jr.,NYG,14.0,RB,108.5,tyrone tracy,tyronetracy,2025
+Cam Skattebo,NYG,14.0,RB,109.5,cam skattebo,camskattebo,2025
+Caleb Williams,CHI,5.0,QB,110.0,caleb williams,calebwilliams,2025
+Rashod Bateman,BAL,7.0,WR,110.5,rashod bateman,rashodbateman,2025
+Zach Charbonnet,SEA,8.0,RB,112.5,zach charbonnet,zachcharbonnet,2025
+Jonnu Smith,MIA,12.0,TE,114.5,jonnu smith,jonnusmith,2025
+Dak Prescott,DAL,10.0,QB,115.0,dak prescott,dakprescott,2025
+Jared Goff,DET,8.0,QB,117.0,jared goff,jaredgoff,2025
+Drake Maye,NE,14.0,QB,118.0,drake maye,drakemaye,2025
+Luther Burden III,CHI,5.0,WR,120.0,luther burden,lutherburden,2025
+Javonte Williams,DAL,10.0,RB,120.5,javonte williams,javontewilliams,2025
+Rhamondre Stevenson,NE,14.0,RB,121.5,rhamondre stevenson,rhamondrestevenson,2025
+Christian Kirk,HOU,6.0,WR,121.5,christian kirk,christiankirk,2025
+David Njoku,CLE,9.0,TE,122.0,david njoku,davidnjoku,2025
+Kyle Williams,NE,14.0,WR,122.5,kyle williams,kylewilliams,2025
+Justin Herbert,LAC,12.0,QB,124.5,justin herbert,justinherbert,2025
+J.J. McCarthy,MIN,6.0,QB,125.5,jj mccarthy,jjmccarthy,2025
+Tyler Warren,IND,11.0,TE,126.0,tyler warren,tylerwarren,2025
+J.K. Dobbins,DEN,12.0,RB,126.5,jk dobbins,jkdobbins,2025
+Marvin Mims Jr.,DEN,12.0,WR,127.0,marvin mims,marvinmims,2025
+Tyjae Spears,TEN,10.0,RB,127.5,tyjae spears,tyjaespears,2025
+Jordan Love,GB,5.0,QB,127.5,jordan love,jordanlove,2025
+Bhayshul Tuten,JAC,8.0,RB,129.0,bhayshul tuten,bhayshultuten,2025
+Trevor Lawrence,JAC,8.0,QB,133.5,trevor lawrence,trevorlawrence,2025
+Marquise Brown,KC,10.0,WR,134.0,marquise brown,marquisebrown,2025
+Tucker Kraft,GB,5.0,TE,134.0,tucker kraft,tuckerkraft,2025
+C.J. Stroud,HOU,6.0,QB,135.0,cj stroud,cjstroud,2025
+Ray Davis,BUF,7.0,RB,136.0,ray davis,raydavis,2025
+Colston Loveland,CHI,5.0,TE,137.0,colston loveland,colstonloveland,2025
+Jaydon Blue,DAL,10.0,RB,138.0,jaydon blue,jaydonblue,2025
+Trey Benson,ARI,8.0,RB,140.0,trey benson,treybenson,2025
+Dallas Goedert,PHI,9.0,TE,140.5,dallas goedert,dallasgoedert,2025
+Rachaad White,TB,9.0,RB,141.0,rachaad white,rachaadwhite,2025
+Dalton Kincaid,BUF,7.0,TE,141.0,dalton kincaid,daltonkincaid,2025
+Michael Penix Jr.,ATL,5.0,QB,144.5,michael penix,michaelpenix,2025
+Cedric Tillman,CLE,9.0,WR,145.0,cedric tillman,cedrictillman,2025
+Isaac Guerendo,SF,14.0,RB,145.5,isaac guerendo,isaacguerendo,2025
+Isaiah Likely,BAL,7.0,TE,146.5,isaiah likely,isaiahlikely,2025
+Jake Ferguson,DAL,10.0,TE,148.5,jake ferguson,jakeferguson,2025
+Tua Tagovailoa,MIA,12.0,QB,149.0,tua tagovailoa,tuatagovailoa,2025
+Quentin Johnston,LAC,12.0,WR,149.5,quentin johnston,quentinjohnston,2025
+Jack Bech,LV,8.0,WR,149.5,jack bech,jackbech,2025
+Austin Ekeler,WAS,12.0,RB,150.0,austin ekeler,austinekeler,2025
+Bryce Young,CAR,14.0,QB,152.5,bryce young,bryceyoung,2025
+Tyler Allgeier,ATL,5.0,RB,153.5,tyler allgeier,tylerallgeier,2025
+Romeo Doubs,GB,5.0,WR,155.5,romeo doubs,romeodoubs,2025
+Adam Thielen,CAR,14.0,WR,157.0,adam thielen,adamthielen,2025
+Jalen McMillan,TB,9.0,WR,158.0,jalen mcmillan,jalenmcmillan,2025
+Geno Smith,LV,8.0,QB,158.0,geno smith,genosmith,2025
+Joshua Palmer,BUF,7.0,WR,158.5,joshua palmer,joshuapalmer,2025
+Tank Bigsby,JAC,8.0,RB,159.0,tank bigsby,tankbigsby,2025
+Xavier Legette,CAR,14.0,WR,159.0,xavier legette,xavierlegette,2025
+Kyle Pitts,ATL,5.0,TE,160.0,kyle pitts,kylepitts,2025
+Matthew Stafford,LAR,8.0,QB,160.0,matthew stafford,matthewstafford,2025
+Pat Bryant,DEN,12.0,WR,160.5,pat bryant,patbryant,2025
+Cameron Ward,TEN,10.0,QB,162.0,cameron ward,cameronward,2025
+Roschon Johnson,CHI,5.0,RB,162.0,roschon johnson,roschonjohnson,2025
+Brenton Strange,JAC,8.0,TE,165.0,brenton strange,brentonstrange,2025
+Pat Freiermuth,PIT,5.0,TE,167.5,pat freiermuth,patfreiermuth,2025
+Wan'Dale Robinson,NYG,14.0,WR,167.5,wandale robinson,wandalerobinson,2025
+Hunter Henry,NE,14.0,TE,168.0,hunter henry,hunterhenry,2025
+Jaylen Wright,MIA,12.0,RB,168.0,jaylen wright,jaylenwright,2025
+Braelon Allen,NYJ,9.0,RB,170.5,braelon allen,braelonallen,2025
+Zach Ertz,WAS,12.0,TE,172.0,zach ertz,zachertz,2025
+Rico Dowdle,CAR,14.0,RB,172.5,rico dowdle,ricodowdle,2025
+DeMario Douglas,NE,14.0,WR,175.0,demario douglas,demariodouglas,2025
+Sam Darnold,SEA,8.0,QB,175.5,sam darnold,samdarnold,2025
+Mike Gesicki,CIN,10.0,TE,176.5,mike gesicki,mikegesicki,2025
+Alec Pierce,IND,11.0,WR,177.0,alec pierce,alecpierce,2025
+Will Shipley,PHI,9.0,RB,178.5,will shipley,willshipley,2025
+Nick Chubb,HOU,6.0,RB,180.0,nick chubb,nickchubb,2025
+Jaylin Noel,HOU,6.0,WR,180.0,jaylin noel,jaylinnoel,2025
+Aaron Rodgers,PIT,5.0,QB,181.0,aaron rodgers,aaronrodgers,2025
+Justice Hill,BAL,7.0,RB,184.0,justice hill,justicehill,2025
+Cade Otton,TB,9.0,TE,184.0,cade otton,cadeotton,2025
+Dyami Brown,JAC,8.0,WR,185.0,dyami brown,dyamibrown,2025
+Miles Sanders,DAL,10.0,RB,185.0,miles sanders,milessanders,2025
+Michael Wilson,ARI,8.0,WR,185.5,michael wilson,michaelwilson,2025
+Keenan Allen,FA,0.0,WR,185.5,keenan allen,keenanallen,2025
+Mason Taylor,NYJ,9.0,TE,186.0,mason taylor,masontaylor,2025
+DeAndre Hopkins,BAL,7.0,WR,188.0,deandre hopkins,deandrehopkins,2025
+Chig Okonkwo,TEN,10.0,TE,191.5,chig okonkwo,chigokonkwo,2025
+Jarquez Hunter,LAR,8.0,RB,192.5,jarquez hunter,jarquezhunter,2025
+Daniel Jones,IND,11.0,QB,192.5,daniel jones,danieljones,2025
+DJ Giddens,IND,11.0,RB,192.5,dj giddens,djgiddens,2025
+Calvin Austin III,PIT,5.0,WR,193.5,calvin austin,calvinaustin,2025
+Dont'e Thornton Jr.,LV,8.0,WR,194.0,donte thornton,dontethornton,2025
+Darius Slayton,NYG,14.0,WR,194.0,darius slayton,dariusslayton,2025
+Dalton Schultz,HOU,6.0,TE,196.5,dalton schultz,daltonschultz,2025
+MarShawn Lloyd,GB,5.0,RB,196.5,marshawn lloyd,marshawnlloyd,2025
+Andrei Iosivas,CIN,10.0,WR,199.0,andrei iosivas,andreiiosivas,2025
+Juwan Johnson,NO,11.0,TE,201.5,juwan johnson,juwanjohnson,2025
+Dylan Sampson,CLE,9.0,RB,202.5,dylan sampson,dylansampson,2025
+Anthony Richardson Sr.,IND,11.0,QB,203.0,anthony richardson,anthonyrichardson,2025
+Jalen Coker,CAR,14.0,WR,203.0,jalen coker,jalencoker,2025
+Brashard Smith,KC,10.0,RB,206.0,brashard smith,brashardsmith,2025
+Tyler Shough,NO,11.0,QB,206.5,tyler shough,tylershough,2025
+Ja'Tavion Sanders,CAR,14.0,TE,207.5,jatavion sanders,jatavionsanders,2025
+Tutu Atwell,LAR,8.0,WR,208.0,tutu atwell,tutuatwell,2025
+Jerome Ford,CLE,9.0,RB,208.0,jerome ford,jeromeford,2025
+Keaton Mitchell,BAL,7.0,RB,208.0,keaton mitchell,keatonmitchell,2025
+Kareem Hunt,KC,10.0,RB,210.5,kareem hunt,kareemhunt,2025
+Blake Corum,LAR,8.0,RB,211.5,blake corum,blakecorum,2025
+Tyler Lockett,TEN,10.0,WR,211.5,tyler lockett,tylerlockett,2025
+Theo Johnson,NYG,14.0,TE,212.5,theo johnson,theojohnson,2025
+Dontayvion Wicks,GB,5.0,WR,214.5,dontayvion wicks,dontayvionwicks,2025
+Russell Wilson,NYG,14.0,QB,214.5,russell wilson,russellwilson,2025
+Jaxson Dart,NYG,14.0,QB,216.5,jaxson dart,jaxsondart,2025
+Adonai Mitchell,IND,11.0,WR,216.5,adonai mitchell,adonaimitchell,2025
+Raheem Mostert,LV,8.0,RB,218.5,raheem mostert,raheemmostert,2025
+Elic Ayomanor,TEN,10.0,WR,219.0,elic ayomanor,elicayomanor,2025
+Tahj Brooks,CIN,10.0,RB,221.5,tahj brooks,tahjbrooks,2025
+Ray-Ray McCloud III,ATL,5.0,WR,221.5,ray ray mccloud,rayraymccloud,2025
+Terrance Ferguson,LAR,8.0,TE,224.5,terrance ferguson,terranceferguson,2025
+Roman Wilson,PIT,5.0,WR,225.0,roman wilson,romanwilson,2025
+Amari Cooper,FA,0.0,WR,225.5,amari cooper,amaricooper,2025
+Elijah Arroyo,SEA,8.0,TE,226.5,elijah arroyo,elijaharroyo,2025
+Elijah Moore,BUF,7.0,WR,228.0,elijah moore,elijahmoore,2025
+Diontae Johnson,CLE,9.0,WR,228.5,diontae johnson,diontaejohnson,2025
+Kyle Monangai,CHI,5.0,RB,228.5,kyle monangai,kylemonangai,2025
+Tyler Conklin,LAC,12.0,TE,231.5,tyler conklin,tylerconklin,2025
+Jalen Tolbert,DAL,10.0,WR,231.5,jalen tolbert,jalentolbert,2025
+Isaac TeSlaa,DET,8.0,WR,232.5,isaac teslaa,isaacteslaa,2025
+Tyler Higbee,LAR,8.0,TE,233.5,tyler higbee,tylerhigbee,2025
+Devin Neal,NO,11.0,RB,235.0,devin neal,devinneal,2025
+Jalen Royals,KC,10.0,WR,237.0,jalen royals,jalenroyals,2025
+Sean Tucker,TB,9.0,RB,239.0,sean tucker,seantucker,2025
+Taysom Hill,NO,11.0,TE,239.0,taysom hill,taysomhill,2025
+Noah Gray,KC,10.0,TE,239.5,noah gray,noahgray,2025
+Jacory Croskey-Merritt,WAS,12.0,RB,242.5,jacory croskey merritt,jacorycroskeymerritt,2025
+Shedeur Sanders,CLE,9.0,QB,245.5,shedeur sanders,shedeursanders,2025
+Tre Tucker,LV,8.0,WR,247.0,tre tucker,tretucker,2025
+Tory Horton,SEA,8.0,WR,248.0,tory horton,toryhorton,2025
+Marquez Valdes-Scantling,SEA,8.0,WR,250.0,marquez valdes scantling,marquezvaldesscantling,2025
+Josh Reynolds,NYJ,9.0,WR,250.0,josh reynolds,joshreynolds,2025
+Joe Flacco,CLE,9.0,QB,250.5,joe flacco,joeflacco,2025
+Ty Johnson,BUF,7.0,RB,252.0,ty johnson,tyjohnson,2025
+Cole Kmet,CHI,5.0,TE,252.0,cole kmet,colekmet,2025
+Demarcus Robinson,SF,14.0,WR,253.0,demarcus robinson,demarcusrobinson,2025
+Ben Sinnott,WAS,12.0,TE,253.5,ben sinnott,bensinnott,2025
+Troy Franklin,DEN,12.0,WR,253.5,troy franklin,troyfranklin,2025
+Will Dissly,LAC,12.0,TE,254.0,will dissly,willdissly,2025
+Oronde Gadsden II,LAC,12.0,TE,254.0,oronde gadsden,orondegadsden,2025
+Jordan James,SF,14.0,RB,254.5,jordan james,jordanjames,2025
+KaVontae Turpin,DAL,10.0,WR,256.5,kavontae turpin,kavontaeturpin,2025
+Kendre Miller,NO,11.0,RB,256.5,kendre miller,kendremiller,2025
+Kirk Cousins,ATL,5.0,QB,257.0,kirk cousins,kirkcousins,2025
+Devaughn Vele,DEN,12.0,WR,257.5,devaughn vele,devaughnvele,2025
+Malik Washington,MIA,12.0,WR,258.0,malik washington,malikwashington,2025
+Mike Williams,LAC,12.0,WR,259.5,mike williams,mikewilliams,2025
+Curtis Samuel,BUF,7.0,WR,260.0,curtis samuel,curtissamuel,2025
+Jalen Nailor,MIN,6.0,WR,260.0,jalen nailor,jalennailor,2025
+Jaylin Lane,WAS,12.0,WR,260.0,jaylin lane,jaylinlane,2025
+Kayshon Boutte,NE,14.0,WR,260.5,kayshon boutte,kayshonboutte,2025
+Jalen Milroe,SEA,8.0,QB,260.5,jalen milroe,jalenmilroe,2025
+Jermaine Burton,CIN,10.0,WR,261.5,jermaine burton,jermaineburton,2025
+Elijah Mitchell,KC,10.0,RB,262.0,elijah mitchell,elijahmitchell,2025
+Harold Fannin Jr.,CLE,9.0,TE,263.0,harold fannin,haroldfannin,2025
+Zack Moss,CIN,10.0,RB,263.5,zack moss,zackmoss,2025
+Jordan Whittington,LAR,8.0,WR,263.5,jordan whittington,jordanwhittington,2025
+Isaiah Davis,NYJ,9.0,RB,264.0,isaiah davis,isaiahdavis,2025
+Tai Felton,MIN,6.0,WR,265.5,tai felton,taifelton,2025
+Savion Williams,GB,5.0,WR,267.0,savion williams,savionwilliams,2025
+Ollie Gordon II,MIA,12.0,RB,267.0,ollie gordon,olliegordon,2025
+Devontez Walker,BAL,7.0,WR,267.5,devontez walker,devontezwalker,2025
+Michael Mayer,LV,8.0,TE,268.0,michael mayer,michaelmayer,2025
+Parker Washington,JAC,8.0,WR,268.0,parker washington,parkerwashington,2025
+Allen Lazard,NYJ,9.0,WR,269.0,allen lazard,allenlazard,2025
+Xavier Restrepo,TEN,10.0,WR,269.5,xavier restrepo,xavierrestrepo,2025
+Jaleel McLaughlin,DEN,12.0,RB,271.0,jaleel mclaughlin,jaleelmclaughlin,2025
+Emanuel Wilson,GB,5.0,RB,271.5,emanuel wilson,emanuelwilson,2025
+Noah Brown,WAS,12.0,WR,272.5,noah brown,noahbrown,2025
+Woody Marks,HOU,6.0,RB,274.0,woody marks,woodymarks,2025
+Nick Westbrook-Ikhine,MIA,12.0,WR,275.0,nick westbrook ikhine,nickwestbrookikhine,2025
+Mack Hollins,NE,14.0,WR,276.5,mack hollins,mackhollins,2025
+Jahan Dotson,PHI,9.0,WR,277.0,jahan dotson,jahandotson,2025
+A.J. Dillon,PHI,9.0,RB,278.0,aj dillon,ajdillon,2025
+Noah Fant,SEA,8.0,TE,280.0,noah fant,noahfant,2025
+Arian Smith,NYJ,9.0,WR,282.0,arian smith,ariansmith,2025
+Audric Estime,DEN,12.0,RB,282.5,audric estime,audricestime,2025
+Christian Watson,GB,5.0,WR,283.0,christian watson,christianwatson,2025
+Tim Patrick,DET,8.0,WR,285.0,tim patrick,timpatrick,2025
+Brandin Cooks,NO,11.0,WR,285.5,brandin cooks,brandincooks,2025
+Luke McCaffrey,WAS,12.0,WR,288.0,luke mccaffrey,lukemccaffrey,2025
+Phil Mafah,DAL,10.0,RB,290.0,phil mafah,philmafah,2025
+Jimmy Horn Jr.,CAR,14.0,WR,291.0,jimmy horn,jimmyhorn,2025
+Efton Chism III,NE,14.0,WR,292.0,efton chism,eftonchism,2025
+Dawson Knox,BUF,7.0,TE,294.0,dawson knox,dawsonknox,2025
+Chimere Dike,TEN,10.0,WR,295.0,chimere dike,chimeredike,2025
+Cam Akers,NO,11.0,RB,296.0,cam akers,camakers,2025
+Greg Dortch,ARI,8.0,WR,297.0,greg dortch,gregdortch,2025
+Trevor Etienne,CAR,14.0,RB,299.0,trevor etienne,trevoretienne,2025
+Hunter Renfrow,CAR,14.0,WR,300.0,hunter renfrow,hunterrenfrow,2025
+Joe Milton III,DAL,10.0,QB,302.0,joe milton,joemilton,2025
+Jordan Watkins,SF,14.0,WR,303.0,jordan watkins,jordanwatkins,2025
+Tyquan Thornton,KC,10.0,WR,304.0,tyquan thornton,tyquanthornton,2025
+Cade Stover,HOU,6.0,TE,305.0,cade stover,cadestover,2025
+Trayveon Williams,NE,14.0,RB,306.0,trayveon williams,trayveonwilliams,2025
+Luke Musgrave,GB,5.0,TE,307.0,luke musgrave,lukemusgrave,2025
+Jameis Winston,NYG,14.0,QB,308.0,jameis winston,jameiswinston,2025
+Jalin Hyatt,NYG,14.0,WR,309.0,jalin hyatt,jalinhyatt,2025
+Dillon Gabriel,CLE,9.0,QB,310.0,dillon gabriel,dillongabriel,2025
+James Robinson,FA,0.0,RB,311.0,james robinson,jamesrobinson,2025
+Malachi Corley,NYJ,9.0,WR,312.0,malachi corley,malachicorley,2025
+Olamide Zaccheaus,CHI,5.0,WR,313.0,olamide zaccheaus,olamidezaccheaus,2025
+Devin Singletary,NYG,14.0,RB,314.0,devin singletary,devinsingletary,2025
+Kenny Pickett,CLE,9.0,QB,315.0,kenny pickett,kennypickett,2025
+Jaheim Bell,NE,14.0,TE,316.0,jaheim bell,jaheimbell,2025
+Kimani Vidal,LAC,12.0,RB,317.0,kimani vidal,kimanividal,2025
+Carson Wentz,FA,0.0,QB,318.0,carson wentz,carsonwentz,2025
+Spencer Rattler,NO,11.0,QB,319.0,spencer rattler,spencerrattler,2025
+Dameon Pierce,HOU,6.0,RB,320.0,dameon pierce,dameonpierce,2025
+Darnell Washington,PIT,5.0,TE,321.0,darnell washington,darnellwashington,2025
+Khalil Herbert,IND,11.0,RB,322.0,khalil herbert,khalilherbert,2025
+Damien Martinez,SEA,8.0,RB,323.0,damien martinez,damienmartinez,2025
+Tez Johnson,TB,9.0,WR,324.0,tez johnson,tezjohnson,2025
+JuJu Smith-Schuster,KC,10.0,WR,325.0,juju smith schuster,jujusmithschuster,2025
+Jacob Cowing,SF,14.0,WR,326.0,jacob cowing,jacobcowing,2025
+Jermar Jefferson,FA,0.0,RB,327.0,jermar jefferson,jermarjefferson,2025
+Robert Woods,PIT,5.0,WR,328.0,robert woods,robertwoods,2025
+Antonio Gibson,NE,14.0,RB,329.0,antonio gibson,antoniogibson,2025
+Chris Rodriguez Jr.,WAS,12.0,RB,330.0,chris rodriguez,chrisrodriguez,2025
+Samaje Perine,CIN,10.0,RB,331.0,samaje perine,samajeperine,2025
+Kenneth Gainwell,PIT,5.0,RB,332.0,kenneth gainwell,kennethgainwell,2025
+Austin Hooper,NE,14.0,TE,333.0,austin hooper,austinhooper,2025
+Emari Demercado,ARI,8.0,RB,334.0,emari demercado,emaridemercado,2025
+Elijah Higgins,ARI,8.0,TE,335.0,elijah higgins,elijahhiggins,2025
+Stone Smartt,NYJ,9.0,TE,336.0,stone smartt,stonesmartt,2025
+Gunnar Helm,TEN,10.0,TE,337.0,gunnar helm,gunnarhelm,2025
+Foster Moreau,NO,11.0,TE,338.0,foster moreau,fostermoreau,2025
+Alexander Mattison,MIA,12.0,RB,339.0,alexander mattison,alexandermattison,2025
+Luke Schoonmaker,DAL,10.0,TE,340.0,luke schoonmaker,lukeschoonmaker,2025
+Tank Dell,HOU,6.0,WR,341.0,tank dell,tankdell,2025
+Josh Oliver,MIN,6.0,TE,342.0,josh oliver,josholiver,2025
+John Metchie III,HOU,6.0,WR,343.0,john metchie,johnmetchie,2025
+Zamir White,LV,8.0,RB,344.0,zamir white,zamirwhite,2025
+Joshua Dobbs,NE,14.0,QB,345.0,joshua dobbs,joshuadobbs,2025
+Isaiah Bond,FA,0.0,WR,346.0,isaiah bond,isaiahbond,2025
+Tommy Mellott,LV,8.0,QB,347.0,tommy mellott,tommymellott,2025
+Konata Mumpfield,LAR,8.0,WR,348.0,konata mumpfield,konatamumpfield,2025
+LaJohntay Wester,BAL,7.0,WR,349.0,lajohntay wester,lajohntaywester,2025
+Ja'Corey Brooks,WAS,12.0,WR,350.0,jacorey brooks,jacoreybrooks,2025
+Sam Howell,MIN,6.0,QB,351.0,sam howell,samhowell,2025
+Zach Wilson,MIA,12.0,QB,352.0,zach wilson,zachwilson,2025
+Cam Miller,LV,8.0,QB,353.0,cam miller,cammiller,2025
+Ricky White III,SEA,8.0,WR,354.0,ricky white,rickywhite,2025
+Joshua Simon,ATL,5.0,TE,355.0,joshua simon,joshuasimon,2025
+LeQuint Allen Jr.,JAC,8.0,RB,356.0,lequint allen,lequintallen,2025
+Jeremy Ruckert,NYJ,9.0,TE,357.0,jeremy ruckert,jeremyruckert,2025
+Ty Chandler,MIN,6.0,RB,358.0,ty chandler,tychandler,2025
+Derius Davis,LAC,12.0,WR,359.0,derius davis,deriusdavis,2025
+Kalel Mullings,TEN,10.0,RB,360.0,kalel mullings,kalelmullings,2025
+KhaDarel Hodge,ATL,5.0,WR,361.0,khadarel hodge,khadarelhodge,2025
+Cordarrelle Patterson,PIT,5.0,RB,362.0,cordarrelle patterson,cordarrellepatterson,2025
+Bub Means,NO,11.0,WR,363.0,bub means,bubmeans,2025
+Kenny McIntosh,SEA,8.0,RB,364.0,kenny mcintosh,kennymcintosh,2025
+Zay Jones,ARI,8.0,WR,365.0,zay jones,zayjones,2025
+Ja'Lynn Polk,NE,14.0,WR,366.0,jalynn polk,jalynnpolk,2025
+Will Levis,TEN,10.0,QB,367.0,will levis,willlevis,2025
+Treylon Burks,TEN,10.0,WR,368.0,treylon burks,treylonburks,2025
+Jake Bobo,SEA,8.0,WR,369.0,jake bobo,jakebobo,2025
+Adam Trautman,DEN,12.0,TE,370.0,adam trautman,adamtrautman,2025
+Grant Calcaterra,PHI,9.0,TE,371.0,grant calcaterra,grantcalcaterra,2025
+Malik Willis,GB,5.0,QB,372.0,malik willis,malikwillis,2025
+Johnny Wilson,PHI,9.0,WR,373.0,johnny wilson,johnnywilson,2025
+Chris Brooks,GB,5.0,RB,374.0,chris brooks,chrisbrooks,2025
+Gardner Minshew II,KC,10.0,QB,375.0,gardner minshew,gardnerminshew,2025
+Marcus Mariota,WAS,12.0,QB,376.0,marcus mariota,marcusmariota,2025
+Jake Browning,CIN,10.0,QB,377.0,jake browning,jakebrowning,2025
+Tyson Bagent,CHI,5.0,QB,378.0,tyson bagent,tysonbagent,2025
+Tyrod Taylor,NYJ,9.0,QB,379.0,tyrod taylor,tyrodtaylor,2025
+Mac Jones,SF,14.0,QB,380.0,mac jones,macjones,2025
+Rondale Moore,MIN,6.0,WR,381.0,rondale moore,rondalemoore,2025
+KeAndre Lambert-Smith,LAC,12.0,WR,382.0,keandre lambert smith,keandrelambertsmith,2025
+Ihmir Smith-Marsette,NYG,14.0,WR,383.0,ihmir smith marsette,ihmirsmithmarsette,2025
+Jared Wiley,KC,10.0,TE,384.0,jared wiley,jaredwiley,2025
+Erick All Jr.,CIN,10.0,TE,385.0,erick all,erickall,2025
+Nick Nash,ATL,5.0,WR,386.0,nick nash,nicknash,2025
+Damien Williams,FA,0.0,RB,387.0,damien williams,damienwilliams,2025
+Israel Abanikanda,SF,14.0,RB,388.0,israel abanikanda,israelabanikanda,2025
+George Holani,SEA,8.0,RB,389.0,george holani,georgeholani,2025
+Brenden Rice,LAC,12.0,WR,390.0,brenden rice,brendenrice,2025
+Caleb Lohner,DEN,12.0,TE,391.0,caleb lohner,caleblohner,2025
+Carlos Washington Jr.,ATL,5.0,RB,392.0,carlos washington,carloswashington,2025
+Sincere McCormick,LV,8.0,RB,393.0,sincere mccormick,sinceremccormick,2025
