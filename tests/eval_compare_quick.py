@@ -1,8 +1,4 @@
-# eval_compare_quick.py
-#
-# Monte-Carlo evaluation of the heuristic baseline vs. a trained agent
-# (uses the newest FantasyDraftEnv – observation = roster counts + ADPs only)
-
+# tests/eval_compare_quick.py
 import numpy as np, pandas as pd, tqdm
 from src.fantasyDraftEnv import FantasyDraftEnv
 from sb3_contrib import MaskablePPO
@@ -11,80 +7,78 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 
 board   = pd.read_csv("data/processed/training_data_2021.csv")
 ROSTER  = dict(QB=1, RB=2, WR=3, TE=1, K=1, DST=1, FLEX=1)
-N_TEAMS = 12
-ROUNDS  = 16
 
-# --------------------------------------------------------------------- #
-# helpers                                                               #
-# --------------------------------------------------------------------- #
+# -------------------------------------------------------------------
+# helper to build a *wrapped* env; we’ll keep a shortcut to .unwrapped
+# -------------------------------------------------------------------
 def make_env(slot: int):
-    """Return **wrapped** env (ActionMasker) for the given draft slot."""
-    env = FantasyDraftEnv(
+    env      = FantasyDraftEnv(
         board_df     = board,
-        num_teams    = N_TEAMS,
+        num_teams    = 12,
         my_slot      = slot,
-        rounds       = ROUNDS,
+        rounds       = 16,
         roster_slots = ROSTER,
         bench_spots  = 6,
     )
-    return ActionMasker(env, lambda e: e.get_action_mask())
+    wrapped  = ActionMasker(env, lambda e: e.get_action_mask())
+    return wrapped
 
-
-# --------------------------------------------------------------------- #
-# 1)  Monte-Carlo baseline                                              #
-# --------------------------------------------------------------------- #
+# -------------------------------------------------------------------
+# Monte-Carlo heuristic baseline, stop when the SEM < 2 pts
+# -------------------------------------------------------------------
 def baseline_mean(target_se: float = 2.0,
                   min_runs: int   = 100,
                   max_runs: int   = 2000) -> float:
-    """
-    Draw baseline drafts until the standard-error of the mean lineup
-    points is below `target_se` or `max_runs` reached.
-    """
-    scores: list[float] = []
-    rng = np.random.default_rng()
+    scores = []
+    for _ in range(max_runs):
+        wenv               = make_env(np.random.randint(1, 13))
+        env                = wenv.unwrapped            # <-- RAW env
+        obs, _             = wenv.reset()
+        done               = False
 
-    for i in range(max_runs):
-        wrapped = make_env(rng.integers(1, N_TEAMS + 1))
-        wrapped.reset()
-        inner = wrapped.unwrapped            # peel off ActionMasker
+        # the heuristic always picks for *my* slot
+        while not done:
+            env._opponent_pick(env.my_slot)
+            env.pick_global += 1
+            env._simulate_opponents()
+            done = env.pick_global >= env.total_picks
 
-        scores.append(inner._baseline_points())
+        scores.append(env._lineup_points(env.board, env.my_picks))
 
         if len(scores) >= min_runs:
             se = np.std(scores) / np.sqrt(len(scores))
             if se < target_se:
                 break
-
     return float(np.mean(scores))
 
 
-print("Computing heuristic baseline …")
 baseline_pts = baseline_mean()
-print(f"Baseline (heuristic) converged mean: {baseline_pts:.1f} pts\n")
+print(f"Heuristic baseline (converged): {baseline_pts:6.1f} pts")
 
-
-# --------------------------------------------------------------------- #
-# 2)  Evaluate the trained agent                                        #
-# --------------------------------------------------------------------- #
+# -------------------------------------------------------------------
+# load the trained agent
+# -------------------------------------------------------------------
 model = MaskablePPO.load("models/ppo_12_2021_quick.zip")
 
+# run 300 evaluation drafts
 def agent_episode() -> float:
-    wrapped = make_env(np.random.randint(1, N_TEAMS + 1))
-    obs, info = wrapped.reset()
-    done = False
-
+    wenv           = make_env(np.random.randint(1, 13))
+    env            = wenv.unwrapped                  # raw env
+    obs, info      = wenv.reset()
+    done           = False
     while not done:
-        mask   = info["action_mask"]
-        action, _ = model.predict(obs, deterministic=False, action_masks=mask)
-        obs, _, done, _, info = wrapped.step(action)
+        action, _  = model.predict(
+            obs,
+            deterministic=False,
+            action_masks=info["action_mask"]
+        )
+        obs, _, done, _, info = wenv.step(action)
+    return env._lineup_points(env.board, env.my_picks)
 
-    inner = wrapped.unwrapped
-    return inner._roster_points()            # best-lineup season points
 
-
-print("Running agent episodes …")
+print("\nRunning agent episodes …")
 agent_scores = [agent_episode() for _ in tqdm.tqdm(range(300))]
-agent_mean   = float(np.mean(agent_scores))
+mean_agent   = float(np.mean(agent_scores))
 
-print(f"\nAgent mean lineup pts:  {agent_mean:.1f}")
-print(f"Average improvement vs. baseline:  {agent_mean - baseline_pts:+.1f} pts")
+print(f"\nAgent mean lineup pts : {mean_agent:6.1f}")
+print(f"Average improvement    : {mean_agent - baseline_pts:+6.1f}")
