@@ -1,38 +1,32 @@
 # fantasy_draft_env.py
 #
-# Minimal fantasy-football snake-draft environment for gymnasium.
-# Works with stable-baselines3 (or sb3-contrib MaskablePPO)
-#
-# Observation space:
+# Observation space (no leakage of fantasy-points):
 #   Dict{
-#       "roster": int[6]            – counts of QB,RB,WR,TE,K,DST drafted
-#       pos tables (6 keys): float32[5,2] – [fant_pts, adp] for top 5 avail
+#       "roster" : float32[6]             – counts / rounds (QB…DST)
+#       pos keys : float32[5,1]           – ADP ÷ MAX_ADP of top-5 avail
 #   }
 #
-# Reward: 0 during draft, at episode end
-#     (my best-lineup season points) − (baseline best-lineup points)
-#
-# Author: 2025-06
+# Reward = Δ(best-line-up points)/10 each pick  +  final_points / lineup_scale
+# ---------------------------------------------------------------------------
 
 from __future__ import annotations
-import numpy as np
-import pandas as pd
-import gymnasium as gym
+import numpy as np, pandas as pd, gymnasium as gym
 from gymnasium import spaces
 from typing import Dict, List
 
 # ---------------------------------------------------------------------------
-BASE_POS  = ["QB", "RB", "WR", "TE", "K", "DST"]
-FLEX_POS  = {"WR", "RB", "TE"}
+BASE_POS    = ["QB", "RB", "WR", "TE", "K", "DST"]
+FLEX_POS    = {"WR", "RB", "TE"}
 FORESIGHT_K = 5
+MAX_ADP     = 300
+MAX_PLAYER_PTS = 450.0
+DENSE_SCALE    = 10.0
 # ---------------------------------------------------------------------------
 
 
 class FantasyDraftEnv(gym.Env):
     metadata = {"render_modes": []}
 
-    # -----------------------------------------------------------------------
-    # constructor
     # -----------------------------------------------------------------------
     def __init__(
         self,
@@ -45,7 +39,6 @@ class FantasyDraftEnv(gym.Env):
         bench_spots: int = 6,
     ):
         super().__init__()
-
         if not 1 <= my_slot <= num_teams:
             raise ValueError("my_slot must be between 1 and num_teams inclusive")
 
@@ -53,6 +46,7 @@ class FantasyDraftEnv(gym.Env):
             board_df[["name", "position", "adp", "fantasy_points"]]
             .copy()
             .sort_values("adp")
+            .head(MAX_ADP)
             .reset_index(drop=True)
         )
 
@@ -64,84 +58,80 @@ class FantasyDraftEnv(gym.Env):
         self.bench_spots = bench_spots
         self.pos_max     = {"QB": 2, "TE": 3, "K": 1, "DST": 1}
 
-        # track indices I drafted
-        self.my_picks: List[int] = []
+        start_slots = sum(v for k, v in roster_slots.items() if k != "FLEX") \
+                      + roster_slots.get("FLEX", 0)
+        self.lineup_scale = MAX_PLAYER_PTS * start_slots
 
-        # action / observation spaces
+        # -------------------- spaces --------------------------------------
         self.action_space = spaces.Discrete(len(self._board_template))
-        top_shape = (FORESIGHT_K, 2)
+        top_shape = (FORESIGHT_K, 1)                         # ADP only
         self.observation_space = spaces.Dict(
             {
-                "roster": spaces.Box(low=0, high=rounds,
-                                     shape=(len(BASE_POS),), dtype=np.int32),
+                "roster": spaces.Box(0.0, 1.0, (len(BASE_POS),), np.float32),
                 **{
-                    p: spaces.Box(low=-1.0, high=1000.0,
-                                  shape=top_shape, dtype=np.float32)
+                    p: spaces.Box(-1.0, 1.0, top_shape, np.float32)
                     for p in BASE_POS
                 },
             }
         )
 
-        # runtime state
+        # -------------------- runtime -------------------------------------
         self.board: pd.DataFrame | None = None
         self.roster_counts: Dict[str, int] = {}
-        self.pick_global: int = 0
+        self.pick_global = 0
+        self.my_picks: List[int] = []
+        self._curr_lineup_pts = 0.0
 
-    # -----------------------------------------------------------------------
-    # gymnasium methods
-    # -----------------------------------------------------------------------
-    def reset(self, *, seed: int | None = None, options: dict | None = None):
+    # ======================================================================
+    # gymnasium API
+    # ======================================================================
+    def reset(self, *, seed=None, options=None):
         super().reset(seed=seed)
-
         self.board = self._board_template.copy()
         self.board["available"] = True
 
         self.opp_counts = [
-            {pos: 0 for pos in BASE_POS} | {"FLEX": 0}
-            for _ in range(self.num_teams)
+            {p: 0 for p in BASE_POS} | {"FLEX": 0} for _ in range(self.num_teams)
         ]
-
         self.roster_counts = {p: 0 for p in BASE_POS}
         self.my_picks.clear()
         self.pick_global = 0
+        self._curr_lineup_pts = 0.0
         self._skip_to_my_turn()
-
-        obs = self._build_obs()
-        info = {"action_mask": self.get_action_mask()}
-        return obs, info
+        return self._build_obs(), {"action_mask": self.get_action_mask()}
 
     def step(self, action: int):
-        assert self.board is not None
-
         if action >= len(self.board) or not self.board.at[action, "available"]:
             return self._build_obs(), -10.0, True, False, {}
 
-        # --- agent pick ----------------------------------------------------
-        row = self.board.loc[action]
+        # my pick ----------------------------------------------------------
         self.board.at[action, "available"] = False
-        self.roster_counts[row["position"]] += 1
+        pos = self.board.at[action, "position"]
+        self.roster_counts[pos] += 1
         self.my_picks.append(action)
         self.pick_global += 1
 
-        # --- opponents -----------------------------------------------------
+        # dense reward -----------------------------------------------------
+        new_pts = self._lineup_points(self.board, self.my_picks)
+        reward  = (new_pts - self._curr_lineup_pts) / DENSE_SCALE
+        self._curr_lineup_pts = new_pts
+
+        # opponents --------------------------------------------------------
         self._simulate_opponents()
 
         done = self.pick_global >= self.total_picks
-        reward = self._final_reward() if done else 0.0
-        obs = self._build_obs()
-        return obs, reward, done, False, {"action_mask": self.get_action_mask()}
+        if done:
+            reward += new_pts / self.lineup_scale
+        return self._build_obs(), reward, done, False, {"action_mask": self.get_action_mask()}
 
-    # -----------------------------------------------------------------------
-    # MaskablePPO support
-    # -----------------------------------------------------------------------
-    def get_action_mask(self) -> np.ndarray:
-        return self.board["available"].values.astype(bool)
-
-    # -----------------------------------------------------------------------
-    # observation helper
-    # -----------------------------------------------------------------------
+    # ======================================================================
+    # observation builder
+    # ======================================================================
     def _build_obs(self):
-        roster_vec = np.array([self.roster_counts[p] for p in BASE_POS], dtype=np.int32)
+        roster_vec = np.array(
+            [self.roster_counts[p] / self.rounds for p in BASE_POS], np.float32
+        )
+
         tables = {}
         for pos in BASE_POS:
             avail = (
@@ -149,12 +139,17 @@ class FantasyDraftEnv(gym.Env):
                 .sort_values("adp")
                 .head(FORESIGHT_K)
             )
-            tbl = avail[["fantasy_points", "adp"]].to_numpy(dtype=np.float32)
-            if len(tbl) < FORESIGHT_K:
-                tbl = np.vstack([tbl,
-                                 np.full((FORESIGHT_K - len(tbl), 2), -1.0, dtype=np.float32)])
-            tables[pos] = tbl
+            col = avail["adp"].to_numpy(np.float32).reshape(-1, 1) / MAX_ADP
+            if len(col) < FORESIGHT_K:
+                pad = np.full((FORESIGHT_K - len(col), 1), -1.0, np.float32)
+                col = np.vstack([col, pad])
+            tables[pos] = col
+
         return {"roster": roster_vec, **tables}
+    
+    def get_action_mask(self) -> np.ndarray:
+        """Boolean mask the same length as action_space.n"""
+        return self.board["available"].values.astype(bool)
 
     # -----------------------------------------------------------------------
     # smarter opponents
@@ -219,25 +214,17 @@ class FantasyDraftEnv(gym.Env):
     # reward helpers
     # -----------------------------------------------------------------------
     def _lineup_points(self, board: pd.DataFrame, idx_list: List[int]) -> float:
-        """
-        Return season-total points for the optimal starting lineup
-        built from the given row indices, respecting self.roster_req.
-        """
         roster = board.loc[idx_list]
-
-        # groups sorted by points desc
         pos_gp = {p: roster[roster["position"] == p]
                           .sort_values("fantasy_points", ascending=False)
                   for p in BASE_POS}
 
         total = 0.0
-        # fixed slots
         for pos, req in self.roster_req.items():
             if pos == "FLEX":
                 continue
             total += pos_gp.get(pos, pd.DataFrame())["fantasy_points"].head(req).sum()
 
-        # flex slots
         flex_n = self.roster_req.get("FLEX", 0)
         if flex_n:
             flex_pool = pd.concat(
@@ -245,7 +232,6 @@ class FantasyDraftEnv(gym.Env):
                 axis=0
             ).sort_values("fantasy_points", ascending=False)
             total += flex_pool["fantasy_points"].head(flex_n).sum()
-
         return float(total)
 
     def _final_reward(self) -> float:

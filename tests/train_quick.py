@@ -27,9 +27,13 @@ vec_env = DummyVecEnv([
 model = MaskablePPO(
     "MultiInputPolicy",
     vec_env,
+    n_steps=512,
+    batch_size=2048,
+    learning_rate=3e-4,
+    gamma=0.995,
+    ent_coef=0.01,
+    policy_kwargs=dict(net_arch=dict(pi=[256,256], vf=[256,256])),
     verbose=1,
-    n_steps=256,            # 4 envs × 256 = 1 024 steps per update
-    batch_size=1_024,
 )
 
 model.learn(total_timesteps=100_000)   # ≈ 520 drafts, ~8 min on T4
