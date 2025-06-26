@@ -21,6 +21,7 @@ FORESIGHT_K = 5
 MAX_ADP     = 300
 MAX_PLAYER_PTS = 450.0
 DENSE_SCALE    = 10.0
+TIER_GAP_THRESHOLD = 20.0  # ADP gap that indicates tier break
 # ---------------------------------------------------------------------------
 
 
@@ -64,16 +65,15 @@ class FantasyDraftEnv(gym.Env):
 
         # -------------------- spaces --------------------------------------
         self.action_space = spaces.Discrete(len(self._board_template))
-        top_shape = (FORESIGHT_K, 1)                         # ADP only
-        self.observation_space = spaces.Dict(
-            {
-                "roster": spaces.Box(0.0, 1.0, (len(BASE_POS),), np.float32),
-                **{
-                    p: spaces.Box(-1.0, 1.0, top_shape, np.float32)
-                    for p in BASE_POS
-                },
-            }
-        )
+        top_shape = (FORESIGHT_K, 2)  # ADP + tier_gap columns
+        self.observation_space = spaces.Dict({
+            "roster": spaces.Box(0.0, 1.0, (len(BASE_POS),), np.float32),
+            "roster_needs": spaces.Box(0.0, 1.0, (len(BASE_POS),), np.float32),
+            **{
+                p: spaces.Box(-1.0, 1.0, top_shape, np.float32)
+                for p in BASE_POS
+            },
+        })
 
         # -------------------- runtime -------------------------------------
         self.board: pd.DataFrame | None = None
@@ -133,6 +133,9 @@ class FantasyDraftEnv(gym.Env):
             [self.roster_counts[p] / self.rounds for p in BASE_POS], np.float32
         )
 
+        # roster needs
+        needs_vec = self._get_roster_needs()
+
         tables = {}
         for pos in BASE_POS:
             avail = (
@@ -140,13 +143,34 @@ class FantasyDraftEnv(gym.Env):
                 .sort_values("adp")
                 .head(FORESIGHT_K)
             )
-            col = avail["adp"].to_numpy(np.float32).reshape(-1, 1) / MAX_ADP
-            if len(col) < FORESIGHT_K:
-                pad = np.full((FORESIGHT_K - len(col), 1), -1.0, np.float32)
-                col = np.vstack([col, pad])
-            tables[pos] = col
+            
+            if len(avail) == 0:
+                # No players available at this position
+                tables[pos] = np.full((FORESIGHT_K, 2), -1.0, np.float32)
+                continue
+                
+            # ADP column (normalized)
+            adp_col = avail["adp"].to_numpy(np.float32) / MAX_ADP
+            
+            # NEW: Tier gap column (normalized ADP difference to next player)
+            tier_gaps = self._calculate_tier_gaps(avail)
+            
+            # Stack into 2-column array [ADP, tier_gap]
+            features = np.column_stack([adp_col, tier_gaps])
+            
+            # Pad if necessary
+            if len(features) < FORESIGHT_K:
+                pad_rows = FORESIGHT_K - len(features)
+                pad = np.full((pad_rows, 2), -1.0, np.float32)
+                features = np.vstack([features, pad])
+                
+            tables[pos] = features
 
-        return {"roster": roster_vec, **tables}
+        return {
+            "roster": roster_vec,
+            "roster_needs": needs_vec,
+            **tables
+        }
     
     def get_action_mask(self) -> np.ndarray:
         """Boolean mask the same length as action_space.n"""
@@ -319,3 +343,219 @@ class FantasyDraftEnv(gym.Env):
             top_idx = self.board[self.board["available"]].index[0]
             self.board.at[top_idx, "available"] = False
             self.pick_global += 1
+
+    # -----------------------------------------------------------------------
+    # Helper methods
+    # -----------------------------------------------------------------------
+    def _get_roster_needs(self) -> np.ndarray:
+        """
+        Calculate urgency flags for each position based on:
+        1. Required starter slots still unfilled
+        2. FLEX eligibility 
+        3. Late-round K/DST timing (special case)
+        4. Round context (early vs late draft)
+        
+        Returns float array [0.0, 1.0] where:
+        - 1.0 = urgent need (missing required starter)
+        - 0.7 = high need (FLEX eligible, late K/DST)
+        - 0.3 = moderate need (depth/value play)
+        - 0.0 = no immediate need
+        """
+        needs = np.zeros(len(BASE_POS), dtype=np.float32)
+        
+        round_idx = self.pick_global // self.num_teams
+        late_draft = round_idx >= self.rounds - 4  # Last 4 rounds
+        very_late = round_idx >= self.rounds - 2   # Last 2 rounds
+        
+        # Calculate current FLEX usage
+        flex_filled = 0
+        for pos in FLEX_POS:
+            # Count excess players beyond required starters as potential FLEX
+            required = self.roster_req.get(pos, 0)
+            current = self.roster_counts[pos]
+            if current > required:
+                flex_filled += (current - required)
+        
+        flex_needed = max(0, self.roster_req.get("FLEX", 0) - flex_filled)
+        
+        for i, pos in enumerate(BASE_POS):
+            required = self.roster_req.get(pos, 0)
+            current = self.roster_counts[pos]
+            
+            # SPECIAL CASE: K/DST timing logic (overrides basic requirement logic)
+            if pos in ("K", "DST"):
+                if current >= required:
+                    needs[i] = 0.0  # Already have enough
+                elif very_late:
+                    needs[i] = 1.0  # Urgent in final 2 rounds
+                elif late_draft:
+                    needs[i] = 0.7  # High need in final 4 rounds
+                else:
+                    needs[i] = 0.0  # Don't draft early, even if "required"
+                    
+            # REGULAR POSITIONS: Standard requirement logic
+            elif current < required:
+                needs[i] = 1.0  # Urgent: missing required starters
+                
+            # FLEX-eligible positions when FLEX needed
+            elif pos in FLEX_POS and flex_needed > 0:
+                needs[i] = 0.7  # High need for FLEX fill
+                
+            # DEPTH CONSIDERATIONS
+            elif pos in ("RB", "WR") and current < 4:  # Want RB/WR depth
+                needs[i] = 0.3  # Moderate need for depth
+                
+            elif pos == "QB" and current < 2:  # Limited QB depth
+                needs[i] = 0.2  # Low need for QB2
+                
+            else:
+                needs[i] = 0.0  # No immediate need
+                    
+        return needs
+    
+    def _calculate_tier_gaps(self, position_df: pd.DataFrame) -> np.ndarray:
+        """
+        Calculate normalized tier gaps for position rankings.
+        
+        Large gaps indicate tier breaks where waiting might be costly.
+        Small gaps suggest similar player quality.
+        
+        Returns array where:
+        - 1.0 = large gap (major tier break)
+        - 0.5 = moderate gap  
+        - 0.0 = small gap (similar tier)
+        """
+        adps = position_df["adp"].to_numpy()
+        gaps = np.zeros_like(adps, dtype=np.float32)
+        
+        for i in range(len(adps) - 1):
+            raw_gap = adps[i + 1] - adps[i]
+            
+            # Normalize gap by threshold and cap at 1.0
+            normalized_gap = min(raw_gap / TIER_GAP_THRESHOLD, 1.0)
+            gaps[i] = normalized_gap
+            
+        # Last player has no "next" player, so gap = 0
+        if len(gaps) > 0:
+            gaps[-1] = 0.0
+            
+        return gaps
+
+# # Test function to verify the new observations
+# def test_enhanced_observations():
+#     """Quick test to verify new observation features work correctly."""
+#     import pandas as pd
+#     from pathlib import Path
+    
+#     # Load some test data
+#     board_path = Path("data/processed/training_data_2021.csv")
+#     if not board_path.exists():
+#         print("Test data not found - run preprocessing first")
+#         return
+        
+#     board = pd.read_csv(board_path)
+    
+#     # Create test environment
+#     env = FantasyDraftEnv(
+#         board_df=board,
+#         num_teams=12,
+#         my_slot=5,
+#         rounds=16,
+#         roster_slots={"QB": 1, "RB": 2, "WR": 3, "TE": 1, "K": 1, "DST": 1, "FLEX": 1},
+#         bench_spots=6,
+#     )
+    
+#     # Reset and get initial observation
+#     obs, info = env.reset()
+    
+#     print("Enhanced Observation Test Results:")
+#     print("=" * 40)
+#     print(f"Observation keys: {list(obs.keys())}")
+#     print(f"Roster shape: {obs['roster'].shape}")
+#     print(f"Roster needs shape: {obs['roster_needs'].shape}")
+#     print(f"QB table shape: {obs['QB'].shape}")
+#     print()
+    
+#     print("Initial roster needs:", obs['roster_needs'])
+#     print("Initial QB top-5 ADP + tier gaps:")
+#     print(obs['QB'])
+#     print()
+    
+#     # Take a few picks and see how needs evolve
+#     print("Taking QB pick...")
+#     qb_action = np.where(env.board["position"] == "QB")[0][0]
+#     obs, reward, done, _, info = env.step(qb_action)
+#     print("Roster needs after QB:", obs['roster_needs'])
+#     print()
+    
+#     print("Taking RB pick...")
+#     rb_action = np.where(env.board["available"] & (env.board["position"] == "RB"))[0][0]
+#     obs, reward, done, _, info = env.step(rb_action)
+#     print("Roster needs after RB:", obs['roster_needs'])
+#     print()
+    
+#     print("Enhanced observations working correctly! ✓")
+
+# def test_k_dst_timing():
+#     """Test that K/DST needs follow proper timing."""
+#     board = pd.read_csv("data/processed/training_data_2021.csv")
+    
+#     env = FantasyDraftEnv(
+#         board_df=board,
+#         num_teams=12,
+#         my_slot=1,
+#         rounds=16,
+#         roster_slots={"QB": 1, "RB": 2, "WR": 3, "TE": 1, "K": 1, "DST": 1, "FLEX": 1},
+#         bench_spots=6,
+#     )
+    
+#     # Initialize the environment properly
+#     env.reset()
+    
+#     # Test different round scenarios
+#     test_rounds = [1, 8, 13, 15, 16]  # Early, mid, late-4, late-2, final
+    
+#     print("K/DST Timing Test:")
+#     print("Round | K Need | DST Need | Explanation")
+#     print("-" * 50)
+    
+#     for round_num in test_rounds:
+#         env.pick_global = (round_num - 1) * 12  # Simulate being in that round
+#         obs = env._build_obs()
+        
+#         k_need = obs['roster_needs'][4]    # K is index 4
+#         dst_need = obs['roster_needs'][5]  # DST is index 5
+        
+#         if round_num <= 12:  # Early/mid rounds
+#             explanation = "Should be 0.0 (too early)"
+#             expected = 0.0
+#         elif round_num <= 14:  # Rounds 13-14 (late_draft but not very_late)
+#             explanation = "Should be 0.7 (late but not urgent)"
+#             expected = 0.7
+#         else:  # Rounds 15-16 (very_late)
+#             explanation = "Should be 1.0 (urgent)"
+#             expected = 1.0
+            
+#         print(f"  {round_num:2d}  |  {k_need:.1f}   |   {dst_need:.1f}   | {explanation}")
+        
+#         # Verify expectations
+#         assert np.isclose(k_need, expected), f"Round {round_num}: K need should be {expected}, got {k_need}"
+#         assert np.isclose(dst_need, expected), f"Round {round_num}: DST need should be {expected}, got {dst_need}"
+    
+#     print("✅ K/DST timing logic working correctly!")
+    
+#     # Test that other positions still work normally
+#     env.reset()  # Reset to get clean round 1 state
+#     obs, _ = env.reset()  # Get the actual observation from reset
+    
+#     print(f"\nRound 1 needs (should be [1.0, 1.0, 1.0, 1.0, 0.0, 0.0]):")
+#     print(f"Actual: {obs['roster_needs']}")
+    
+#     expected_early = np.array([1.0, 1.0, 1.0, 1.0, 0.0, 0.0])
+#     assert np.allclose(obs['roster_needs'], expected_early), "Early round needs incorrect"
+    
+#     print("✅ All position needs working correctly!")
+
+# if __name__ == "__main__":
+#     test_enhanced_observations()
+#     test_k_dst_timing()
