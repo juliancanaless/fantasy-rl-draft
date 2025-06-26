@@ -36,5 +36,5 @@ model = MaskablePPO(
     verbose=1,
 )
 
-model.learn(total_timesteps=100_000)   # ≈ 520 drafts, ~8 min on T4
+model.learn(total_timesteps=500_000)
 model.save("ppo_12_2021_quick")

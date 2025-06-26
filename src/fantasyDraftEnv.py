@@ -266,6 +266,7 @@ class FantasyDraftEnv(gym.Env):
         return self._lineup_points(self.board, self.my_picks)
 
     def _baseline_points(self) -> float:
+        """Calculate baseline as AVERAGE of all teams in a heuristic draft."""
         board = self._board_template.copy()
         board["available"] = True
         counts = [
@@ -273,16 +274,32 @@ class FantasyDraftEnv(gym.Env):
             for _ in range(self.num_teams)
         ]
 
-        my_rows: List[int] = []
+        # Track picks for ALL teams, not just mine
+        all_team_picks = [[] for _ in range(self.num_teams)]
+        
         for pick in range(self.total_picks):
-            tid = pick % self.num_teams
-            if tid == self.my_slot:
-                idx = self._heuristic_pick(board, counts[tid], pick)
-                my_rows.append(idx)
+            round_idx = pick // self.num_teams
+            pick_in_round = pick % self.num_teams
+            
+            # FIXED: Proper snake draft order
+            if round_idx % 2 == 0:
+                tid = pick_in_round
             else:
-                self._heuristic_pick(board, counts[tid], pick)
+                tid = self.num_teams - 1 - pick_in_round
+                
+            # Make pick for current team
+            idx = self._heuristic_pick(board, counts[tid], pick)
+            all_team_picks[tid].append(idx)
 
-        return self._lineup_points(board, my_rows)
+        # Calculate lineup points for ALL teams
+        team_scores = []
+        for team_picks in all_team_picks:
+            score = self._lineup_points(board, team_picks)
+            team_scores.append(score)
+        
+        # Return AVERAGE across all teams
+        return float(np.mean(team_scores))
+
 
     # -----------------------------------------------------------------------
     # _heuristic_pick 

@@ -22,14 +22,16 @@ def make_env(slot: int):
 # 1) Heuristic baseline
 # ----------------------------------------------------------------------
 def baseline_mean(runs: int = 500) -> float:
+    """Calculate baseline with random draft positions."""
     pts = []
     for _ in range(runs):
-        wenv = make_env(np.random.randint(1, 13))
-        wenv.reset()
-        # ask the underlying env for its deterministic baseline
+        slot = np.random.randint(0, 12)  # 0-11 (internal representation)
+        wenv = make_env(slot + 1)  # Convert to 1-12 for env
         pts.append(wenv.unwrapped._baseline_points())
+        # No reset() needed - _baseline_points() is self-contained
     return float(np.mean(pts))
 
+print("Calculating heuristic baseline...")
 baseline_pts = baseline_mean()
 print(f"Heuristic baseline (mean of 500): {baseline_pts:.1f} pts")
 
@@ -53,9 +55,22 @@ def agent_episode() -> float:
     return wenv.unwrapped._lineup_points(wenv.unwrapped.board,
                                          wenv.unwrapped.my_picks)
 
-print("\nRunning 300 agent drafts …")
+print("\nRunning 300 agent drafts...")
 agent_scores = [agent_episode() for _ in tqdm.tqdm(range(300))]
 mean_agent   = float(np.mean(agent_scores))
 
-print(f"\nAgent mean lineup pts : {mean_agent:.1f}")
-print(f"Average improvement   : {mean_agent - baseline_pts:+.1f}")
+print(f"\nResults:")
+print(f"Heuristic baseline: {baseline_pts:.1f} pts")
+print(f"Agent mean score:   {mean_agent:.1f} pts")
+print(f"Difference:         {mean_agent - baseline_pts:+.1f} pts")
+print(f"Improvement:        {((mean_agent / baseline_pts - 1) * 100):+.1f}%")
+
+# Quick analysis
+if mean_agent > baseline_pts:
+    print("🎉 Agent is beating the baseline!")
+elif mean_agent > baseline_pts * 0.95:
+    print("😊 Agent is close to baseline (within 5%)")
+elif mean_agent > baseline_pts * 0.90:
+    print("🤔 Agent needs more training (within 10%)")
+else:
+    print("😟 Agent needs significant improvement")
