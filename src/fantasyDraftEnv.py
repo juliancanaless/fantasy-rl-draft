@@ -101,14 +101,15 @@ class FantasyDraftEnv(gym.Env):
         return self._build_obs(), {"action_mask": self.get_action_mask()}
 
     def step(self, action: int):
-        if action >= len(self.board) or not self.board["available"].iat[action]:
+        idx = int(action)
+        if idx >= len(self.board) or not self.board["available"].iat[idx]:
             return self._build_obs(), -10.0, True, False, {}
 
         # my pick ----------------------------------------------------------
-        self.board["available"].iat[action] = False
-        pos = self.board["position"].iat[action]
+        self.board["available"].iat[idx] = False
+        pos = self.board["position"].iat[idx]
         self.roster_counts[pos] += 1
-        self.my_picks.append(action)
+        self.my_picks.append(idx)
         self.pick_global += 1
 
         # dense reward -----------------------------------------------------
