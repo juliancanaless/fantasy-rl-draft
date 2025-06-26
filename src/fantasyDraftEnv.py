@@ -105,8 +105,8 @@ class FantasyDraftEnv(gym.Env):
             return self._build_obs(), -10.0, True, False, {}
 
         # my pick ----------------------------------------------------------
-        self.board.at[action, "available"] = False
-        pos = self.board.at[action, "position"]
+        self.board["available"].iat[action] = False
+        pos = self.board["position"].iat[action]
         self.roster_counts[pos] += 1
         self.my_picks.append(action)
         self.pick_global += 1
