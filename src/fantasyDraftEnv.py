@@ -101,7 +101,7 @@ class FantasyDraftEnv(gym.Env):
         return self._build_obs(), {"action_mask": self.get_action_mask()}
 
     def step(self, action: int):
-        if action >= len(self.board) or not self.board.at[action, "available"]:
+        if action >= len(self.board) or not self.board["available"].iat[action]:
             return self._build_obs(), -10.0, True, False, {}
 
         # my pick ----------------------------------------------------------
