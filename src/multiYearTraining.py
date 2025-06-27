@@ -192,7 +192,7 @@ def train_multi_year_model():
     
     # Train for 2M timesteps
     model.learn(
-        total_timesteps=2_000_000,
+        total_timesteps=1_000_000,
         tb_log_name="multi_year_optimized",
         progress_bar=True  # Re-enable progress bar since we fixed the warnings
     )
