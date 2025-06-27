@@ -173,8 +173,21 @@ class FantasyDraftEnv(gym.Env):
         }
     
     def get_action_mask(self) -> np.ndarray:
-        """Boolean mask the same length as action_space.n"""
-        return self.board["available"].values.astype(bool)
+        """Boolean mask that prevents invalid picks (unavailable + position limits)"""
+        mask = self.board["available"].values.copy()
+        
+        # Enforce position limits
+        for i, pos in enumerate(self.board["position"]):
+            if not mask[i]:  # Already unavailable
+                continue
+                
+            current_count = self.roster_counts[pos]
+            max_allowed = self.pos_max.get(pos, 99)  # You have: {"QB": 2, "TE": 3, "K": 1, "DST": 1}
+            
+            if current_count >= max_allowed:
+                mask[i] = False  # Block this pick
+        
+        return mask.astype(bool)
 
     # -----------------------------------------------------------------------
     # smarter opponents
