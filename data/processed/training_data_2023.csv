@@ -47,8 +47,8 @@ T.J. Hockenson,MIN,13.0,TE,45.3,tj hockenson,tjhockenson,2023,219.0,15.0
 Dameon Pierce,HOU,7.0,RB,46.3,dameon pierce,dameonpierce,2023,76.7,13.0
 Jonathan Taylor,IND,11.0,RB,47.8,jonathan taylor,jonathantaylor,2023,128.8,9.0
 George Kittle,SF,9.0,TE,49.5,george kittle,georgekittle,2023,203.2,16.0
-Miles Sanders,DAL,7.0,RB,50.5,miles sanders,milessanders,2023,85.8,15.0
 Darren Waller,FA,0.0,TE,50.5,darren waller,darrenwaller,2023,103.7,11.0
+Miles Sanders,DAL,7.0,RB,50.5,miles sanders,milessanders,2023,85.8,15.0
 DJ Moore,CHI,13.0,WR,50.8,dj moore,djmoore,2023,276.1,16.0
 DeAndre Hopkins,BAL,13.0,WR,52.5,deandre hopkins,deandrehopkins,2023,206.0,16.0
 Terry McLaurin,WAS,14.0,WR,54.3,terry mclaurin,terrymclaurin,2023,197.6,16.0
@@ -68,18 +68,18 @@ Drake London,ATL,11.0,WR,66.8,drake london,drakelondon,2023,165.4,15.0
 Chris Godwin,TB,5.0,WR,67.0,chris godwin,chrisgodwin,2023,197.7,16.0
 Tyler Lockett,TEN,7.0,WR,70.5,tyler lockett,tylerlockett,2023,185.3,16.0
 James Cook,BUF,13.0,RB,71.3,james cook,jamescook,2023,224.5,16.0
-Jerry Jeudy,CLE,5.0,WR,72.0,jerry jeudy,jerryjeudy,2023,124.9,15.0
 Brandon Aiyuk,SF,9.0,WR,72.0,brandon aiyuk,brandonaiyuk,2023,243.7,15.0
+Jerry Jeudy,CLE,5.0,WR,72.0,jerry jeudy,jerryjeudy,2023,124.9,15.0
 Isiah Pacheco,KC,10.0,RB,72.5,isiah pacheco,isiahpacheco,2023,213.9,14.0
 Javonte Williams,DAL,7.0,RB,72.8,javonte williams,javontewilliams,2023,158.7,15.0
 D'Andre Swift,CHI,13.0,RB,74.3,dandre swift,dandreswift,2023,199.3,16.0
 Diontae Johnson,CLE,5.0,WR,74.8,diontae johnson,diontaejohnson,2023,133.8,12.0
 Mike Evans,TB,5.0,WR,75.8,mike evans,mikeevans,2023,277.3,16.0
-Deshaun Watson,CLE,5.0,QB,76.0,deshaun watson,deshaunwatson,2023,86.8,6.0
 Christian Kirk,HU,7.0,WR,76.0,christian kirk,christiankirk,2023,150.3,12.0
+Deshaun Watson,CLE,5.0,QB,76.0,deshaun watson,deshaunwatson,2023,86.8,6.0
 Evan Engram,DEN,9.0,TE,78.3,evan engram,evanengram,2023,206.4,16.0
 Michael Pittman Jr.,IND,11.0,WR,81.5,michael pittman,michaelpittman,2023,242.8,15.0
-San Francisco 49ers,DST,9.0,DST,82.8,san francisco 49ers,sanfrancisco49ers,2023,137.0,-1.0
+San Francisco 49ers,DST,9.0,DST,82.8,san francisco 49ers,sanfrancisco49ers,2023,137.0,16.0
 George Pickens,DAL,7.0,WR,83.0,george pickens,georgepickens,2023,208.5,16.0
 David Njoku,CLE,5.0,TE,85.8,david njoku,davidnjoku,2023,201.2,16.0
 David Montgomery,DET,9.0,RB,86.0,david montgomery,davidmontgomery,2023,197.2,13.0
@@ -96,12 +96,12 @@ Jaxon Smith-Njigba,SEA,5.0,WR,97.5,jaxon smith njigba,jaxonsmithnjigba,2023,145.
 Khalil Herbert,IND,11.0,RB,99.0,khalil herbert,khalilherbert,2023,106.4,11.0
 Aaron Rodgers,PIT,6.0,QB,101.8,aaron rodgers,aaronrodgers,2023,0.0,1.0
 Jamaal Williams,FA,0.0,RB,103.8,jamaal williams,jamaalwilliams,2023,48.4,12.0
-Philadelphia Eagles,DST,10.0,DST,106.0,philadelphia eagles,philadelphiaeagles,2023,96.0,-1.0
+Philadelphia Eagles,DST,10.0,DST,106.0,philadelphia eagles,philadelphiaeagles,2023,96.0,16.0
 Courtland Sutton,DEN,9.0,WR,106.0,courtland sutton,courtlandsutton,2023,189.0,15.0
 Michael Thomas,FA,0.0,WR,106.3,michael thomas,michaelthomas,2023,89.8,10.0
 Odell Beckham Jr.,FA,0.0,WR,106.3,odell beckham,odellbeckham,2023,107.5,14.0
 Gabe Davis,FA,0.0,WR,108.3,gabe davis,gabedavis,2023,161.4,16.0
-Buffalo Bills,DST,13.0,DST,108.5,buffalo bills,buffalobills,2023,147.0,-1.0
+Buffalo Bills,DST,13.0,DST,108.5,buffalo bills,buffalobills,2023,147.0,16.0
 JuJu Smith-Schuster,KC,10.0,WR,109.3,juju smith schuster,jujusmithschuster,2023,61.0,11.0
 Brian Robinson Jr.,WAS,14.0,RB,109.3,brian robinson,brianrobinson,2023,187.5,14.0
 Kirk Cousins,ATL,11.0,QB,109.8,kirk cousins,kirkcousins,2023,149.7,8.0
@@ -111,18 +111,18 @@ Daniel Carlson,LV,13.0,K,114.3,daniel carlson,danielcarlson,2023,111.0,16.0
 Zay Flowers,BAL,13.0,WR,115.0,zay flowers,zayflowers,2023,206.4,16.0
 Kadarius Toney,FA,0.0,WR,116.8,kadarius toney,kadariustoney,2023,53.0,13.0
 Zach Charbonnet,SEA,5.0,RB,118.0,zach charbonnet,zachcharbonnet,2023,98.1,15.0
-Dallas Cowboys,DST,7.0,DST,118.3,dallas cowboys,dallascowboys,2023,162.0,-1.0
+Dallas Cowboys,DST,7.0,DST,118.3,dallas cowboys,dallascowboys,2023,162.0,16.0
 Samaje Perine,CIN,7.0,RB,118.5,samaje perine,samajeperine,2023,115.3,16.0
 Anthony Richardson Sr.,IND,11.0,QB,120.3,anthony richardson,anthonyrichardson,2023,72.7,4.0
 Dalton Schultz,HOU,7.0,TE,120.5,dalton schultz,daltonschultz,2023,141.3,14.0
 Daniel Jones,IND,11.0,QB,120.8,daniel jones,danieljones,2023,57.0,6.0
-New York Jets,DST,7.0,DST,122.3,new york jets,newyorkjets,2023,139.0,-1.0
+New York Jets,DST,7.0,DST,122.3,new york jets,newyorkjets,2023,139.0,16.0
 Geno Smith,LV,13.0,QB,124.8,geno smith,genosmith,2023,206.1,14.0
 Jerick McKinnon,FA,0.0,RB,125.3,jerick mckinnon,jerickmckinnon,2023,80.3,12.0
 Quentin Johnston,LAC,5.0,WR,125.3,quentin johnston,quentinjohnston,2023,89.7,16.0
 Dalton Kincaid,BUF,13.0,TE,127.0,dalton kincaid,daltonkincaid,2023,134.9,15.0
 Skyy Moore,KC,10.0,WR,127.5,skyy moore,skyymoore,2023,53.7,14.0
-New England Patriots,DST,11.0,DST,128.5,new england patriots,newenglandpatriots,2023,106.0,-1.0
+New England Patriots,DST,11.0,DST,128.5,new england patriots,newenglandpatriots,2023,106.0,16.0
 Tyler Bass,BUF,13.0,K,129.0,tyler bass,tylerbass,2023,130.0,16.0
 Eddy Pineiro,FA,0.0,K,129.0,eddy pineiro,eddypineiro,2023,109.0,15.0
 Cole Kmet,CHI,13.0,TE,129.5,cole kmet,colekmet,2023,174.0,16.0
@@ -135,20 +135,20 @@ De'Von Achane,MIA,10.0,RB,136.8,devon achane,devonachane,2023,177.6,10.0
 Jason Myers,SEA,5.0,K,136.8,jason myers,jasonmyers,2023,151.0,16.0
 Adam Thielen,CAR,7.0,WR,137.3,adam thielen,adamthielen,2023,227.8,16.0
 Jared Goff,DET,9.0,QB,138.8,jared goff,jaredgoff,2023,270.3,16.0
-Baltimore Ravens,DST,13.0,DST,138.8,baltimore ravens,baltimoreravens,2023,166.0,-1.0
+Baltimore Ravens,DST,13.0,DST,138.8,baltimore ravens,baltimoreravens,2023,166.0,16.0
 Younghoe Koo,ATL,11.0,K,139.0,younghoe koo,younghoekoo,2023,133.0,16.0
 Rashaad Penny,FA,0.0,RB,140.3,rashaad penny,rashaadpenny,2023,3.2,2.0
 Elijah Mitchell,KC,10.0,RB,140.3,elijah mitchell,elijahmitchell,2023,32.8,10.0
-Pittsburgh Steelers,DST,6.0,DST,141.5,pittsburgh steelers,pittsburghsteelers,2023,131.0,-1.0
+Pittsburgh Steelers,DST,6.0,DST,141.5,pittsburgh steelers,pittsburghsteelers,2023,131.0,16.0
 Allen Lazard,NYJ,7.0,WR,143.5,allen lazard,allenlazard,2023,60.1,14.0
-Miami Dolphins,DST,10.0,DST,145.8,miami dolphins,miamidolphins,2023,143.0,-1.0
+Miami Dolphins,DST,10.0,DST,145.8,miami dolphins,miamidolphins,2023,143.0,16.0
 Juwan Johnson,NO,11.0,TE,147.3,juwan johnson,juwanjohnson,2023,90.8,12.0
 Russell Wilson,NYG,13.0,QB,148.0,russell wilson,russellwilson,2023,256.9,15.0
 Jakobi Meyers,LV,13.0,WR,150.0,jakobi meyers,jakobimeyers,2023,192.5,15.0
 Elijah Moore,BUF,13.0,WR,151.0,elijah moore,elijahmoore,2023,132.1,16.0
 Rashod Bateman,BAL,13.0,WR,152.0,rashod bateman,rashodbateman,2023,76.5,15.0
 Jameson Williams,DET,9.0,WR,154.0,jameson williams,jamesonwilliams,2023,80.3,12.0
-New Orleans Saints,DST,11.0,DST,154.0,new orleans saints,neworleanssaints,2023,135.0,-1.0
+New Orleans Saints,DST,11.0,DST,154.0,new orleans saints,neworleanssaints,2023,135.0,16.0
 Chig Okonkwo,TEN,7.0,TE,154.5,chig okonkwo,chigokonkwo,2023,107.8,16.0
 Graham Gano,NYG,13.0,K,155.3,graham gano,grahamgano,2023,50.0,8.0
 Tyler Boyd,FA,0.0,WR,156.0,tyler boyd,tylerboyd,2023,145.4,16.0
@@ -161,7 +161,7 @@ Jaylen Warren,PIT,6.0,RB,162.8,jaylen warren,jaylenwarren,2023,188.4,16.0
 Derek Carr,FA,0.0,QB,163.3,derek carr,derekcarr,2023,214.0,16.0
 Damien Harris,FA,0.0,RB,164.5,damien harris,damienharris,2023,19.0,6.0
 Jalin Hyatt,NYG,13.0,WR,166.3,jalin hyatt,jalinhyatt,2023,58.8,16.0
-Kansas City Chiefs,DST,10.0,DST,166.5,kansas city chiefs,kansascitychiefs,2023,119.0,-1.0
+Kansas City Chiefs,DST,10.0,DST,166.5,kansas city chiefs,kansascitychiefs,2023,119.0,16.0
 Brock Purdy,SF,9.0,QB,167.0,brock purdy,brockpurdy,2023,295.6,16.0
 Sam LaPorta,DET,9.0,TE,168.3,sam laporta,samlaporta,2023,225.4,16.0
 Kenny Pickett,CLE,5.0,QB,168.3,kenny pickett,kennypickett,2023,110.2,12.0
@@ -174,16 +174,16 @@ Darnell Mooney,ATL,11.0,WR,174.0,darnell mooney,darnellmooney,2023,78.9,15.0
 Greg Dulcich,NYG,13.0,TE,176.0,greg dulcich,gregdulcich,2023,5.5,2.0
 Kendre Miller,NO,11.0,RB,177.3,kendre miller,kendremiller,2023,28.4,7.0
 Matthew Stafford,LAR,10.0,QB,178.8,matthew stafford,matthewstafford,2023,243.1,15.0
-Washington Commanders,DST,14.0,DST,179.8,washington commanders,washingtoncommanders,2023,58.0,-1.0
+Washington Commanders,DST,14.0,DST,179.8,washington commanders,washingtoncommanders,2023,58.0,16.0
 Deuce Vaughn,DAL,7.0,RB,180.0,deuce vaughn,deucevaughn,2023,15.0,8.0
 Greg Zuerlein,FA,0.0,K,180.0,greg zuerlein,gregzuerlein,2023,133.0,15.0
 Romeo Doubs,GB,6.0,WR,180.3,romeo doubs,romeodoubs,2023,174.4,16.0
-Cincinnati Bengals,DST,7.0,DST,180.8,cincinnati bengals,cincinnatibengals,2023,110.0,-1.0
+Cincinnati Bengals,DST,7.0,DST,180.8,cincinnati bengals,cincinnatibengals,2023,110.0,16.0
 Bryce Young,CAR,7.0,QB,183.3,bryce young,bryceyoung,2023,152.2,15.0
 Deon Jackson,FA,0.0,RB,183.7,deon jackson,deonjackson,2023,4.0,4.0
 Rondale Moore,MIN,13.0,WR,184.5,rondale moore,rondalemoore,2023,97.4,16.0
 Rashee Rice,KC,10.0,WR,185.3,rashee rice,rasheerice,2023,212.5,16.0
-Green Bay Packers,DST,6.0,DST,187.3,green bay packers,greenbaypackers,2023,106.0,-1.0
+Green Bay Packers,DST,6.0,DST,187.3,green bay packers,greenbaypackers,2023,106.0,16.0
 Kenneth Gainwell,PIT,6.0,RB,187.5,kenneth gainwell,kennethgainwell,2023,90.5,15.0
 Jordan Love,GB,6.0,QB,189.0,jordan love,jordanlove,2023,300.5,16.0
 Michael Gallup,WAS,14.0,WR,190.0,michael gallup,michaelgallup,2023,87.8,16.0
@@ -196,18 +196,18 @@ K.J. Osborn,WAS,14.0,WR,192.3,kj osborn,kjosborn,2023,117.1,15.0
 Kyren Williams,LAR,10.0,RB,193.0,kyren williams,kyrenwilliams,2023,255.0,12.0
 Matt Gay,WAS,14.0,K,193.8,matt gay,mattgay,2023,146.0,16.0
 Donovan Peoples-Jones,NO,11.0,WR,194.3,donovan peoples jones,donovanpeoplesjones,2023,24.0,14.0
-Jacksonville Jaguars,DST,9.0,DST,194.5,jacksonville jaguars,jacksonvillejaguars,2023,117.0,-1.0
+Jacksonville Jaguars,DST,9.0,DST,194.5,jacksonville jaguars,jacksonvillejaguars,2023,117.0,16.0
 Roschon Johnson,CHI,13.0,RB,195.0,roschon johnson,roschonjohnson,2023,100.1,14.0
 Brandon McManus,GB,6.0,K,196.5,brandon mcmanus,brandonmcmanus,2023,137.0,16.0
 Jason Sanders,MIA,10.0,K,197.3,jason sanders,jasonsanders,2023,144.0,16.0
-Los Angeles Chargers,DST,5.0,DST,197.5,los angeles chargers,losangeleschargers,2023,105.0,-1.0
-Carolina Panthers,DST,7.0,DST,198.0,carolina panthers,carolinapanthers,2023,64.0,-1.0
+Los Angeles Chargers,DST,5.0,DST,197.5,los angeles chargers,losangeleschargers,2023,105.0,16.0
 Sean Tucker,TB,5.0,RB,198.0,sean tucker,seantucker,2023,5.2,11.0
-Denver Broncos,DST,9.0,DST,198.8,denver broncos,denverbroncos,2023,115.0,-1.0
+Carolina Panthers,DST,7.0,DST,198.0,carolina panthers,carolinapanthers,2023,64.0,16.0
 Zach Ertz,WAS,14.0,TE,198.8,zach ertz,zachertz,2023,51.7,7.0
-Detroit Lions,DST,9.0,DST,199.0,detroit lions,detroitlions,2023,98.0,-1.0
-Cleveland Browns,DST,5.0,DST,199.8,cleveland browns,clevelandbrowns,2023,153.0,-1.0
-Seattle Seahawks,DST,5.0,DST,200.0,seattle seahawks,seattleseahawks,2023,107.0,-1.0
+Denver Broncos,DST,9.0,DST,198.8,denver broncos,denverbroncos,2023,115.0,16.0
+Detroit Lions,DST,9.0,DST,199.0,detroit lions,detroitlions,2023,98.0,16.0
+Cleveland Browns,DST,5.0,DST,199.8,cleveland browns,clevelandbrowns,2023,153.0,16.0
+Seattle Seahawks,DST,5.0,DST,200.0,seattle seahawks,seattleseahawks,2023,107.0,16.0
 DJ Chark Jr.,FA,0.0,WR,200.3,dj chark,djchark,2023,110.9,14.0
 Sam Howell,MIN,13.0,QB,200.3,sam howell,samhowell,2023,250.1,16.0
 Luke Musgrave,GB,6.0,TE,200.8,luke musgrave,lukemusgrave,2023,73.1,10.0
@@ -222,12 +222,12 @@ Ty Chandler,MIN,13.0,RB,208.5,ty chandler,tychandler,2023,90.1,16.0
 Cairo Santos,CHI,13.0,K,209.0,cairo santos,cairosantos,2023,147.0,16.0
 Zamir White,LV,13.0,RB,209.5,zamir white,zamirwhite,2023,60.8,16.0
 Marquez Valdes-Scantling,SEA,5.0,WR,210.5,marquez valdes scantling,marquezvaldesscantling,2023,56.5,16.0
-Minnesota Vikings,DST,13.0,DST,211.0,minnesota vikings,minnesotavikings,2023,125.0,-1.0
+Minnesota Vikings,DST,13.0,DST,211.0,minnesota vikings,minnesotavikings,2023,125.0,16.0
 C.J. Stroud,HOU,7.0,QB,211.5,cj stroud,cjstroud,2023,254.5,14.0
+Los Angeles Rams,DST,10.0,DST,212.5,los angeles rams,losangelesrams,2023,77.0,16.0
 Kareem Hunt,KC,10.0,RB,212.5,kareem hunt,kareemhunt,2023,117.0,14.0
 Greg Joseph,SF,9.0,K,212.5,greg joseph,gregjoseph,2023,110.0,16.0
-Los Angeles Rams,DST,10.0,DST,212.5,los angeles rams,losangelesrams,2023,77.0,-1.0
-New York Giants,DST,13.0,DST,213.0,new york giants,newyorkgiants,2023,114.0,-1.0
+New York Giants,DST,13.0,DST,213.0,new york giants,newyorkgiants,2023,114.0,16.0
 Jimmy Garoppolo,LAR,10.0,QB,213.3,jimmy garoppolo,jimmygaroppolo,2023,64.1,6.0
 Chris Boswell,PIT,6.0,K,214.0,chris boswell,chrisboswell,2023,128.0,16.0
 Tom Brady,FA,0.0,QB,214.0,tom brady,tombrady,2023,-1.0,-1.0
@@ -243,22 +243,22 @@ Michael Mayer,LV,13.0,TE,218.8,michael mayer,michaelmayer,2023,71.4,14.0
 Jimmy Graham,FA,0.0,TE,219.0,jimmy graham,jimmygraham,2023,33.9,12.0
 Jayden Reed,GB,6.0,WR,220.0,jayden reed,jaydenreed,2023,202.0,15.0
 Jake Moody,SF,9.0,K,220.7,jake moody,jakemoody,2023,129.0,16.0
-Chicago Bears,DST,13.0,DST,222.0,chicago bears,chicagobears,2023,116.0,-1.0
 Jerome Ford,CLE,5.0,RB,222.0,jerome ford,jeromeford,2023,206.0,16.0
+Chicago Bears,DST,13.0,DST,222.0,chicago bears,chicagobears,2023,116.0,16.0
 Tyler Conklin,LAC,5.0,TE,222.3,tyler conklin,tylerconklin,2023,119.5,16.0
 Joshua Kelley,FA,0.0,RB,222.5,joshua kelley,joshuakelley,2023,61.6,16.0
 Mac Jones,SF,9.0,QB,222.7,mac jones,macjones,2023,106.4,11.0
 Parris Campbell,DAL,7.0,WR,222.8,parris campbell,parriscampbell,2023,30.4,12.0
-Tampa Bay Buccaneers,DST,5.0,DST,223.0,tampa bay buccaneers,tampabaybuccaneers,2023,116.0,-1.0
+Tampa Bay Buccaneers,DST,5.0,DST,223.0,tampa bay buccaneers,tampabaybuccaneers,2023,116.0,16.0
 Gus Edwards,FA,0.0,RB,223.5,gus edwards,gusedwards,2023,184.2,16.0
-Las Vegas Raiders,DST,13.0,DST,224.5,las vegas raiders,lasvegasraiders,2023,138.0,-1.0
+Las Vegas Raiders,DST,13.0,DST,224.5,las vegas raiders,lasvegasraiders,2023,138.0,16.0
 Hunter Renfrow,CAR,7.0,WR,224.8,hunter renfrow,hunterrenfrow,2023,48.5,16.0
-Tennessee Titans,DST,7.0,DST,226.0,tennessee titans,tennesseetitans,2023,95.0,-1.0
+Tennessee Titans,DST,7.0,DST,226.0,tennessee titans,tennesseetitans,2023,95.0,16.0
 Alec Pierce,IND,11.0,WR,226.3,alec pierce,alecpierce,2023,95.4,16.0
 Hayden Hurst,FA,0.0,TE,227.0,hayden hurst,haydenhurst,2023,42.4,9.0
 Curtis Samuel,BUF,13.0,WR,230.3,curtis samuel,curtissamuel,2023,152.2,15.0
 Justyn Ross,KC,10.0,WR,230.8,justyn ross,justynross,2023,7.6,9.0
-Atlanta Falcons,DST,11.0,DST,231.0,atlanta falcons,atlantafalcons,2023,100.0,-1.0
+Atlanta Falcons,DST,11.0,DST,231.0,atlanta falcons,atlantafalcons,2023,100.0,16.0
 Chase McLaughlin,TB,5.0,K,231.0,chase mclaughlin,chasemclaughlin,2023,125.0,16.0
 Noah Fant,SEA,5.0,TE,231.5,noah fant,noahfant,2023,73.4,16.0
 Blake Grupe,NO,11.0,K,232.0,blake grupe,blakegrupe,2023,138.0,16.0
@@ -268,25 +268,25 @@ Latavius Murray,FA,0.0,RB,234.5,latavius murray,lataviusmurray,2023,82.9,16.0
 John Metchie III,HOU,7.0,WR,235.0,john metchie,johnmetchie,2023,30.7,15.0
 Chase Edmonds,FA,0.0,RB,237.0,chase edmonds,chaseedmonds,2023,36.3,12.0
 DeVante Parker,FA,0.0,WR,239.7,devante parker,devanteparker,2023,70.8,12.0
-Ryan Tannehill,FA,0.0,QB,240.3,ryan tannehill,ryantannehill,2023,67.6,9.0
 Baker Mayfield,TB,5.0,QB,240.3,baker mayfield,bakermayfield,2023,267.9,16.0
+Ryan Tannehill,FA,0.0,QB,240.3,ryan tannehill,ryantannehill,2023,67.6,9.0
 Matt Prater,FA,0.0,K,241.0,matt prater,mattprater,2023,122.0,16.0
 Malik Cunningham,BAL,13.0,QB,241.0,malik cunningham,malikcunningham,2023,0.0,1.0
-Arizona Cardinals,DST,14.0,DST,242.0,arizona cardinals,arizonacardinals,2023,65.0,-1.0
 Rob Gronkowski,FA,0.0,TE,242.0,rob gronkowski,robgronkowski,2023,-1.0,-1.0
+Arizona Cardinals,DST,14.0,DST,242.0,arizona cardinals,arizonacardinals,2023,65.0,16.0
 Tanner Brown,FA,0.0,K,243.0,tanner brown,tannerbrown,2023,-1.0,-1.0
 Luke Schoonmaker,DAL,7.0,TE,244.0,luke schoonmaker,lukeschoonmaker,2023,26.5,16.0
-Houston Texans,DST,7.0,DST,245.0,houston texans,houstontexans,2023,127.0,-1.0
+Houston Texans,DST,7.0,DST,245.0,houston texans,houstontexans,2023,127.0,16.0
 Darius Slayton,NYG,13.0,WR,245.5,darius slayton,dariusslayton,2023,133.8,16.0
-Chase Brown,CIN,7.0,RB,246.0,chase brown,chasebrown,2023,47.2,11.0
 Bruce Anderson,III,0.0,RB,246.0,bruce anderson,bruceanderson,2023,-1.0,-1.0
 Robbie Gould,FA,0.0,K,246.0,robbie gould,robbiegould,2023,-1.0,-1.0
+Chase Brown,CIN,7.0,RB,246.0,chase brown,chasebrown,2023,47.2,11.0
 Kyle Allen,DET,9.0,QB,247.0,kyle allen,kyleallen,2023,-1.3,7.0
 Mecole Hardman Jr.,GB,6.0,WR,247.3,mecole hardman,mecolehardman,2023,12.0,10.0
-Henry Litwin,FA,0.0,WR,248.0,henry litwin,henrylitwin,2023,-1.0,-1.0
 Chase Claypool,FA,0.0,WR,248.0,chase claypool,chaseclaypool,2023,20.4,11.0
-Brandon Aubrey,DAL,7.0,K,249.0,brandon aubrey,brandonaubrey,2023,171.0,16.0
+Henry Litwin,FA,0.0,WR,248.0,henry litwin,henrylitwin,2023,-1.0,-1.0
 Jake Bobo,SEA,5.0,WR,249.0,jake bobo,jakebobo,2023,55.0,16.0
+Brandon Aubrey,DAL,7.0,K,249.0,brandon aubrey,brandonaubrey,2023,171.0,16.0
 Antonio Brown,FA,0.0,WR,250.0,antonio brown,antoniobrown,2023,-1.0,-1.0
 Desmond Ridder,FA,0.0,QB,250.0,desmond ridder,desmondridder,2023,161.1,14.0
 Mason Crosby,FA,0.0,K,251.0,mason crosby,masoncrosby,2023,14.0,2.0
@@ -305,18 +305,18 @@ Trey Lance,LAC,5.0,QB,259.3,trey lance,treylance,2023,-1.0,-1.0
 Wan'Dale Robinson,NYG,13.0,WR,259.5,wandale robinson,wandalerobinson,2023,119.7,14.0
 Rashid Shaheed,NO,11.0,WR,259.7,rashid shaheed,rashidshaheed,2023,134.1,14.0
 Keaontay Ingram,KC,10.0,RB,260.0,keaontay ingram,keaontayingram,2023,14.0,8.0
-Michael Carter,ARI,14.0,RB,260.0,michael carter,michaelcarter,2023,55.9,14.0
 Christopher Dunn,FA,0.0,K,260.0,christopher dunn,christopherdunn,2023,-1.0,-1.0
-Max Duggan,FA,0.0,QB,261.0,max duggan,maxduggan,2023,0.0,1.0
-Robert Woods,PIT,6.0,WR,261.0,robert woods,robertwoods,2023,89.3,14.0
+Michael Carter,ARI,14.0,RB,260.0,michael carter,michaelcarter,2023,55.9,14.0
 Christian Trahan,FA,0.0,TE,261.0,christian trahan,christiantrahan,2023,-1.0,-1.0
+Robert Woods,PIT,6.0,WR,261.0,robert woods,robertwoods,2023,89.3,14.0
+Max Duggan,FA,0.0,QB,261.0,max duggan,maxduggan,2023,0.0,1.0
 Isaiah Likely,BAL,13.0,TE,262.0,isaiah likely,isaiahlikely,2023,90.0,16.0
 Stetson Bennett,LAR,10.0,QB,263.0,stetson bennett,stetsonbennett,2023,-1.0,-1.0
-Tristan Vizcaino,FA,0.0,K,264.0,tristan vizcaino,tristanvizcaino,2023,-1.0,-1.0
 Adrian Peterson,FA,0.0,RB,264.0,adrian peterson,adrianpeterson,2023,-1.0,-1.0
+Tristan Vizcaino,FA,0.0,K,264.0,tristan vizcaino,tristanvizcaino,2023,-1.0,-1.0
+Puka Nacua,LAR,10.0,WR,265.0,puka nacua,pukanacua,2023,284.4,16.0
 Zack Kuntz,NYJ,7.0,TE,265.0,zack kuntz,zackkuntz,2023,-1.0,-1.0
 Nikola Kalinic,ATL,11.0,TE,265.0,nikola kalinic,nikolakalinic,2023,-1.0,-1.0
-Puka Nacua,LAR,10.0,WR,265.0,puka nacua,pukanacua,2023,284.4,16.0
 Tank Dell,HU,7.0,WR,265.8,tank dell,tankdell,2023,165.0,11.0
 Marvin Jones Jr.,FA,0.0,WR,266.0,marvin jones,marvinjones,2023,6.5,6.0
 Mohamed Ibrahim,FA,0.0,RB,266.0,mohamed ibrahim,mohamedibrahim,2023,0.0,1.0
@@ -324,8 +324,8 @@ Chad Ryland,ARI,14.0,K,266.5,chad ryland,chadryland,2023,78.0,16.0
 Chase Cota-,DUP,0.0,WR,267.0,chase cota,chasecota,2023,0.0,1.0
 Joey Slye,TEN,7.0,K,267.0,joey slye,joeyslye,2023,98.0,16.0
 Joshua Palmer,BUF,13.0,WR,267.5,joshua palmer,joshuapalmer,2023,95.7,9.0
-Indianapolis Colts,DST,11.0,DST,268.0,indianapolis colts,indianapoliscolts,2023,135.0,-1.0
 Noah Gray,KC,10.0,TE,268.0,noah gray,noahgray,2023,70.6,16.0
+Indianapolis Colts,DST,11.0,DST,268.0,indianapolis colts,indianapoliscolts,2023,135.0,16.0
 Austin Watkins Jr.,FA,0.0,WR,269.0,austin watkins,austinwatkins,2023,-1.0,-1.0
 Zach Evans,NYJ,7.0,RB,270.0,zach evans,zachevans,2023,1.6,9.0
 Chris Naggar,FA,0.0,K,270.0,chris naggar,chrisnaggar,2023,-1.0,-1.0
@@ -335,9 +335,9 @@ Rico Dowdle,CAR,7.0,RB,271.0,rico dowdle,ricodowdle,2023,78.5,15.0
 Cade Otton,TB,5.0,TE,271.7,cade otton,cadeotton,2023,111.5,16.0
 Michael Wilson,ARI,14.0,WR,272.0,michael wilson,michaelwilson,2023,99.0,12.0
 C.J. Uzomah,FA,0.0,TE,272.0,cj uzomah,cjuzomah,2023,19.8,12.0
-Matt Breida,FA,0.0,RB,273.0,matt breida,mattbreida,2023,46.9,16.0
-Michael Badgley,FA,0.0,K,273.0,michael badgley,michaelbadgley,2023,20.0,3.0
 Tucker Kraft,GB,6.0,TE,273.0,tucker kraft,tuckerkraft,2023,72.4,16.0
+Michael Badgley,FA,0.0,K,273.0,michael badgley,michaelbadgley,2023,20.0,3.0
+Matt Breida,FA,0.0,RB,273.0,matt breida,mattbreida,2023,46.9,16.0
 Allen Robinson,II,0.0,WR,274.0,allen robinson,allenrobinson,2023,62.0,16.0
 Justin Watson,HOU,7.0,WR,274.0,justin watson,justinwatson,2023,89.0,15.0
 Zach Wilson,MIA,10.0,QB,275.0,zach wilson,zachwilson,2023,119.9,12.0
@@ -347,13 +347,13 @@ Marcus Mariota,WAS,14.0,QB,277.0,marcus mariota,marcusmariota,2023,1.2,2.0
 Ronnie Bell,DET,9.0,WR,278.0,ronnie bell,ronniebell,2023,23.3,16.0
 DeWayne McBride,FA,0.0,RB,278.5,dewayne mcbride,dewaynemcbride,2023,-1.0,-1.0
 Austin Allen,FA,0.0,TE,279.0,austin allen,austinallen,2023,-1.0,-1.0
-Logan Thomas,FA,0.0,TE,279.0,logan thomas,loganthomas,2023,124.9,15.0
 Matt Barkley,FA,0.0,QB,279.0,matt barkley,mattbarkley,2023,-0.3,1.0
+Logan Thomas,FA,0.0,TE,279.0,logan thomas,loganthomas,2023,124.9,15.0
+Robert Tonyan,KC,10.0,TE,280.0,robert tonyan,roberttonyan,2023,22.2,16.0
 Will Dissly,LAC,5.0,TE,280.0,will dissly,willdissly,2023,26.6,15.0
 Albert Okwuegbunam Jr.,IND,11.0,TE,280.0,albert okwuegbunam,albertokwuegbunam,2023,0.0,4.0
-Robert Tonyan,KC,10.0,TE,280.0,robert tonyan,roberttonyan,2023,22.2,16.0
-Cade York,FA,0.0,K,280.5,cade york,cadeyork,2023,-1.0,-1.0
 Daniel Bellinger,NYG,13.0,TE,280.5,daniel bellinger,danielbellinger,2023,50.5,16.0
+Cade York,FA,0.0,K,280.5,cade york,cadeyork,2023,-1.0,-1.0
 Rodrigo Blankenship,FA,0.0,K,281.0,rodrigo blankenship,rodrigoblankenship,2023,-1.0,-1.0
 Richie James Jr.,FA,0.0,WR,281.5,richie james,richiejames,2023,15.9,8.0
 Dustin Hopkins,CLE,5.0,K,282.0,dustin hopkins,dustinhopkins,2023,149.0,15.0
@@ -363,16 +363,16 @@ Durham Smythe,CHI,13.0,TE,283.0,durham smythe,durhamsmythe,2023,65.6,15.0
 Quez Watkins,ARI,14.0,WR,284.0,quez watkins,quezwatkins,2023,11.9,8.0
 Julio Jones,FA,0.0,WR,284.0,julio jones,juliojones,2023,33.1,10.0
 Irv Smith Jr.,HOU,7.0,TE,285.0,irv smith,irvsmith,2023,33.5,12.0
-Tyquan Thornton,KC,10.0,WR,285.0,tyquan thornton,tyquanthornton,2023,27.2,9.0
 Mitchell Trubisky,BUF,13.0,QB,285.0,mitchell trubisky,mitchelltrubisky,2023,-1.0,-1.0
-Equanimeous St. Brown,FA,0.0,WR,286.0,equanimeous st brown,equanimeousstbrown,2023,8.4,6.0
+Tyquan Thornton,KC,10.0,WR,285.0,tyquan thornton,tyquanthornton,2023,27.2,9.0
 Josh Woodrum,FA,0.0,QB,286.0,josh woodrum,joshwoodrum,2023,-1.0,-1.0
+Equanimeous St. Brown,FA,0.0,WR,286.0,equanimeous st brown,equanimeousstbrown,2023,8.4,6.0
 Boston Scott,FA,0.0,RB,286.5,boston scott,bostonscott,2023,15.3,14.0
 Thomas Greaney,FA,0.0,TE,287.0,thomas greaney,thomasgreaney,2023,-1.0,-1.0
 Nick Sciba,FA,0.0,K,287.0,nick sciba,nicksciba,2023,-1.0,-1.0
 Josh Oliver,MIN,13.0,TE,288.0,josh oliver,josholiver,2023,48.2,16.0
-Jake Browning,CIN,7.0,QB,289.0,jake browning,jakebrowning,2023,126.1,8.0
 Pierre Strong Jr.,CLE,5.0,RB,289.0,pierre strong,pierrestrong,2023,36.3,16.0
+Jake Browning,CIN,7.0,QB,289.0,jake browning,jakebrowning,2023,126.1,8.0
 Ka'imi Fairbairn,HOU,7.0,K,289.5,kaimi fairbairn,kaimifairbairn,2023,107.0,11.0
 Cooper Rush,BAL,13.0,QB,290.0,cooper rush,cooperrush,2023,2.1,7.0
 Cole McDonald,FA,0.0,QB,290.0,cole mcdonald,colemcdonald,2023,-1.0,-1.0
@@ -382,12 +382,12 @@ Trenton Irwin,JAC,9.0,WR,293.0,trenton irwin,trentonirwin,2023,57.2,15.0
 Danny Etling,FA,0.0,QB,294.0,danny etling,dannyetling,2023,-1.0,-1.0
 Trace McSorley,FA,0.0,QB,294.0,trace mcsorley,tracemcsorley,2023,-1.0,-1.0
 KaVontae Turpin,DAL,7.0,WR,295.0,kavontae turpin,kavontaeturpin,2023,59.2,15.0
-Cam Newton,FA,0.0,QB,296.0,cam newton,camnewton,2023,-1.0,-1.0
 Jauan Jennings,SF,9.0,WR,296.0,jauan jennings,jauanjennings,2023,51.5,13.0
+Cam Newton,FA,0.0,QB,296.0,cam newton,camnewton,2023,-1.0,-1.0
 Peyton Hendershot,FA,0.0,TE,297.0,peyton hendershot,peytonhendershot,2023,4.4,7.0
 Malik Flowers,FA,0.0,WR,297.0,malik flowers,malikflowers,2023,-1.0,-1.0
-Teddy Bridgewater,FA,0.0,QB,298.0,teddy bridgewater,teddybridgewater,2023,-0.2,1.0
 Sterling Shepard,TB,5.0,WR,298.0,sterling shepard,sterlingshepard,2023,14.9,14.0
+Teddy Bridgewater,FA,0.0,QB,298.0,teddy bridgewater,teddybridgewater,2023,-0.2,1.0
 Drew Lock,SEA,5.0,QB,299.0,drew lock,drewlock,2023,29.1,4.0
 J.J. Taylor,HOU,7.0,RB,300.0,jj taylor,jjtaylor,2023,-1.0,-1.0
 Darius Jackson,FA,0.0,RB,301.0,darius jackson,dariusjackson,2023,-1.0,-1.0
@@ -396,30 +396,30 @@ Sean Clifford,GB,6.0,QB,303.0,sean clifford,seanclifford,2023,1.3,2.0
 Troy Fumagalli,FA,0.0,TE,303.0,troy fumagalli,troyfumagalli,2023,-1.0,-1.0
 Josh Hill,FA,0.0,TE,304.0,josh hill,joshhill,2023,-1.0,-1.0
 Binjimen Victor,FA,0.0,WR,304.0,binjimen victor,binjimenvictor,2023,-1.0,-1.0
+Devin Duvernay,CHI,13.0,WR,305.0,devin duvernay,devinduvernay,2023,7.3,13.0
 Levine Toilolo,FA,0.0,TE,305.0,levine toilolo,levinetoilolo,2023,-1.0,-1.0
 C.J. Ham,MIN,13.0,RB,305.0,cj ham,cjham,2023,10.2,16.0
-Devin Duvernay,CHI,13.0,WR,305.0,devin duvernay,devinduvernay,2023,7.3,13.0
 Charlie Jones,CIN,7.0,WR,306.0,charlie jones,charliejones,2023,5.5,10.0
-Nate Stanley,FA,0.0,QB,307.0,nate stanley,natestanley,2023,-1.0,-1.0
 Ryan Succop,FA,0.0,K,307.0,ryan succop,ryansuccop,2023,-1.0,-1.0
-Kaden Smith,FA,0.0,TE,308.0,kaden smith,kadensmith,2023,-1.0,-1.0
+Nate Stanley,FA,0.0,QB,307.0,nate stanley,natestanley,2023,-1.0,-1.0
 Le'Veon Bell,FA,0.0,RB,308.0,leveon bell,leveonbell,2023,-1.0,-1.0
-Nick Bowers,FA,0.0,TE,309.0,nick bowers,nickbowers,2023,-1.0,-1.0
+Kaden Smith,FA,0.0,TE,308.0,kaden smith,kadensmith,2023,-1.0,-1.0
 Marquise Goodwin,FA,0.0,WR,309.0,marquise goodwin,marquisegoodwin,2023,14.0,12.0
+Nick Bowers,FA,0.0,TE,309.0,nick bowers,nickbowers,2023,-1.0,-1.0
 Briley Moore,FA,0.0,TE,310.0,briley moore,brileymoore,2023,-1.0,-1.0
 Grant DuBose,FA,0.0,WR,311.0,grant dubose,grantdubose,2023,-1.0,-1.0
-Olamide Zaccheaus,CHI,13.0,WR,312.0,olamide zaccheaus,olamidezaccheaus,2023,34.4,16.0
 Ross Travis,FA,0.0,TE,312.0,ross travis,rosstravis,2023,-1.0,-1.0
+Olamide Zaccheaus,CHI,13.0,WR,312.0,olamide zaccheaus,olamidezaccheaus,2023,34.4,16.0
 Jason Brownlee,KC,10.0,WR,313.0,jason brownlee,jasonbrownlee,2023,16.6,6.0
 Israel Abanikanda,SF,9.0,RB,313.5,israel abanikanda,israelabanikanda,2023,15.7,6.0
-Derek Watt,FA,0.0,RB,314.0,derek watt,derekwatt,2023,-1.0,-1.0
 Matt Bushman,FA,0.0,TE,314.0,matt bushman,mattbushman,2023,0.0,1.0
+Derek Watt,FA,0.0,RB,314.0,derek watt,derekwatt,2023,-1.0,-1.0
 Jordan Matthews,FA,0.0,TE,316.0,jordan matthews,jordanmatthews,2023,0.0,1.0
 Hendon Hooker,DET,9.0,QB,316.0,hendon hooker,hendonhooker,2023,-1.0,-1.0
 Kahale Warring,FA,0.0,TE,317.0,kahale warring,kahalewarring,2023,-1.0,-1.0
 Brock Wright,DET,9.0,TE,317.0,brock wright,brockwright,2023,28.1,14.0
-DaeSean Hamilton,FA,0.0,WR,318.0,daesean hamilton,daeseanhamilton,2023,-1.0,-1.0
 Jalen Tolbert,DAL,7.0,WR,318.0,jalen tolbert,jalentolbert,2023,50.0,16.0
+DaeSean Hamilton,FA,0.0,WR,318.0,daesean hamilton,daeseanhamilton,2023,-1.0,-1.0
 Jonnu Smith,MIA,10.0,TE,319.0,jonnu smith,jonnusmith,2023,112.3,16.0
 Jarrett Stidham,DEN,9.0,QB,320.0,jarrett stidham,jarrettstidham,2023,13.6,2.0
 Andrei Iosivas,CIN,7.0,WR,321.0,andrei iosivas,andreiiosivas,2023,30.0,15.0
@@ -457,8 +457,8 @@ Cedrick Wilson Jr.,NO,11.0,WR,353.0,cedrick wilson,cedrickwilson,2023,66.2,14.0
 James Robinson,FA,0.0,RB,353.0,james robinson,jamesrobinson,2023,1.0,1.0
 Julian Hill,MIA,10.0,TE,355.0,julian hill,julianhill,2023,7.6,14.0
 Dontayvion Wicks,GB,6.0,WR,356.0,dontayvion wicks,dontayvionwicks,2023,95.1,14.0
-Mitchell Wilcox,FA,0.0,TE,357.0,mitchell wilcox,mitchellwilcox,2023,14.6,16.0
 Jared Cook,FA,0.0,TE,357.0,jared cook,jaredcook,2023,-1.0,-1.0
+Mitchell Wilcox,FA,0.0,TE,357.0,mitchell wilcox,mitchellwilcox,2023,14.6,16.0
 Xavier Gipson,NYJ,7.0,WR,358.0,xavier gipson,xaviergipson,2023,51.3,16.0
 Alec Ingold,MIA,10.0,RB,359.0,alec ingold,alecingold,2023,24.9,16.0
 Devonta Freeman,FA,0.0,RB,360.0,devonta freeman,devontafreeman,2023,-1.0,-1.0
@@ -545,7 +545,6 @@ Andrew Beck,NYJ,7.0,RB,445.0,andrew beck,andrewbeck,2023,23.9,14.0
 Velus Jones Jr.,NO,11.0,WR,446.0,velus jones,velusjones,2023,11.1,13.0
 Brandon Powell,FA,0.0,WR,447.0,brandon powell,brandonpowell,2023,65.9,16.0
 Ian Thomas,LV,13.0,TE,448.0,ian thomas,ianthomas,2023,9.1,11.0
-Jason Cabinda,FA,0.0,RB,449.0,jason cabinda,jasoncabinda,2023,0.0,3.0
 Demarcus Robinson,SF,9.0,WR,450.0,demarcus robinson,demarcusrobinson,2023,87.4,15.0
 Malik Willis,GB,6.0,QB,451.0,malik willis,malikwillis,2023,3.1,3.0
 Jaren Hall,FA,0.0,QB,452.0,jaren hall,jarenhall,2023,2.1,3.0
