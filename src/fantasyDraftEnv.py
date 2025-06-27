@@ -200,41 +200,29 @@ class FantasyDraftEnv(gym.Env):
         return mask.astype(bool)
 
     def _fast_lineup_points(self) -> float:
-        """🚀 OPTIMIZED lineup calculation using numpy operations."""
+        """🚀 OPTIMIZED lineup calculation - matches original logic exactly."""
         if not self.my_picks:
             return 0.0
             
-        # Get fantasy points for my picks
-        my_roster = self.board.iloc[self.my_picks]
-        
+        # Use the exact same logic as original _lineup_points
+        roster = self.board.loc[self.my_picks]
+        pos_gp = {p: roster[roster["position"] == p]
+                        .sort_values("fantasy_points", ascending=False)
+                for p in BASE_POS}
+
         total = 0.0
-        
-        # Calculate starter points for each position
         for pos, req in self.roster_req.items():
             if pos == "FLEX":
                 continue
-            pos_players = my_roster[my_roster["position"] == pos]
-            if len(pos_players) > 0:
-                top_points = pos_players["fantasy_points"].nlargest(req).sum()
-                total += top_points
+            total += pos_gp.get(pos, pd.DataFrame())["fantasy_points"].head(req).sum()
 
-        # Handle FLEX
         flex_n = self.roster_req.get("FLEX", 0)
-        if flex_n > 0:
-            flex_eligible = []
-            for pos in FLEX_POS:
-                pos_players = my_roster[my_roster["position"] == pos]
-                required = self.roster_req.get(pos, 0)
-                if len(pos_players) > required:
-                    # Add excess players to FLEX pool
-                    excess = pos_players.nlargest(len(pos_players)).iloc[required:]
-                    flex_eligible.append(excess)
-            
-            if flex_eligible:
-                flex_pool = pd.concat(flex_eligible, axis=0)
-                flex_points = flex_pool["fantasy_points"].nlargest(flex_n).sum()
-                total += flex_points
-                
+        if flex_n:
+            flex_pool = pd.concat(
+                [pos_gp[p].iloc[self.roster_req.get(p, 0):] for p in FLEX_POS],
+                axis=0
+            ).sort_values("fantasy_points", ascending=False)
+            total += flex_pool["fantasy_points"].head(flex_n).sum()
         return float(total)
 
     def _calculate_baseline_once(self) -> float:
