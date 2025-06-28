@@ -6,12 +6,12 @@ board = pd.read_csv("data/processed/training_data_2021.csv")
 
 # 2. env params (10-team league just to check flexibility)
 env = FantasyDraftEnv(
-    board_df     = board,
-    num_teams    = 10,
-    my_slot      = 3,
-    rounds       = 16,
+    board_df = board,
+    num_teams = 10,
+    my_slot = 3,
+    rounds = 16,
     roster_slots = dict(QB=1, RB=2, WR=2, TE=1, K=1, DST=1, FLEX=1),
-    bench_spots  = 6,
+    bench_spots = 6,
 )
 
 obs, info = env.reset(seed=42)

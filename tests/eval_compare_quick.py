@@ -9,12 +9,12 @@ ROSTER = dict(QB=1, RB=2, WR=3, TE=1, K=1, DST=1, FLEX=1)
 
 def make_env(slot: int):
     env = FantasyDraftEnv(
-        board_df     = board,
-        num_teams    = 12,
-        my_slot      = slot,          # 1-based
-        rounds       = 16,
+        board_df = board,
+        num_teams = 12,
+        my_slot = slot,
+        rounds = 16,
         roster_slots = ROSTER,
-        bench_spots  = 6,
+        bench_spots = 6,
     )
     return ActionMasker(env, lambda e: e.get_action_mask())
 
@@ -67,10 +67,10 @@ print(f"Improvement:        {((mean_agent / baseline_pts - 1) * 100):+.1f}%")
 
 # Quick analysis
 if mean_agent > baseline_pts:
-    print("🎉 Agent is beating the baseline!")
+    print("Agent is beating the baseline!")
 elif mean_agent > baseline_pts * 0.95:
-    print("😊 Agent is close to baseline (within 5%)")
+    print("Agent is close to baseline (within 5%)")
 elif mean_agent > baseline_pts * 0.90:
-    print("🤔 Agent needs more training (within 10%)")
+    print("Agent needs more training (within 10%)")
 else:
-    print("😟 Agent needs significant improvement")
+    print("Agent needs significant improvement")

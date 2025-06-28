@@ -5,12 +5,12 @@ from gymnasium import spaces
 from typing import Dict, List
 
 # ---------------------------------------------------------------------------
-BASE_POS    = ["QB", "RB", "WR", "TE", "K", "DST"]
-FLEX_POS    = {"WR", "RB", "TE"}
+BASE_POS = ["QB", "RB", "WR", "TE", "K", "DST"]
+FLEX_POS = {"WR", "RB", "TE"}
 FORESIGHT_K = 5
-MAX_ADP     = 300
+MAX_ADP = 300
 MAX_PLAYER_PTS = 450.0
-DENSE_SCALE    = 10.0
+DENSE_SCALE = 10.0
 TIER_GAP_THRESHOLD = 20.0  # ADP gap that indicates tier break
 # ---------------------------------------------------------------------------
 
@@ -142,13 +142,13 @@ class FantasyDraftEnv(gym.Env):
             # ADP column (normalized)
             adp_col = avail["adp"].to_numpy(np.float32) / MAX_ADP
             
-            # NEW: Tier gap column (normalized ADP difference to next player)
+            # Tier gap column (normalized ADP difference to next player)
             tier_gaps = self._calculate_tier_gaps(avail)
             
             # Stack into 2-column array [ADP, tier_gap]
             features = np.column_stack([adp_col, tier_gaps])
             
-            # Pad if necessary
+            # Pad
             if len(features) < FORESIGHT_K:
                 pad_rows = FORESIGHT_K - len(features)
                 pad = np.full((pad_rows, 2), -1.0, np.float32)
@@ -172,7 +172,7 @@ class FantasyDraftEnv(gym.Env):
                 continue
                 
             current_count = self.roster_counts[pos]
-            max_allowed = self.pos_max.get(pos, 99)  # You have: {"QB": 2, "TE": 3, "K": 1, "DST": 1}
+            max_allowed = self.pos_max.get(pos, 99)
             
             if current_count >= max_allowed:
                 mask[i] = False  # Block this pick

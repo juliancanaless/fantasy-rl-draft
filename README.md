@@ -1,63 +1,37 @@
-# Fantasy Football Draft Assistant: A Deep Reinforcement Learning Experiment
+# Fantasy Football Draft Optimization with Deep Reinforcement Learning
 
-**An exploration of whether RL agents can learn optimal fantasy football drafting strategies across multiple seasons**
+**Investigating whether RL agents can learn optimal fantasy football drafting strategies that generalize across seasons**
 
-## 🎯 Project Overview
+## Overview
 
-This project investigates the application of deep reinforcement learning to fantasy football draft optimization. Using historical player data (2021-2024), I built custom gymnasium environments and trained PPO agents to draft superior teams compared to heuristic baselines. The journey revealed fascinating insights about the limits of RL in rapidly evolving strategic domains.
+This project explores the application of deep reinforcement learning to fantasy football draft optimization. Using 4 seasons of NFL data (2021-2024), I built custom Gymnasium environments and trained PPO agents to draft superior teams compared to intelligent heuristic baselines.
 
-## 🧠 The Research Question
+**Key Finding**: While agents achieved excellent performance on training data (+26% improvement), they failed catastrophically on unseen seasons (-17%), revealing fundamental limitations of RL in rapidly evolving strategic domains.
 
-**Can a reinforcement learning agent learn fantasy football drafting strategies that generalize across seasons?**
+## Technical Architecture
 
-Initial hypothesis: Yes, fundamental drafting principles (value, scarcity, positional need) should transfer across years.
+- **Environment**: Custom Gymnasium environment simulating 12-team snake drafts
+- **Action Space**: Discrete choice from 300+ available players with action masking
+- **Observation**: Multi-dict featuring roster state, positional needs, and top-5 players per position
+- **Algorithm**: Maskable PPO with dense reward shaping and intelligent opponent simulation
+- **Scale**: 1M+ training timesteps, 1,200+ evaluation episodes across multiple experiments
 
-**Spoiler alert:** The answer was more nuanced than expected.
+## Key Results
 
-## 🏗️ Technical Architecture
+![Generalization Analysis](results/generalization_failure.png)
 
-### Environment Design
-- **Custom Gymnasium Environment**: 12-team snake draft simulation
-- **Action Space**: Discrete choice from 300 available players  
-- **Observation Space**: Multi-dict with roster state, positional needs, and top-5 available players per position
-- **Reward Engineering**: Dense rewards for lineup improvement + final score vs baseline
-
-### Key Features
-- **Intelligent Opponents**: Heuristic bots that follow realistic drafting patterns (no K/DST before round 13, positional need awareness)
-- **Position Flexibility**: Full FLEX position support with optimal lineup calculation
-- **Draft Position Randomization**: Agent learns strategy-invariant principles across all draft slots
-- **Multi-Year Training**: Weighted sampling across 2021-2023 data (50% 2023, 35% 2022, 15% 2021)
-
-### Model Architecture
-- **Algorithm**: Maskable PPO with action masking for invalid picks
-- **Policy Network**: Multi-input CNN processing positional availability tables
-- **Training Scale**: 1M+ timesteps across multiple experiments
-- **Hardware**: NVIDIA T4 GPU on Google Colab
-
-## 📊 Key Experiments & Results
-
-### Experiment 1: Single-Year Overfitting (2021 Data)
-**Hypothesis**: Agent should easily beat baseline on same-year data
-
+### Experiment 1: Single-Year Training (2021)
 ```
-Training: 2021 data only (500k timesteps)
-Testing: 2021 data
-
-Results:
-Agent: 2,387 pts | Baseline: 1,680 pts | Improvement: +42%
-Win Rate: 100% | Status: ✅ EXCELLENT
+Training/Testing: 2021 data only
+Result: Agent 2,387 pts | Baseline 1,680 pts (+42% improvement)
+Status: ✅ Perfect overfitting
 ```
 
-**Outcome**: Complete success. Agent learned to exploit 2021-specific patterns perfectly.
-
-### Experiment 2: Multi-Year Generalization (2021-2023 → 2024)
-**Hypothesis**: Agent should learn transferable drafting principles
-
+### Experiment 2: Multi-Year Generalization
 ```
-Training: 2021-2023 multi-year (1M timesteps, weighted sampling)
+Training: 2021-2023 (weighted sampling)
 Testing: Individual years + unseen 2024
 
-Results by Year:
 2021: +501 pts (+26.2%) ✅
 2022: +437 pts (+22.6%) ✅  
 2023: +170 pts (+8.7%)  🟡
@@ -66,146 +40,78 @@ Results by Year:
 Generalization Gap: 700+ points
 ```
 
-**Outcome**: Catastrophic failure. Agent memorized training patterns that became obsolete.
+![Training Performance](results/training_progression.png)
 
-### Experiment 3: Anti-Overfitting Measures (2023 → 2024)
-**Hypothesis**: Regularization might enable generalization
-
+### Experiment 3: Regularization Attempts
 ```
-Training: 2023 only with ADP noise, higher entropy, smaller network
+Training: 2023 only (ADP noise, higher entropy, smaller network)
 Testing: 2024
-
-Results:
-Agent: 1,521 pts | Baseline: 1,982 pts | Improvement: -23%
-Overfitting Gap: Minimal (0.7%)
-Generalization: Still failed
+Result: -23% improvement (still failed)
+Conclusion: Not an overfitting problem - fundamental domain shift
 ```
 
-**Outcome**: Ruled out overfitting. The problem was fundamental domain shift.
+## Key Insights
 
-## 🔍 Key Discoveries
+### Why RL Failed Here
+1. **Rapidly Evolving Meta**: Fantasy football strategy changes faster than RL can adapt
+2. **Non-Stationary Environment**: Historical patterns became adversarial in new seasons
+3. **High Baseline Quality**: Heuristic opponents already encoded most exploitable patterns
+4. **Domain Characteristics**: High variance, rule changes, shifting player usage patterns
 
-### 1. **Fantasy Football Strategy Evolution**
-The dramatic performance decline 2021→2023→2024 revealed that fantasy football strategy evolves rapidly:
-- **2021**: Post-COVID patterns, more predictable
-- **2022-2023**: Rule changes, new offensive schemes  
-- **2024**: Evolved meta that invalidated historical patterns
+### When RL Works vs. Struggles
+**RL Excels**: Stable environments (chess, Go) with consistent rules and optimal strategies
 
-### 2. **Limits of Multi-Year RL Training**
-Traditional RL assumption: "More data = better generalization"
-Reality: Historical data became adversarial when the underlying game changed.
+**RL Struggles**: Dynamic domains where historical data becomes misleading (fantasy sports, financial markets)
 
-### 3. **The Baseline Quality Problem**
-The heuristic baseline was already quite strong (smart positional timing, value-based picks), leaving limited room for improvement through pattern memorization.
+![Domain Analysis](results/domain_shift_analysis.png)
 
-### 4. **Observation Space Insights**
-Key features that drove performance:
-- **Positional scarcity signals**: ADP gaps indicating tier breaks
-- **Roster construction state**: K/DST timing, FLEX optimization
-- **Draft context awareness**: Round-dependent position prioritization
+Technical Highlights
+Advanced Environment Engineering
+python# Multi-agent simulation with intelligent opponents
+class FantasyDraftEnv(gym.Env):
+    def _opponent_pick(self, team_idx):
+        # Realistic drafting logic: K/DST timing, positional scarcity, 
+        # roster construction rules, late-round strategy shifts
+    
+    def _build_obs(self):
+        # Complex observation space: roster state, positional needs,
+        # ADP tier gaps, draft context awareness
+        return {"roster": roster_vec, "roster_needs": needs_vec, 
+                "QB": top5_qb_features, ...}
 
-## 🛠️ Technical Implementation Highlights
+# Sophisticated reward engineering
+reward = (lineup_improvement / 10.0) + (final_vs_baseline / lineup_scale)
+Production-Scale Infrastructure
 
-### Reward Engineering
-```python
-# Dense reward for immediate improvement
-reward = (new_lineup_points - old_lineup_points) / 10.0
+High-Performance Training: NVIDIA A100 GPU on Google Colab (500+ its/sec)
+Optimized Data Pipeline: Pre-processed board templates with 10x faster environment resets
+Advanced Observation Processing: Vectorized operations with numpy masking and multi-dict spaces
+Multi-Year Training Architecture: Weighted temporal sampling across 3 seasons with dynamic draft position randomization
+Robust Evaluation Framework: Statistical validation across 1,200+ episodes with cross-temporal testing
 
-# Final reward comparing to baseline
-if done:
-    reward += (final_score - baseline_score) / lineup_scale
-```
-
-### Smart Baseline Calculation
-```python
-def _baseline_points(self):
-    # Run complete heuristic draft simulation
-    # Calculate average across all opponent teams
-    # Ensures fair comparison excluding agent's slot
-```
-
-### Multi-Year Environment Optimization
-- Pre-processed board templates for 10x faster resets
-- Weighted year sampling with recency bias
-- Draft position randomization for strategy-invariant learning
-
-## 📈 Technical Metrics
-
-- **Training Episodes**: 50,000+ complete drafts simulated
-- **Environment Performance**: 2.5 drafts/second evaluation speed
-- **Model Size**: 1.2M parameters (MultiInputPolicy CNN)
-- **Data Scale**: 900+ players across 4 seasons
-- **Evaluation Robustness**: 300 episodes per test with statistical significance
-
-## 🎯 Strategic Insights for RL Practitioners
-
-### When RL Works for Game Domains:
-- **Stable rule sets** (chess, Go, poker)
-- **Clear optimal strategies** that don't change over time
-- **Sufficient signal-to-noise ratio** in the reward function
-
-### When RL Struggles:
-- **Rapidly evolving metas** (fantasy sports, real-time strategy games)
-- **High variance outcomes** where luck dominates skill
-- **Non-stationary environments** where historical data becomes misleading
-
-### Alternative Approaches for Fantasy Sports:
-- **Supervised learning** on season-specific patterns
-- **Multi-task learning** with year-specific heads
-- **Meta-learning** approaches for few-shot adaptation
-
-## 💡 Project Lessons
-
-### Technical Learnings
-1. **Environment design matters more than model complexity**
-2. **Reward shaping can mask fundamental domain problems**
-3. **Evaluation methodology must match real-world deployment**
-4. **Baseline quality determines the ceiling for RL improvement**
-
-### Domain Insights
-5. **Fantasy football strategy shifts faster than RL can adapt**
-6. **Historical performance may be negatively correlated with future success**
-7. **Human experts already encode most learnable patterns into ADP**
-
-### Research Methodology
-8. **Always test generalization early and often**
-9. **Single-year overfitting can mask generalization failures**
-10. **Cross-validation is critical for time-series domains**
-
-## 🏆 Portfolio Significance
-
-This project demonstrates:
-- **Advanced RL Engineering**: Custom environments, reward design, multi-agent simulation
-- **Rigorous Experimentation**: Proper baselines, statistical evaluation, controlled experiments  
-- **Domain Expertise**: Deep understanding of fantasy football strategy and market dynamics
-- **Critical Analysis**: Honest assessment of approach limitations and alternative directions
-- **Production Considerations**: Performance optimization, evaluation frameworks, deployment readiness
-
-The "failure" to achieve generalization is actually a valuable research contribution, highlighting the boundaries of current RL techniques in rapidly evolving strategic domains.
-
-## 🔮 Future Directions
-
-If continuing this research:
-
-1. **Hybrid Approaches**: Combine RL for draft strategy with supervised learning for player valuation
-2. **Meta-Learning**: Train agents to quickly adapt to new season patterns
-3. **Multi-Objective Optimization**: Balance expected value against variance/risk
-4. **Real-Time Adaptation**: Update models during the season as new information emerges
-5. **Causal Inference**: Focus on stable causal relationships rather than correlational patterns
-
-## 📊 Repository Structure
+## Repository Structure
 
 ```
 fantasy-rl-draft/
-├── src/                    # Core RL environment and training
-├── data/                   # Processed player data 2021-2024
+├── src/                    # Core RL environment and training code
+├── notebooks/              # EDA + training colab notebooks
+├── data/processed/         # Clean player data 2021-2024
+├── data/raw/               # raw data - collected from fantasypros.com & fantastfootballers.com
 ├── models/                 # Trained PPO agents
-├── tests/                  # Evaluation and debugging scripts
-├── results/                # Experimental results and analysis
-├── scripts/                # Data processing pipeline
-└── docs/                   # Additional documentation
+├── tests/                  # Evaluation scripts and analysis
+├── results/                # Experimental results and visualizations
+├── visualizations/         # Chart generation scripts
+└── README.md
 ```
+
+## Lessons Learned
+
+**Technical**: Environment design and evaluation methodology matter more than model complexity
+
+**Domain**: Some problems require approaches other than RL - knowing when *not* to use a technique is as valuable as knowing when to use it
+
+**Research**: This "failure" provides insights into RL limitations in non-stationary domains, contributing to understanding of when historical data becomes adversarial
 
 ---
 
-**The most important lesson: Sometimes the most valuable outcome of an ML project is learning when *not* to apply a particular technique to a given domain.**
+*The most valuable outcome: Understanding the boundaries of current RL techniques in rapidly evolving strategic domains*

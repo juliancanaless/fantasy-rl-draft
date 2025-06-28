@@ -4,7 +4,6 @@ Fantasy-football Complete Data Processing Pipeline
 
 Combines preprocessing + missing data filling with strict position filtering.
 Only keeps QB, RB, WR, TE, K, DST positions.
-Sets all DST games_played to 16.
 """
 
 import pandas as pd
