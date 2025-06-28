@@ -1,10 +1,3 @@
-# fantasy_draft_env.py - PERFORMANCE OPTIMIZED VERSION
-#
-# Key optimizations:
-# 1. Cache baseline points (calculate once)
-# 2. Pre-filter position dataframes
-# 3. Minimize DataFrame operations in hot paths
-# 4. Use numpy operations where possible
 
 from __future__ import annotations
 import numpy as np, pandas as pd, gymnasium as gym
@@ -25,6 +18,7 @@ TIER_GAP_THRESHOLD = 20.0  # ADP gap that indicates tier break
 class FantasyDraftEnv(gym.Env):
     metadata = {"render_modes": []}
 
+    # -----------------------------------------------------------------------
     def __init__(
         self,
         board_df: pd.DataFrame,
@@ -59,16 +53,6 @@ class FantasyDraftEnv(gym.Env):
                       + roster_slots.get("FLEX", 0)
         self.lineup_scale = MAX_PLAYER_PTS * start_slots
 
-        # 🚀 MAJOR OPTIMIZATION: Pre-calculate baseline once!
-        print("🔧 Pre-calculating baseline (one-time cost)...")
-        self._cached_baseline = self._calculate_baseline_once()
-        print(f"✅ Baseline cached: {self._cached_baseline:.1f} points")
-        
-        # 🚀 OPTIMIZATION: Pre-filter position dataframes
-        self._position_masks = {}
-        for pos in BASE_POS:
-            self._position_masks[pos] = (self._board_template["position"] == pos).values
-
         # -------------------- spaces --------------------------------------
         self.action_space = spaces.Discrete(len(self._board_template))
         top_shape = (FORESIGHT_K, 2)  # ADP + tier_gap columns
@@ -88,6 +72,9 @@ class FantasyDraftEnv(gym.Env):
         self.my_picks: List[int] = []
         self._curr_lineup_pts = 0.0
 
+    # ======================================================================
+    # gymnasium API
+    # ======================================================================
     def reset(self, *, seed=None, options=None):
         super().reset(seed=seed)
         self.board = self._board_template.copy()
@@ -115,8 +102,8 @@ class FantasyDraftEnv(gym.Env):
         self.my_picks.append(idx)
         self.pick_global += 1
 
-        # 🚀 OPTIMIZED: Use fast lineup calculation
-        new_pts = self._fast_lineup_points()
+        # dense reward -----------------------------------------------------
+        new_pts = self._lineup_points(self.board, self.my_picks)
         reward  = (new_pts - self._curr_lineup_pts) / DENSE_SCALE
         self._curr_lineup_pts = new_pts
 
@@ -125,45 +112,38 @@ class FantasyDraftEnv(gym.Env):
 
         done = self.pick_global >= self.total_picks
         if done:
-            # 🚀 OPTIMIZATION: Use cached baseline instead of recalculating
-            final_reward = new_pts - self._cached_baseline
-            reward += final_reward / self.lineup_scale
-            
+            reward += new_pts / self.lineup_scale
         return self._build_obs(), reward, done, False, {"action_mask": self.get_action_mask()}
 
+    # ======================================================================
+    # observation builder
+    # ======================================================================
     def _build_obs(self):
-        """🚀 OPTIMIZED observation builder using pre-computed masks."""
         roster_vec = np.array(
             [self.roster_counts[p] / self.rounds for p in BASE_POS], np.float32
         )
 
+        # roster needs
         needs_vec = self._get_roster_needs()
 
-        # 🚀 OPTIMIZATION: Use numpy boolean indexing instead of DataFrame queries
-        available_mask = self.board["available"].values
-        
         tables = {}
-        for i, pos in enumerate(BASE_POS):
-            # Combine position mask with availability mask
-            pos_available_mask = self._position_masks[pos] & available_mask
-            pos_indices = np.where(pos_available_mask)[0]
+        for pos in BASE_POS:
+            avail = (
+                self.board[self.board["available"] & (self.board["position"] == pos)]
+                .sort_values("adp")
+                .head(FORESIGHT_K)
+            )
             
-            if len(pos_indices) == 0:
+            if len(avail) == 0:
+                # No players available at this position
                 tables[pos] = np.full((FORESIGHT_K, 2), -1.0, np.float32)
                 continue
+                
+            # ADP column (normalized)
+            adp_col = avail["adp"].to_numpy(np.float32) / MAX_ADP
             
-            # Get top K available players for this position (already sorted by ADP)
-            top_indices = pos_indices[:FORESIGHT_K]
-            
-            # Extract ADP values directly from numpy array
-            adp_values = self.board["adp"].iloc[top_indices].values.astype(np.float32)
-            adp_col = adp_values / MAX_ADP
-            
-            # Calculate tier gaps
-            tier_gaps = np.zeros_like(adp_col)
-            for j in range(len(adp_col) - 1):
-                raw_gap = adp_values[j + 1] - adp_values[j]
-                tier_gaps[j] = min(raw_gap / TIER_GAP_THRESHOLD, 1.0)
+            # NEW: Tier gap column (normalized ADP difference to next player)
+            tier_gaps = self._calculate_tier_gaps(avail)
             
             # Stack into 2-column array [ADP, tier_gap]
             features = np.column_stack([adp_col, tier_gaps])
@@ -183,114 +163,25 @@ class FantasyDraftEnv(gym.Env):
         }
     
     def get_action_mask(self) -> np.ndarray:
-        """🚀 OPTIMIZED action mask using numpy operations."""
+        """Boolean mask that prevents invalid picks (unavailable + position limits)"""
         mask = self.board["available"].values.copy()
         
-        # Vectorized position limit checking
+        # Enforce position limits
         for i, pos in enumerate(self.board["position"]):
-            if not mask[i]:
+            if not mask[i]:  # Already unavailable
                 continue
                 
             current_count = self.roster_counts[pos]
-            max_allowed = self.pos_max.get(pos, 99)
+            max_allowed = self.pos_max.get(pos, 99)  # You have: {"QB": 2, "TE": 3, "K": 1, "DST": 1}
             
             if current_count >= max_allowed:
-                mask[i] = False
+                mask[i] = False  # Block this pick
         
         return mask.astype(bool)
 
-    def _fast_lineup_points(self) -> float:
-        """🚀 OPTIMIZED lineup calculation - matches original logic exactly."""
-        if not self.my_picks:
-            return 0.0
-            
-        # Use the exact same logic as original _lineup_points
-        roster = self.board.loc[self.my_picks]
-        pos_gp = {p: roster[roster["position"] == p]
-                        .sort_values("fantasy_points", ascending=False)
-                for p in BASE_POS}
-
-        total = 0.0
-        for pos, req in self.roster_req.items():
-            if pos == "FLEX":
-                continue
-            total += pos_gp.get(pos, pd.DataFrame())["fantasy_points"].head(req).sum()
-
-        flex_n = self.roster_req.get("FLEX", 0)
-        if flex_n:
-            flex_pool = pd.concat(
-                [pos_gp[p].iloc[self.roster_req.get(p, 0):] for p in FLEX_POS],
-                axis=0
-            ).sort_values("fantasy_points", ascending=False)
-            total += flex_pool["fantasy_points"].head(flex_n).sum()
-        return float(total)
-
-    def _calculate_baseline_once(self) -> float:
-        """🚀 OPTIMIZATION: Calculate baseline once and cache it.
-        
-        IMPORTANT: Excludes agent's slot to ensure fair comparison.
-        Only averages the heuristic bot performance, not agent performance.
-        """
-        board = self._board_template.copy()
-        board["available"] = True
-        counts = [
-            {p: 0 for p in BASE_POS} | {"FLEX": 0}
-            for _ in range(self.num_teams)
-        ]
-
-        all_team_picks = [[] for _ in range(self.num_teams)]
-        
-        for pick in range(self.total_picks):
-            round_idx = pick // self.num_teams
-            pick_in_round = pick % self.num_teams
-            
-            # Proper snake draft order
-            if round_idx % 2 == 0:
-                tid = pick_in_round
-            else:
-                tid = self.num_teams - 1 - pick_in_round
-                
-            idx = self._heuristic_pick(board, counts[tid], pick)
-            all_team_picks[tid].append(idx)
-
-        # 🎯 FAIRNESS FIX: Only calculate baseline from opponent teams
-        # Exclude agent's slot (self.my_slot) from baseline calculation
-        opponent_scores = []
-        for i, team_picks in enumerate(all_team_picks):
-            if i != self.my_slot:  # Skip agent's slot
-                score = self._lineup_points_static(board, team_picks)
-                opponent_scores.append(score)
-        
-        baseline = float(np.mean(opponent_scores))
-        print(f"🎯 Fair baseline calculated from {len(opponent_scores)} opponent teams: {baseline:.1f}")
-        return baseline
-
-    def _lineup_points_static(self, board: pd.DataFrame, idx_list: List[int]) -> float:
-        """Static version of lineup calculation for baseline."""
-        if not idx_list:
-            return 0.0
-            
-        roster = board.iloc[idx_list]
-        pos_gp = {p: roster[roster["position"] == p]
-                          .sort_values("fantasy_points", ascending=False)
-                  for p in BASE_POS}
-
-        total = 0.0
-        for pos, req in self.roster_req.items():
-            if pos == "FLEX":
-                continue
-            total += pos_gp.get(pos, pd.DataFrame())["fantasy_points"].head(req).sum()
-
-        flex_n = self.roster_req.get("FLEX", 0)
-        if flex_n:
-            flex_pool = pd.concat(
-                [pos_gp[p].iloc[self.roster_req.get(p, 0):] for p in FLEX_POS],
-                axis=0
-            ).sort_values("fantasy_points", ascending=False)
-            total += flex_pool["fantasy_points"].head(flex_n).sum()
-        return float(total)
-
-    # Keep all the other methods the same (opponent simulation, etc.)
+    # -----------------------------------------------------------------------
+    # smarter opponents
+    # -----------------------------------------------------------------------
     def _simulate_opponents(self):
         while self.pick_global < self.total_picks:
             tid = self.pick_global % self.num_teams
@@ -347,6 +238,75 @@ class FantasyDraftEnv(gym.Env):
         else:
             counts[pos] += 1
 
+    # -----------------------------------------------------------------------
+    # reward helpers
+    # -----------------------------------------------------------------------
+    def _lineup_points(self, board: pd.DataFrame, idx_list: List[int]) -> float:
+        roster = board.loc[idx_list]
+        pos_gp = {p: roster[roster["position"] == p]
+                          .sort_values("fantasy_points", ascending=False)
+                  for p in BASE_POS}
+
+        total = 0.0
+        for pos, req in self.roster_req.items():
+            if pos == "FLEX":
+                continue
+            total += pos_gp.get(pos, pd.DataFrame())["fantasy_points"].head(req).sum()
+
+        flex_n = self.roster_req.get("FLEX", 0)
+        if flex_n:
+            flex_pool = pd.concat(
+                [pos_gp[p].iloc[self.roster_req.get(p, 0):] for p in FLEX_POS],
+                axis=0
+            ).sort_values("fantasy_points", ascending=False)
+            total += flex_pool["fantasy_points"].head(flex_n).sum()
+        return float(total)
+
+    def _final_reward(self) -> float:
+        return self._roster_points() - self._baseline_points()
+
+    def _roster_points(self) -> float:
+        return self._lineup_points(self.board, self.my_picks)
+
+    def _baseline_points(self) -> float:
+        """Calculate baseline as AVERAGE of all teams in a heuristic draft."""
+        board = self._board_template.copy()
+        board["available"] = True
+        counts = [
+            {p: 0 for p in BASE_POS} | {"FLEX": 0}
+            for _ in range(self.num_teams)
+        ]
+
+        # Track picks for ALL teams, not just mine
+        all_team_picks = [[] for _ in range(self.num_teams)]
+        
+        for pick in range(self.total_picks):
+            round_idx = pick // self.num_teams
+            pick_in_round = pick % self.num_teams
+            
+            # FIXED: Proper snake draft order
+            if round_idx % 2 == 0:
+                tid = pick_in_round
+            else:
+                tid = self.num_teams - 1 - pick_in_round
+                
+            # Make pick for current team
+            idx = self._heuristic_pick(board, counts[tid], pick)
+            all_team_picks[tid].append(idx)
+
+        # Calculate lineup points for ALL teams
+        team_scores = []
+        for team_picks in all_team_picks:
+            score = self._lineup_points(board, team_picks)
+            team_scores.append(score)
+        
+        # Return AVERAGE across all teams
+        return float(np.mean(team_scores))
+
+
+    # -----------------------------------------------------------------------
+    # _heuristic_pick 
+    # -----------------------------------------------------------------------
     def _heuristic_pick(self, board: pd.DataFrame, counts: dict, pick_num: int):
         round_idx = pick_num // self.num_teams
         late4 = round_idx >= self.rounds - 4
@@ -404,16 +364,33 @@ class FantasyDraftEnv(gym.Env):
             self.board.at[top_idx, "available"] = False
             self.pick_global += 1
 
+    # -----------------------------------------------------------------------
+    # Helper methods
+    # -----------------------------------------------------------------------
     def _get_roster_needs(self) -> np.ndarray:
-        """Calculate roster needs - kept same as original."""
+        """
+        Calculate urgency flags for each position based on:
+        1. Required starter slots still unfilled
+        2. FLEX eligibility 
+        3. Late-round K/DST timing (special case)
+        4. Round context (early vs late draft)
+        
+        Returns float array [0.0, 1.0] where:
+        - 1.0 = urgent need (missing required starter)
+        - 0.7 = high need (FLEX eligible, late K/DST)
+        - 0.3 = moderate need (depth/value play)
+        - 0.0 = no immediate need
+        """
         needs = np.zeros(len(BASE_POS), dtype=np.float32)
         
         round_idx = self.pick_global // self.num_teams
-        late_draft = round_idx >= self.rounds - 4
-        very_late = round_idx >= self.rounds - 2
+        late_draft = round_idx >= self.rounds - 4  # Last 4 rounds
+        very_late = round_idx >= self.rounds - 2   # Last 2 rounds
         
+        # Calculate current FLEX usage
         flex_filled = 0
         for pos in FLEX_POS:
+            # Count excess players beyond required starters as potential FLEX
             required = self.roster_req.get(pos, 0)
             current = self.roster_counts[pos]
             if current > required:
@@ -425,24 +402,61 @@ class FantasyDraftEnv(gym.Env):
             required = self.roster_req.get(pos, 0)
             current = self.roster_counts[pos]
             
+            # SPECIAL CASE: K/DST timing logic (overrides basic requirement logic)
             if pos in ("K", "DST"):
                 if current >= required:
-                    needs[i] = 0.0
+                    needs[i] = 0.0  # Already have enough
                 elif very_late:
-                    needs[i] = 1.0
+                    needs[i] = 1.0  # Urgent in final 2 rounds
                 elif late_draft:
-                    needs[i] = 0.7
+                    needs[i] = 0.7  # High need in final 4 rounds
                 else:
-                    needs[i] = 0.0
+                    needs[i] = 0.0  # Don't draft early, even if "required"
+                    
+            # REGULAR POSITIONS: Standard requirement logic
             elif current < required:
-                needs[i] = 1.0
+                needs[i] = 1.0  # Urgent: missing required starters
+                
+            # FLEX-eligible positions when FLEX needed
             elif pos in FLEX_POS and flex_needed > 0:
-                needs[i] = 0.7
-            elif pos in ("RB", "WR") and current < 4:
-                needs[i] = 0.3
-            elif pos == "QB" and current < 2:
-                needs[i] = 0.2
+                needs[i] = 0.7  # High need for FLEX fill
+                
+            # DEPTH CONSIDERATIONS
+            elif pos in ("RB", "WR") and current < 4:  # Want RB/WR depth
+                needs[i] = 0.3  # Moderate need for depth
+                
+            elif pos == "QB" and current < 2:  # Limited QB depth
+                needs[i] = 0.2  # Low need for QB2
+                
             else:
-                needs[i] = 0.0
+                needs[i] = 0.0  # No immediate need
                     
         return needs
+    
+    def _calculate_tier_gaps(self, position_df: pd.DataFrame) -> np.ndarray:
+        """
+        Calculate normalized tier gaps for position rankings.
+        
+        Large gaps indicate tier breaks where waiting might be costly.
+        Small gaps suggest similar player quality.
+        
+        Returns array where:
+        - 1.0 = large gap (major tier break)
+        - 0.5 = moderate gap  
+        - 0.0 = small gap (similar tier)
+        """
+        adps = position_df["adp"].to_numpy()
+        gaps = np.zeros_like(adps, dtype=np.float32)
+        
+        for i in range(len(adps) - 1):
+            raw_gap = adps[i + 1] - adps[i]
+            
+            # Normalize gap by threshold and cap at 1.0
+            normalized_gap = min(raw_gap / TIER_GAP_THRESHOLD, 1.0)
+            gaps[i] = normalized_gap
+            
+        # Last player has no "next" player, so gap = 0
+        if len(gaps) > 0:
+            gaps[-1] = 0.0
+            
+        return gaps

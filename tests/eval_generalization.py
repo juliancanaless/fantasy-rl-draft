@@ -12,7 +12,6 @@ def evaluate_on_year(model, board_data, year_name, num_episodes=300):
     """Evaluate model performance on a specific year's data."""
     
     def run_episode():
-        # Random draft position each episode
         slot = np.random.randint(1, 13)
         
         env = FantasyDraftEnv(
@@ -25,7 +24,6 @@ def evaluate_on_year(model, board_data, year_name, num_episodes=300):
         )
         wrapped_env = ActionMasker(env, lambda e: e.get_action_mask())
         
-        # Run the draft
         obs, info = wrapped_env.reset()
         done = False
         
@@ -37,7 +35,6 @@ def evaluate_on_year(model, board_data, year_name, num_episodes=300):
             )
             obs, _, done, _, info = wrapped_env.step(action)
         
-        # Get final scores
         agent_score = wrapped_env.unwrapped._lineup_points(
             wrapped_env.unwrapped.board,
             wrapped_env.unwrapped.my_picks
@@ -73,18 +70,15 @@ def evaluate_on_year(model, board_data, year_name, num_episodes=300):
 def full_generalization_test():
     """Run complete generalization evaluation."""
     
-    # Load the multi-year trained model
-    model_path = "models/ppo_multi_year_generalization"
+    model_path = "models/ppo_multi_year_optimized"
     if not Path(model_path + ".zip").exists():
         raise FileNotFoundError(f"Model not found: {model_path}")
     
     model = MaskablePPO.load(model_path)
     
-    # Load all available data
     data_dir = Path("data/processed")
     results = {}
     
-    # Test on all years (including training years for comparison)
     test_years = [2021, 2022, 2023, 2024]
     
     for year in test_years:
@@ -100,13 +94,11 @@ def full_generalization_test():
             print(f"  Improvement: {year_results['improvement']:+.1f} pts ({year_results['improvement_pct']:+.1f}%)")
             print(f"  Win Rate: {year_results['win_rate']:.1%}")
             
-            # Mark if this was training or test data
             if year in [2021, 2022, 2023]:
                 print(f"  (Training data)")
             else:
                 print(f"  (Test data - GENERALIZATION)")
     
-    # Summary analysis
     print(f"\nGENERALIZATION ANALYSIS")
     print("=" * 50)
     
@@ -122,7 +114,6 @@ def full_generalization_test():
             print(f"Test year (2024) improvement: {test_improvement:+.1f} pts")
             print(f"Generalization gap: {test_improvement - avg_train_improvement:+.1f} pts")
             
-            # Assessment
             if test_improvement > 0:
                 if test_improvement > avg_train_improvement * 0.8:
                     print(f"EXCELLENT: Strong generalization!")
@@ -138,13 +129,11 @@ def full_generalization_test():
 if __name__ == "__main__":
     results = full_generalization_test()
     
-    # Save detailed results
     if results:
         import json
         results_dir = Path("results")
         results_dir.mkdir(exist_ok=True)
         
-        # Convert to JSON-serializable format
         json_results = {}
         for year, result in results.items():
             json_results[str(year)] = {
