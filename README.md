@@ -1,4 +1,4 @@
-# Fantasy Football Draft Optimization with Deep Reinforcement Learning
+## Fantasy Football Draft Optimization with Deep Reinforcement Learning
 
 **Investigating whether RL agents can learn optimal fantasy football drafting strategies that generalize across seasons**
 
@@ -65,9 +65,11 @@ Conclusion: Not an overfitting problem - fundamental domain shift
 
 ![Domain Analysis](results/domain_shift_analysis.png)
 
-Technical Highlights
-Advanced Environment Engineering
-python# Multi-agent simulation with intelligent opponents
+## Technical Highlights
+
+### Advanced Environment Engineering
+```python
+# Multi-agent simulation with intelligent opponents
 class FantasyDraftEnv(gym.Env):
     def _opponent_pick(self, team_idx):
         # Realistic drafting logic: K/DST timing, positional scarcity, 
@@ -81,13 +83,14 @@ class FantasyDraftEnv(gym.Env):
 
 # Sophisticated reward engineering
 reward = (lineup_improvement / 10.0) + (final_vs_baseline / lineup_scale)
-Production-Scale Infrastructure
+```
 
-High-Performance Training: NVIDIA A100 GPU on Google Colab (500+ its/sec)
-Optimized Data Pipeline: Pre-processed board templates with 10x faster environment resets
-Advanced Observation Processing: Vectorized operations with numpy masking and multi-dict spaces
-Multi-Year Training Architecture: Weighted temporal sampling across 3 seasons with dynamic draft position randomization
-Robust Evaluation Framework: Statistical validation across 1,200+ episodes with cross-temporal testing
+### Production-Scale Infrastructure
+- **High-Performance Training**: NVIDIA A100 GPU on Google Colab (500+ its/sec)
+- **Optimized Data Pipeline**: Pre-processed board templates with 10x faster environment resets
+- **Advanced Observation Processing**: Vectorized operations with numpy masking and multi-dict spaces
+- **Multi-Year Training Architecture**: Weighted temporal sampling across 3 seasons with dynamic draft position randomization
+- **Robust Evaluation Framework**: Statistical validation across 1,200+ episodes with cross-temporal testing
 
 ## Repository Structure
 
@@ -96,7 +99,7 @@ fantasy-rl-draft/
 ├── src/                    # Core RL environment and training code
 ├── notebooks/              # EDA + training colab notebooks
 ├── data/processed/         # Clean player data 2021-2024
-├── data/raw/               # raw data - collected from fantasypros.com & fantasyfootballers.com
+├── data/raw/               # Raw data - collected from fantasypros.com & fantasyfootballers.com
 ├── models/                 # Trained PPO agents
 ├── tests/                  # Evaluation scripts and analysis
 ├── results/                # Experimental results and visualizations
