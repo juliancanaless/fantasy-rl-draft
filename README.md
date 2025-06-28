@@ -96,7 +96,7 @@ fantasy-rl-draft/
 ├── src/                    # Core RL environment and training code
 ├── notebooks/              # EDA + training colab notebooks
 ├── data/processed/         # Clean player data 2021-2024
-├── data/raw/               # raw data - collected from fantasypros.com & fantastfootballers.com
+├── data/raw/               # raw data - collected from fantasypros.com & fantasyfootballers.com
 ├── models/                 # Trained PPO agents
 ├── tests/                  # Evaluation scripts and analysis
 ├── results/                # Experimental results and visualizations
